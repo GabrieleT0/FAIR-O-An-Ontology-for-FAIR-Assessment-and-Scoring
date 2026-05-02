@@ -1,0 +1,353 @@
+<http://example.org/fair-assessment#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/fair-assessment#> <http://purl.org/dc/terms/created> "2025-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/fair-assessment#> <http://purl.org/dc/terms/creator> "Gabriele Tuozzo" .
+<http://example.org/fair-assessment#> <http://purl.org/dc/terms/description> "An ontology for modeling FAIR principle assessment results for digital objects, with support for temporal tracking and detailed sub-principle evaluation."@en .
+<http://example.org/fair-assessment#> <http://purl.org/dc/terms/title> "FAIR Assessment Ontology"@en .
+<http://example.org/fair-assessment#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."@en .
+<http://example.org/fair-assessment#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/fair-assessment#appliesScoringFunction
+<http://example.org/fair-assessment#appliesScoringFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#CalculationAlgorithm> .
+<http://example.org/fair-assessment#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#ScoringFunction> .
+<http://example.org/fair-assessment#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an algorithm to the scoring function it uses."@en .
+<http://example.org/fair-assessment#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#label> "applies scoring function"@en .
+# 
+# http://example.org/fair-assessment#appliesTo
+<http://example.org/fair-assessment#appliesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#appliesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> .
+<https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#appliesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#AssessmentScope> .
+<http://example.org/fair-assessment#appliesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a sub-principle applies to data, metadata, or both."@en .
+<http://example.org/fair-assessment#appliesTo> <http://www.w3.org/2000/01/rdf-schema#label> "applies to"@en .
+# 
+# http://example.org/fair-assessment#assessmentScope
+<http://example.org/fair-assessment#assessmentScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#SubPrincipleResult> .
+<http://example.org/fair-assessment#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#AssessmentScope> .
+<http://example.org/fair-assessment#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the sub-principle result pertains to data, metadata, or both."@en .
+<http://example.org/fair-assessment#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#label> "assessment scope"@en .
+# 
+# http://example.org/fair-assessment#computedUsing
+<http://example.org/fair-assessment#computedUsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#computedUsing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#SubPrincipleResult> .
+<http://example.org/fair-assessment#computedUsing> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#CalculationAlgorithm> .
+<http://example.org/fair-assessment#computedUsing> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sub-principle result to the algorithm used to compute it."@en .
+<http://example.org/fair-assessment#computedUsing> <http://www.w3.org/2000/01/rdf-schema#label> "computed using"@en .
+# 
+# http://example.org/fair-assessment#forSubPrinciple
+<http://example.org/fair-assessment#forSubPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#SubPrincipleResult> .
+<http://example.org/fair-assessment#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> .
+<http://example.org/fair-assessment#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sub-principle result to the specific FAIR sub-principle it evaluates (defined in the official FAIR Vocabulary)."@en .
+<http://example.org/fair-assessment#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "for sub-principle"@en .
+# 
+# http://example.org/fair-assessment#hasSubPrincipleResult
+<http://example.org/fair-assessment#hasSubPrincipleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#SubPrincipleResult> .
+<http://example.org/fair-assessment#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an assessment to individual sub-principle results."@en .
+<http://example.org/fair-assessment#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-principle result"@en .
+# 
+# http://example.org/fair-assessment#implementedBy
+<http://example.org/fair-assessment#implementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#implementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#CalculationAlgorithm> .
+<http://example.org/fair-assessment#implementedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#implementedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the algorithm to the software that implements it."@en .
+<http://example.org/fair-assessment#implementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "implemented by"@en .
+# 
+# http://example.org/fair-assessment#testResult
+<http://example.org/fair-assessment#testResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#testResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#SubPrincipleResult> .
+<http://example.org/fair-assessment#testResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#TestOutcome> .
+<http://example.org/fair-assessment#testResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome of the test for the sub-principle."@en .
+<http://example.org/fair-assessment#testResult> <http://www.w3.org/2000/01/rdf-schema#label> "test result"@en .
+# 
+# http://example.org/fair-assessment#usesAggregationMethod
+<http://example.org/fair-assessment#usesAggregationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#AggregationMethod> .
+<http://example.org/fair-assessment#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an assessment to the method used to aggregate sub-principle scores."@en .
+<http://example.org/fair-assessment#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "uses aggregation method"@en .
+# 
+# http://example.org/fair-assessment#wasAssessedBy
+<http://example.org/fair-assessment#wasAssessedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fair-assessment#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to a FAIR assessment that evaluated it."@en .
+<http://example.org/fair-assessment#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was assessed by"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/fair-assessment#aScore
+<http://example.org/fair-assessment#aScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#aScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#aScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#aScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Accessible principle."@en .
+<http://example.org/fair-assessment#aScore> <http://www.w3.org/2000/01/rdf-schema#label> "A score"@en .
+# 
+# http://example.org/fair-assessment#algorithmDescription
+<http://example.org/fair-assessment#algorithmDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#CalculationAlgorithm> .
+<http://example.org/fair-assessment#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/fair-assessment#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of how the algorithm works."@en .
+<http://example.org/fair-assessment#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#label> "algorithm description"@en .
+# 
+# http://example.org/fair-assessment#evidence
+<http://example.org/fair-assessment#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#evidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#SubPrincipleResult> .
+<http://example.org/fair-assessment#evidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/fair-assessment#evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Textual evidence supporting the sub-principle result."@en .
+<http://example.org/fair-assessment#evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence"@en .
+# 
+# http://example.org/fair-assessment#fScore
+<http://example.org/fair-assessment#fScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#fScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#fScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#fScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Findable principle."@en .
+<http://example.org/fair-assessment#fScore> <http://www.w3.org/2000/01/rdf-schema#label> "F score"@en .
+# 
+# http://example.org/fair-assessment#fairScore
+<http://example.org/fair-assessment#fairScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#fairScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#fairScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#fairScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the entire FAIR assessment."@en .
+<http://example.org/fair-assessment#fairScore> <http://www.w3.org/2000/01/rdf-schema#label> "overall score"@en .
+# 
+# http://example.org/fair-assessment#formula
+<http://example.org/fair-assessment#formula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#formula> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/fair-assessment#formula> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual or mathematical representation of the scoring formula."@en .
+<http://example.org/fair-assessment#formula> <http://www.w3.org/2000/01/rdf-schema#label> "formula"@en .
+# 
+# http://example.org/fair-assessment#iScore
+<http://example.org/fair-assessment#iScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#iScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#iScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#iScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Interoperable principle."@en .
+<http://example.org/fair-assessment#iScore> <http://www.w3.org/2000/01/rdf-schema#label> "I score"@en .
+# 
+# http://example.org/fair-assessment#maxValue
+<http://example.org/fair-assessment#maxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#maxValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#ScoringFunction> .
+<http://example.org/fair-assessment#maxValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#maxValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum possible score this function can produce."@en .
+<http://example.org/fair-assessment#maxValue> <http://www.w3.org/2000/01/rdf-schema#label> "maximum value"@en .
+# 
+# http://example.org/fair-assessment#minValue
+<http://example.org/fair-assessment#minValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#minValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#ScoringFunction> .
+<http://example.org/fair-assessment#minValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#minValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimum possible score this function can produce."@en .
+<http://example.org/fair-assessment#minValue> <http://www.w3.org/2000/01/rdf-schema#label> "minimum value"@en .
+# 
+# http://example.org/fair-assessment#rScore
+<http://example.org/fair-assessment#rScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#rScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#FAIRAssessment> .
+<http://example.org/fair-assessment#rScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#rScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Reusable principle."@en .
+<http://example.org/fair-assessment#rScore> <http://www.w3.org/2000/01/rdf-schema#label> "R score"@en .
+# 
+# http://example.org/fair-assessment#sourceCode
+<http://example.org/fair-assessment#sourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#sourceCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#CalculationAlgorithm> .
+<http://example.org/fair-assessment#sourceCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://example.org/fair-assessment#sourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "URI pointing to the source code implementing this algorithm."@en .
+<http://example.org/fair-assessment#sourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "source code"@en .
+# 
+# http://example.org/fair-assessment#value
+<http://example.org/fair-assessment#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/fair-assessment#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fair-assessment#SubPrincipleResult> .
+<http://example.org/fair-assessment#value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/fair-assessment#value> <http://www.w3.org/2000/01/rdf-schema#comment> "The numeric value assigned to the sub-principle result."@en .
+<http://example.org/fair-assessment#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/fair-assessment#AggregationMethod
+<http://example.org/fair-assessment#AggregationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#AggregationMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#AggregationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A method for combining individual sub-principle scores into principle-level or overall scores."@en .
+<http://example.org/fair-assessment#AggregationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Method"@en .
+# 
+# http://example.org/fair-assessment#AssessmentScope
+<http://example.org/fair-assessment#AssessmentScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#AssessmentScope> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fair-assessment#MetadataScope> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fair-assessment#DataScope> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fair-assessment#DataAndMetadata> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#AssessmentScope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#AssessmentScope> <http://www.w3.org/2000/01/rdf-schema#comment> "The scope of what is being assessed: data, metadata, or both."@en .
+<http://example.org/fair-assessment#AssessmentScope> <http://www.w3.org/2000/01/rdf-schema#label> "Assessment Scope"@en .
+# 
+# http://example.org/fair-assessment#CalculationAlgorithm
+<http://example.org/fair-assessment#CalculationAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<http://example.org/fair-assessment#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "The computational procedure or method used to evaluate a sub-principle and produce a score."@en .
+<http://example.org/fair-assessment#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Scoring Algorithm"@en .
+# 
+# http://example.org/fair-assessment#FAIRAssessment
+<http://example.org/fair-assessment#FAIRAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#FAIRAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#FAIRAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality assessment of a digital object against FAIR principles at a specific point in time."@en .
+<http://example.org/fair-assessment#FAIRAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "FAIR Assessment"@en .
+# 
+# http://example.org/fair-assessment#ScoringFunction
+<http://example.org/fair-assessment#ScoringFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#ScoringFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://example.org/fair-assessment#ScoringFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle."@en .
+<http://example.org/fair-assessment#ScoringFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Scoring Function"@en .
+# 
+# http://example.org/fair-assessment#SubPrincipleResult
+<http://example.org/fair-assessment#SubPrincipleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#SubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://example.org/fair-assessment#SubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The assessment result for a specific FAIR sub-principle (e.g., F1, A1.1, I2)."@en .
+<http://example.org/fair-assessment#SubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#label> "Sub-Principle Result"@en .
+# 
+# http://example.org/fair-assessment#TestOutcome
+<http://example.org/fair-assessment#TestOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#TestOutcome> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#oneOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fair-assessment#Pass> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fair-assessment#Indeterminate> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fair-assessment#Fail> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fair-assessment#TestOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://example.org/fair-assessment#TestOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of a FAIR test (e.g., Pass, Fail, or Indeterminate)."@en .
+<http://example.org/fair-assessment#TestOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "Test Outcome"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+# 
+# http://www.w3.org/ns/prov#Activity
+# 
+# http://www.w3.org/ns/prov#Entity
+# 
+# http://www.w3.org/ns/prov#Plan
+# 
+# http://www.w3.org/ns/prov#SoftwareAgent
+# 
+# https://w3id.org/fair/principles/terms/FAIR-SubPrinciple
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/fair-assessment#DataAndMetadata
+<http://example.org/fair-assessment#DataAndMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fair-assessment#DataAndMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fair-assessment#AssessmentScope> .
+<http://example.org/fair-assessment#DataAndMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "Data and Metadata"@en .
+# 
+# http://example.org/fair-assessment#DataScope
+<http://example.org/fair-assessment#DataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fair-assessment#DataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fair-assessment#AssessmentScope> .
+<http://example.org/fair-assessment#DataScope> <http://www.w3.org/2000/01/rdf-schema#label> "Data"@en .
+# 
+# http://example.org/fair-assessment#Fail
+<http://example.org/fair-assessment#Fail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fair-assessment#Fail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fair-assessment#TestOutcome> .
+<http://example.org/fair-assessment#Fail> <http://www.w3.org/2000/01/rdf-schema#comment> "The test was not satisfied (score = 0)."@en .
+<http://example.org/fair-assessment#Fail> <http://www.w3.org/2000/01/rdf-schema#label> "Fail"@en .
+<http://example.org/fair-assessment#Fail> <http://www.w3.org/2004/02/skos/core#notation> "FAIL" .
+# 
+# http://example.org/fair-assessment#Indeterminate
+<http://example.org/fair-assessment#Indeterminate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fair-assessment#Indeterminate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fair-assessment#TestOutcome> .
+<http://example.org/fair-assessment#Indeterminate> <http://www.w3.org/2000/01/rdf-schema#comment> "The test was partially satisfied (0 < score < 1)."@en .
+<http://example.org/fair-assessment#Indeterminate> <http://www.w3.org/2000/01/rdf-schema#label> "Indeterminate"@en .
+<http://example.org/fair-assessment#Indeterminate> <http://www.w3.org/2004/02/skos/core#notation> "INDETERMINATE" .
+# 
+# http://example.org/fair-assessment#MetadataScope
+<http://example.org/fair-assessment#MetadataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fair-assessment#MetadataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fair-assessment#AssessmentScope> .
+<http://example.org/fair-assessment#MetadataScope> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata"@en .
+# 
+# http://example.org/fair-assessment#Pass
+<http://example.org/fair-assessment#Pass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fair-assessment#Pass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fair-assessment#TestOutcome> .
+<http://example.org/fair-assessment#Pass> <http://www.w3.org/2000/01/rdf-schema#comment> "The test was fully satisfied (score = 1)."@en .
+<http://example.org/fair-assessment#Pass> <http://www.w3.org/2000/01/rdf-schema#label> "Pass"@en .
+<http://example.org/fair-assessment#Pass> <http://www.w3.org/2004/02/skos/core#notation> "PASS" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
