@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/fair-assessment#"
+     xml:base="http://example.org/fair-assessment"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://example.org/fair-assessment#">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-01</terms:created>
+        <terms:creator>Gabriele Tuozzo</terms:creator>
+        <terms:description xml:lang="en">An ontology for modeling FAIR principle assessment results for digital objects, with support for temporal tracking and detailed sub-principle evaluation.</terms:description>
+        <terms:title xml:lang="en">FAIR Assessment Ontology</terms:title>
+        <rdfs:comment xml:lang="en">This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions.</rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/fair-assessment#appliesScoringFunction -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#appliesScoringFunction">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#CalculationAlgorithm"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#ScoringFunction"/>
+        <rdfs:comment xml:lang="en">Links an algorithm to the scoring function it uses.</rdfs:comment>
+        <rdfs:label xml:lang="en">applies scoring function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#appliesTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#appliesTo">
+        <rdfs:domain rdf:resource="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#AssessmentScope"/>
+        <rdfs:comment xml:lang="en">Indicates whether a sub-principle applies to data, metadata, or both.</rdfs:comment>
+        <rdfs:label xml:lang="en">applies to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#assessmentScope -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#assessmentScope">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#AssessmentScope"/>
+        <rdfs:comment xml:lang="en">Indicates whether the sub-principle result pertains to data, metadata, or both.</rdfs:comment>
+        <rdfs:label xml:lang="en">assessment scope</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#computedUsing -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#computedUsing">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#CalculationAlgorithm"/>
+        <rdfs:comment xml:lang="en">Links a sub-principle result to the algorithm used to compute it.</rdfs:comment>
+        <rdfs:label xml:lang="en">computed using</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#forSubPrinciple -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#forSubPrinciple">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"/>
+        <rdfs:comment xml:lang="en">Links a sub-principle result to the specific FAIR sub-principle it evaluates (defined in the official FAIR Vocabulary).</rdfs:comment>
+        <rdfs:label xml:lang="en">for sub-principle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#hasSubPrincipleResult -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#hasSubPrincipleResult">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <rdfs:comment xml:lang="en">Links an assessment to individual sub-principle results.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sub-principle result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#implementedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#implementedBy">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#CalculationAlgorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <rdfs:comment xml:lang="en">Links the algorithm to the software that implements it.</rdfs:comment>
+        <rdfs:label xml:lang="en">implemented by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#testResult -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#testResult">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#TestOutcome"/>
+        <rdfs:comment xml:lang="en">The outcome of the test for the sub-principle.</rdfs:comment>
+        <rdfs:label xml:lang="en">test result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#usesAggregationMethod -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#usesAggregationMethod">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#AggregationMethod"/>
+        <rdfs:comment xml:lang="en">Links an assessment to the method used to aggregate sub-principle scores.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses aggregation method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#wasAssessedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/fair-assessment#wasAssessedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:comment xml:lang="en">Links a resource to a FAIR assessment that evaluated it.</rdfs:comment>
+        <rdfs:label xml:lang="en">was assessed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/fair-assessment#aScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#aScore">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">An aggregate score for the Accessible principle.</rdfs:comment>
+        <rdfs:label xml:lang="en">A score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#algorithmDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#algorithmDescription">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#CalculationAlgorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A human-readable description of how the algorithm works.</rdfs:comment>
+        <rdfs:label xml:lang="en">algorithm description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#evidence -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#evidence">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual evidence supporting the sub-principle result.</rdfs:comment>
+        <rdfs:label xml:lang="en">evidence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#fScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#fScore">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">An aggregate score for the Findable principle.</rdfs:comment>
+        <rdfs:label xml:lang="en">F score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#fairScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#fairScore">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">An aggregate score for the entire FAIR assessment.</rdfs:comment>
+        <rdfs:label xml:lang="en">overall score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#formula -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#formula">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A textual or mathematical representation of the scoring formula.</rdfs:comment>
+        <rdfs:label xml:lang="en">formula</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#iScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#iScore">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">An aggregate score for the Interoperable principle.</rdfs:comment>
+        <rdfs:label xml:lang="en">I score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#maxValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#maxValue">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#ScoringFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The maximum possible score this function can produce.</rdfs:comment>
+        <rdfs:label xml:lang="en">maximum value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#minValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#minValue">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#ScoringFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The minimum possible score this function can produce.</rdfs:comment>
+        <rdfs:label xml:lang="en">minimum value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#rScore -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#rScore">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">An aggregate score for the Reusable principle.</rdfs:comment>
+        <rdfs:label xml:lang="en">R score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#sourceCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#sourceCode">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#CalculationAlgorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URI pointing to the source code implementing this algorithm.</rdfs:comment>
+        <rdfs:label xml:lang="en">source code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/fair-assessment#value -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/fair-assessment#value">
+        <rdfs:domain rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The numeric value assigned to the sub-principle result.</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/fair-assessment#AggregationMethod -->
+
+
+    <owl:Class rdf:about="http://example.org/fair-assessment#AggregationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+        <rdfs:comment xml:lang="en">A method for combining individual sub-principle scores into principle-level or overall scores.</rdfs:comment>
+        <rdfs:label xml:lang="en">Aggregation Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/fair-assessment#AssessmentScope -->
+
+
+    <owl:Class rdf:about="http://example.org/fair-assessment#AssessmentScope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/fair-assessment#DataAndMetadata"/>
+                    <rdf:Description rdf:about="http://example.org/fair-assessment#DataScope"/>
+                    <rdf:Description rdf:about="http://example.org/fair-assessment#MetadataScope"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The scope of what is being assessed: data, metadata, or both.</rdfs:comment>
+        <rdfs:label xml:lang="en">Assessment Scope</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/fair-assessment#CalculationAlgorithm -->
+
+
+    <owl:Class rdf:about="http://example.org/fair-assessment#CalculationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+        <rdfs:comment xml:lang="en">The computational procedure or method used to evaluate a sub-principle and produce a score.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scoring Algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/fair-assessment#FAIRAssessment -->
+
+
+    <owl:Class rdf:about="http://example.org/fair-assessment#FAIRAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment xml:lang="en">A quality assessment of a digital object against FAIR principles at a specific point in time.</rdfs:comment>
+        <rdfs:label xml:lang="en">FAIR Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/fair-assessment#ScoringFunction -->
+
+
+    <owl:Class rdf:about="http://example.org/fair-assessment#ScoringFunction">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scoring Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/fair-assessment#SubPrincipleResult -->
+
+
+    <owl:Class rdf:about="http://example.org/fair-assessment#SubPrincipleResult">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">The assessment result for a specific FAIR sub-principle (e.g., F1, A1.1, I2).</rdfs:comment>
+        <rdfs:label xml:lang="en">Sub-Principle Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/fair-assessment#TestOutcome -->
+
+
+    <owl:Class rdf:about="http://example.org/fair-assessment#TestOutcome">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/fair-assessment#Fail"/>
+                    <rdf:Description rdf:about="http://example.org/fair-assessment#Indeterminate"/>
+                    <rdf:Description rdf:about="http://example.org/fair-assessment#Pass"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The result of a FAIR test (e.g., Pass, Fail, or Indeterminate).</rdfs:comment>
+        <rdfs:label xml:lang="en">Test Outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Plan -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Plan"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#SoftwareAgent -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#SoftwareAgent"/>
+    
+
+
+    <!-- https://w3id.org/fair/principles/terms/FAIR-SubPrinciple -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/fair-assessment#DataAndMetadata -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/fair-assessment#DataAndMetadata">
+        <rdf:type rdf:resource="http://example.org/fair-assessment#AssessmentScope"/>
+        <rdfs:label xml:lang="en">Data and Metadata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/fair-assessment#DataScope -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/fair-assessment#DataScope">
+        <rdf:type rdf:resource="http://example.org/fair-assessment#AssessmentScope"/>
+        <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/fair-assessment#Fail -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/fair-assessment#Fail">
+        <rdf:type rdf:resource="http://example.org/fair-assessment#TestOutcome"/>
+        <rdfs:comment xml:lang="en">The test was not satisfied (score = 0).</rdfs:comment>
+        <rdfs:label xml:lang="en">Fail</rdfs:label>
+        <skos:notation>FAIL</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/fair-assessment#Indeterminate -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/fair-assessment#Indeterminate">
+        <rdf:type rdf:resource="http://example.org/fair-assessment#TestOutcome"/>
+        <rdfs:comment xml:lang="en">The test was partially satisfied (0 &lt; score &lt; 1).</rdfs:comment>
+        <rdfs:label xml:lang="en">Indeterminate</rdfs:label>
+        <skos:notation>INDETERMINATE</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/fair-assessment#MetadataScope -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/fair-assessment#MetadataScope">
+        <rdf:type rdf:resource="http://example.org/fair-assessment#AssessmentScope"/>
+        <rdfs:label xml:lang="en">Metadata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/fair-assessment#Pass -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/fair-assessment#Pass">
+        <rdf:type rdf:resource="http://example.org/fair-assessment#TestOutcome"/>
+        <rdfs:comment xml:lang="en">The test was fully satisfied (score = 1).</rdfs:comment>
+        <rdfs:label xml:lang="en">Pass</rdfs:label>
+        <skos:notation>PASS</skos:notation>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
