@@ -1,0 +1,40 @@
+{
+  "@context" : {
+    "message" : {
+      "@id" : "http://www.w3.org/ns/shacl#message"
+    },
+    "sparql" : {
+      "@id" : "http://www.w3.org/ns/shacl#sparql"
+    },
+    "targetClass" : {
+      "@id" : "http://www.w3.org/ns/shacl#targetClass"
+    },
+    "SPARQLConstraint" : {
+      "@id" : "http://www.w3.org/ns/shacl#SPARQLConstraint"
+    },
+    "class" : {
+      "@id" : "http://www.w3.org/ns/shacl#class"
+    },
+    "targetSubjectsOf" : {
+      "@id" : "http://www.w3.org/ns/shacl#targetSubjectsOf"
+    },
+    "path" : {
+      "@id" : "http://www.w3.org/ns/shacl#path"
+    },
+    "property" : {
+      "@id" : "http://www.w3.org/ns/shacl#property"
+    },
+    "inversePath" : {
+      "@id" : "http://www.w3.org/ns/shacl#inversePath"
+    },
+    "NodeShape" : {
+      "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+    },
+    "datatype" : {
+      "@id" : "http://www.w3.org/ns/shacl#datatype"
+    },
+    "in" : {
+      "@id" : "http://www.w3.org/ns/shacl#in"
+    }
+  }
+}
