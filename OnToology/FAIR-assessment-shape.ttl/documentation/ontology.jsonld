@@ -1,0 +1,771 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "_:genid10",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The Findable score must be a decimal between 0 and 1."
+  } ],
+  "http://www.w3.org/ns/shacl#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#fScore"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The Accessible score must be a decimal between 0 and 1."
+  } ],
+  "http://www.w3.org/ns/shacl#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#aScore"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The Interoperable score must be a decimal between 0 and 1."
+  } ],
+  "http://www.w3.org/ns/shacl#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#iScore"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The Reusable score must be a decimal between 0 and 1."
+  } ],
+  "http://www.w3.org/ns/shacl#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#rScore"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://example.org/fair-assessment#SubPrincipleResult"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A FAIR assessment must have at least one sub-principle result."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#hasSubPrincipleResult"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://example.org/fair-assessment#AggregationMethod"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "If present, the aggregation method must be an instance of fairAss:AggregationMethod."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#usesAggregationMethod"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "Assessment start time must be a valid xsd:dateTime."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/ns/prov#startedAtTime"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "Assessment end time must be a valid xsd:dateTime."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/ns/prov#endedAtTime"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "http://www.w3.org/ns/shacl#in" : [ {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A FAIR sub-principle may specify whether it applies to data, metadata, or both."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#appliesTo"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "An aggregation formula must be represented as a string."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#formula"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#SPARQLConstraint"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "If testResult is Fail, the value must be exactly 0.0."
+  } ],
+  "http://www.w3.org/ns/shacl#select" : [ {
+    "@value" : "\n            PREFIX fairAss: <http://example.org/fair-assessment#>\n\n            SELECT $this\n            WHERE {\n                $this fairAss:testResult fairAss:Fail ;\n                      fairAss:value ?value .\n                FILTER (?value != 0.0)\n            }\n        "
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#SPARQLConstraint"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "If testResult is Indeterminate, the value must be greater than 0 and less than 1."
+  } ],
+  "http://www.w3.org/ns/shacl#select" : [ {
+    "@value" : "\n            PREFIX fairAss: <http://example.org/fair-assessment#>\n\n            SELECT $this\n            WHERE {\n                $this fairAss:testResult fairAss:Indeterminate ;\n                      fairAss:value ?value .\n                FILTER (?value <= 0.0 || ?value >= 1.0)\n            }\n        "
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#SPARQLConstraint"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "If testResult is Pass, the value must be exactly 1.0."
+  } ],
+  "http://www.w3.org/ns/shacl#select" : [ {
+    "@value" : "\n            PREFIX fairAss: <http://example.org/fair-assessment#>\n\n            SELECT $this\n            WHERE {\n                $this fairAss:testResult fairAss:Pass ;\n                      fairAss:value ?value .\n                FILTER (?value != 1.0)\n            }\n        "
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A scoring function must have exactly one minimum value."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#minValue"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A scoring function must have exactly one maximum value."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#maxValue"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A scoring function formula must be a string."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#formula"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#SPARQLConstraint"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "The minimum value of a scoring function must not be greater than its maximum value."
+  } ],
+  "http://www.w3.org/ns/shacl#select" : [ {
+    "@value" : "\n            PREFIX fairAss: <http://example.org/fair-assessment#>\n\n            SELECT $this\n            WHERE {\n                $this fairAss:minValue ?min ;\n                      fairAss:maxValue ?max .\n                FILTER (?min > ?max)\n            }\n        "
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://example.org/fair-assessment#FAIRAssessment"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "Every sub-principle result should be linked from at least one FAIR assessment."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "http://www.w3.org/ns/shacl#inversePath" : [ {
+    "@id" : "http://example.org/fair-assessment#hasSubPrincipleResult"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A sub-principle result must refer to exactly one FAIR sub-principle."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#forSubPrinciple"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://example.org/fair-assessment#FAIRAssessment"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A resource assessed by fairAss:wasAssessedBy must point to a FAIR assessment."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#wasAssessedBy"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "http://www.w3.org/ns/shacl#in" : [ {
+    "@id" : "_:genid31"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A sub-principle result must have exactly one test outcome: Pass, Fail, or Indeterminate."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#testResult"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "http://www.w3.org/ns/shacl#in" : [ {
+    "@id" : "_:genid33"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A sub-principle result must specify exactly one assessment scope."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#assessmentScope"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A sub-principle result must have exactly one decimal value between 0 and 1."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#value"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A sub-principle result should include textual evidence."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#evidence"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://example.org/fair-assessment#CalculationAlgorithm"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "If present, computedUsing must point to a CalculationAlgorithm."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#computedUsing"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A calculation algorithm should have a human-readable description."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#algorithmDescription"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "Source code must be provided as a URI."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#sourceCode"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://example.org/fair-assessment#ScoringFunction"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "If present, appliesScoringFunction must point to a ScoringFunction."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#appliesScoringFunction"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://www.w3.org/ns/prov#SoftwareAgent"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "If present, implementedBy must point to a prov:SoftwareAgent."
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#implementedBy"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.0"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "A FAIR assessment must have exactly one overall FAIR score between 0 and 4."
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/fair-assessment#fairScore"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#AggregationMethodShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#AggregationMethod"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#AssessedResourceShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/ns/shacl#targetSubjectsOf" : [ {
+    "@id" : "http://example.org/fair-assessment#wasAssessedBy"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#AssessmentScopeShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#in" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "Assessment scope must be one of DataScope, MetadataScope, or DataAndMetadata."
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#AssessmentScope"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#CalculationAlgorithmShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#CalculationAlgorithm"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#FAIRAssessmentShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#FAIRAssessment"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#FAIRSubPrincipleShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid18"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#FailResultShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#sparql" : [ {
+    "@id" : "_:genid20"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#SubPrincipleResult"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#IndeterminateResultShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#sparql" : [ {
+    "@id" : "_:genid21"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#SubPrincipleResult"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#PassResultShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#sparql" : [ {
+    "@id" : "_:genid22"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#SubPrincipleResult"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#ScoringFunctionShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  } ],
+  "http://www.w3.org/ns/shacl#sparql" : [ {
+    "@id" : "_:genid26"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#ScoringFunction"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#SubPrincipleResultAttachedToAssessmentShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid27"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#SubPrincipleResult"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#SubPrincipleResultShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid32"
+  }, {
+    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#SubPrincipleResult"
+  } ]
+}, {
+  "@id" : "http://example.org/fair-assessment-shapes#TestOutcomeShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#NodeShape"
+  } ],
+  "http://www.w3.org/ns/shacl#in" : [ {
+    "@id" : "_:genid37"
+  } ],
+  "http://www.w3.org/ns/shacl#message" : [ {
+    "@value" : "Test outcome must be one of Pass, Fail, or Indeterminate."
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://example.org/fair-assessment#TestOutcome"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#NodeShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#SPARQLConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#datatype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#inversePath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#maxCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#maxInclusive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#message",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#minCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#minInclusive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#path",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#select",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#sparql",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#targetClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#targetSubjectsOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
