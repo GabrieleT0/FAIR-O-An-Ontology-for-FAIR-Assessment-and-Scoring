@@ -1,0 +1,155 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "appliesScoringFunction" : {
+      "@id" : "http://example.org/fair-assessment#appliesScoringFunction",
+      "@type" : "@id"
+    },
+    "CalculationAlgorithm" : {
+      "@id" : "http://example.org/fair-assessment#CalculationAlgorithm"
+    },
+    "appliesTo" : {
+      "@id" : "http://example.org/fair-assessment#appliesTo",
+      "@type" : "@id"
+    },
+    "sourceCode" : {
+      "@id" : "http://example.org/fair-assessment#sourceCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "computedUsing" : {
+      "@id" : "http://example.org/fair-assessment#computedUsing",
+      "@type" : "@id"
+    },
+    "fairScore" : {
+      "@id" : "http://example.org/fair-assessment#fairScore",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "SoftwareAgent" : {
+      "@id" : "http://www.w3.org/ns/prov#SoftwareAgent"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TestOutcome" : {
+      "@id" : "http://example.org/fair-assessment#TestOutcome"
+    },
+    "assessmentScope" : {
+      "@id" : "http://example.org/fair-assessment#assessmentScope",
+      "@type" : "@id"
+    },
+    "Activity" : {
+      "@id" : "http://www.w3.org/ns/prov#Activity"
+    },
+    "maxValue" : {
+      "@id" : "http://example.org/fair-assessment#maxValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "AssessmentScope" : {
+      "@id" : "http://example.org/fair-assessment#AssessmentScope"
+    },
+    "algorithmDescription" : {
+      "@id" : "http://example.org/fair-assessment#algorithmDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "notation" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "SubPrincipleResult" : {
+      "@id" : "http://example.org/fair-assessment#SubPrincipleResult"
+    },
+    "value" : {
+      "@id" : "http://example.org/fair-assessment#value",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "usesAggregationMethod" : {
+      "@id" : "http://example.org/fair-assessment#usesAggregationMethod",
+      "@type" : "@id"
+    },
+    "iScore" : {
+      "@id" : "http://example.org/fair-assessment#iScore",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "ScoringFunction" : {
+      "@id" : "http://example.org/fair-assessment#ScoringFunction"
+    },
+    "implementedBy" : {
+      "@id" : "http://example.org/fair-assessment#implementedBy",
+      "@type" : "@id"
+    },
+    "wasAssessedBy" : {
+      "@id" : "http://example.org/fair-assessment#wasAssessedBy",
+      "@type" : "@id"
+    },
+    "aScore" : {
+      "@id" : "http://example.org/fair-assessment#aScore",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Plan" : {
+      "@id" : "http://www.w3.org/ns/prov#Plan"
+    },
+    "hasSubPrincipleResult" : {
+      "@id" : "http://example.org/fair-assessment#hasSubPrincipleResult",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "FAIR-SubPrinciple" : {
+      "@id" : "https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"
+    },
+    "FAIRAssessment" : {
+      "@id" : "http://example.org/fair-assessment#FAIRAssessment"
+    },
+    "rScore" : {
+      "@id" : "http://example.org/fair-assessment#rScore",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "forSubPrinciple" : {
+      "@id" : "http://example.org/fair-assessment#forSubPrinciple",
+      "@type" : "@id"
+    },
+    "Entity" : {
+      "@id" : "http://www.w3.org/ns/prov#Entity"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "formula" : {
+      "@id" : "http://example.org/fair-assessment#formula",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "evidence" : {
+      "@id" : "http://example.org/fair-assessment#evidence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AggregationMethod" : {
+      "@id" : "http://example.org/fair-assessment#AggregationMethod"
+    },
+    "minValue" : {
+      "@id" : "http://example.org/fair-assessment#minValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "testResult" : {
+      "@id" : "http://example.org/fair-assessment#testResult",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "fScore" : {
+      "@id" : "http://example.org/fair-assessment#fScore",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    }
+  }
+}
