@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#class -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#class"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#datatype -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#datatype"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#in -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#in"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#inversePath -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#inversePath"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#maxCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#maxCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#maxInclusive -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#maxInclusive"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#message -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#message"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minInclusive -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minInclusive"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#select -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#select"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#sparql -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#sparql"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetSubjectsOf -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetSubjectsOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#SPARQLConstraint -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#SPARQLConstraint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#AggregationMethodShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#AggregationMethodShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid2"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#AggregationMethod"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid2">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>An aggregation formula must be represented as a string.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#formula"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#AssessedResourceShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#AssessedResourceShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid3"/>
+        <shacl:targetSubjectsOf rdf:resource="http://example.org/fair-assessment#wasAssessedBy"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid3">
+        <shacl:class rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <shacl:message>A resource assessed by fairAss:wasAssessedBy must point to a FAIR assessment.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#wasAssessedBy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#AssessmentScopeShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#AssessmentScopeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:message>Assessment scope must be one of DataScope, MetadataScope, or DataAndMetadata.</shacl:message>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#AssessmentScope"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#CalculationAlgorithmShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#CalculationAlgorithmShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid5"/>
+        <shacl:property rdf:nodeID="genid6"/>
+        <shacl:property rdf:nodeID="genid7"/>
+        <shacl:property rdf:nodeID="genid8"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#CalculationAlgorithm"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid5">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:message>A calculation algorithm should have a human-readable description.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#algorithmDescription"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>Source code must be provided as a URI.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#sourceCode"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <shacl:class rdf:resource="http://example.org/fair-assessment#ScoringFunction"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>If present, appliesScoringFunction must point to a ScoringFunction.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#appliesScoringFunction"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <shacl:class rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>If present, implementedBy must point to a prov:SoftwareAgent.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#implementedBy"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#FAIRAssessmentShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#FAIRAssessmentShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid9"/>
+        <shacl:property rdf:nodeID="genid10"/>
+        <shacl:property rdf:nodeID="genid11"/>
+        <shacl:property rdf:nodeID="genid12"/>
+        <shacl:property rdf:nodeID="genid13"/>
+        <shacl:property rdf:nodeID="genid14"/>
+        <shacl:property rdf:nodeID="genid15"/>
+        <shacl:property rdf:nodeID="genid16"/>
+        <shacl:property rdf:nodeID="genid17"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid9">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</shacl:maxInclusive>
+        <shacl:message>A FAIR assessment must have exactly one overall FAIR score between 0 and 4.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</shacl:minInclusive>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#fairScore"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</shacl:maxInclusive>
+        <shacl:message>The Findable score must be a decimal between 0 and 1.</shacl:message>
+        <shacl:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</shacl:minInclusive>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#fScore"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid11">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</shacl:maxInclusive>
+        <shacl:message>The Accessible score must be a decimal between 0 and 1.</shacl:message>
+        <shacl:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</shacl:minInclusive>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#aScore"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid12">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</shacl:maxInclusive>
+        <shacl:message>The Interoperable score must be a decimal between 0 and 1.</shacl:message>
+        <shacl:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</shacl:minInclusive>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#iScore"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid13">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</shacl:maxInclusive>
+        <shacl:message>The Reusable score must be a decimal between 0 and 1.</shacl:message>
+        <shacl:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</shacl:minInclusive>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#rScore"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid14">
+        <shacl:class rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+        <shacl:message>A FAIR assessment must have at least one sub-principle result.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#hasSubPrincipleResult"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid15">
+        <shacl:class rdf:resource="http://example.org/fair-assessment#AggregationMethod"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>If present, the aggregation method must be an instance of fairAss:AggregationMethod.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#usesAggregationMethod"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid16">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>Assessment start time must be a valid xsd:dateTime.</shacl:message>
+        <shacl:path rdf:resource="http://www.w3.org/ns/prov#startedAtTime"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid17">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>Assessment end time must be a valid xsd:dateTime.</shacl:message>
+        <shacl:path rdf:resource="http://www.w3.org/ns/prov#endedAtTime"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#FAIRSubPrincipleShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#FAIRSubPrincipleShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid18"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid18">
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>A FAIR sub-principle may specify whether it applies to data, metadata, or both.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#appliesTo"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#FailResultShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#FailResultShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:sparql rdf:nodeID="genid20"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid20">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#SPARQLConstraint"/>
+        <shacl:message>If testResult is Fail, the value must be exactly 0.0.</shacl:message>
+        <shacl:select>
+            PREFIX fairAss: &lt;http://example.org/fair-assessment#&gt;
+
+            SELECT $this
+            WHERE {
+                $this fairAss:testResult fairAss:Fail ;
+                      fairAss:value ?value .
+                FILTER (?value != 0.0)
+            }
+        </shacl:select>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#IndeterminateResultShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#IndeterminateResultShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:sparql rdf:nodeID="genid21"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid21">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#SPARQLConstraint"/>
+        <shacl:message>If testResult is Indeterminate, the value must be greater than 0 and less than 1.</shacl:message>
+        <shacl:select>
+            PREFIX fairAss: &lt;http://example.org/fair-assessment#&gt;
+
+            SELECT $this
+            WHERE {
+                $this fairAss:testResult fairAss:Indeterminate ;
+                      fairAss:value ?value .
+                FILTER (?value &lt;= 0.0 || ?value &gt;= 1.0)
+            }
+        </shacl:select>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#PassResultShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#PassResultShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:sparql rdf:nodeID="genid22"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid22">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#SPARQLConstraint"/>
+        <shacl:message>If testResult is Pass, the value must be exactly 1.0.</shacl:message>
+        <shacl:select>
+            PREFIX fairAss: &lt;http://example.org/fair-assessment#&gt;
+
+            SELECT $this
+            WHERE {
+                $this fairAss:testResult fairAss:Pass ;
+                      fairAss:value ?value .
+                FILTER (?value != 1.0)
+            }
+        </shacl:select>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#ScoringFunctionShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#ScoringFunctionShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid23"/>
+        <shacl:property rdf:nodeID="genid24"/>
+        <shacl:property rdf:nodeID="genid25"/>
+        <shacl:sparql rdf:nodeID="genid26"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#ScoringFunction"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid23">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>A scoring function must have exactly one minimum value.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#minValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid24">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>A scoring function must have exactly one maximum value.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#maxValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid25">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>A scoring function formula must be a string.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#formula"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid26">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#SPARQLConstraint"/>
+        <shacl:message>The minimum value of a scoring function must not be greater than its maximum value.</shacl:message>
+        <shacl:select>
+            PREFIX fairAss: &lt;http://example.org/fair-assessment#&gt;
+
+            SELECT $this
+            WHERE {
+                $this fairAss:minValue ?min ;
+                      fairAss:maxValue ?max .
+                FILTER (?min &gt; ?max)
+            }
+        </shacl:select>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#SubPrincipleResultAttachedToAssessmentShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#SubPrincipleResultAttachedToAssessmentShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid27"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid27">
+        <shacl:class rdf:resource="http://example.org/fair-assessment#FAIRAssessment"/>
+        <shacl:message>Every sub-principle result should be linked from at least one FAIR assessment.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path>
+            <rdf:Description>
+                <shacl:inversePath rdf:resource="http://example.org/fair-assessment#hasSubPrincipleResult"/>
+            </rdf:Description>
+        </shacl:path>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#SubPrincipleResultShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#SubPrincipleResultShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:nodeID="genid29"/>
+        <shacl:property rdf:nodeID="genid30"/>
+        <shacl:property rdf:nodeID="genid32"/>
+        <shacl:property rdf:nodeID="genid34"/>
+        <shacl:property rdf:nodeID="genid35"/>
+        <shacl:property rdf:nodeID="genid36"/>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#SubPrincipleResult"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid29">
+        <shacl:class rdf:resource="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>A sub-principle result must refer to exactly one FAIR sub-principle.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#forSubPrinciple"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid30">
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>A sub-principle result must have exactly one test outcome: Pass, Fail, or Indeterminate.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#testResult"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid32">
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>A sub-principle result must specify exactly one assessment scope.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#assessmentScope"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid34">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</shacl:maxInclusive>
+        <shacl:message>A sub-principle result must have exactly one decimal value between 0 and 1.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</shacl:minInclusive>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#value"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid35">
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:message>A sub-principle result should include textual evidence.</shacl:message>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#evidence"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid36">
+        <shacl:class rdf:resource="http://example.org/fair-assessment#CalculationAlgorithm"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:message>If present, computedUsing must point to a CalculationAlgorithm.</shacl:message>
+        <shacl:path rdf:resource="http://example.org/fair-assessment#computedUsing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.org/fair-assessment-shapes#TestOutcomeShape -->
+
+
+    <NamedIndividual rdf:about="http://example.org/fair-assessment-shapes#TestOutcomeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:in>
+            <rdf:Description/>
+        </shacl:in>
+        <shacl:message>Test outcome must be one of Pass, Fail, or Indeterminate.</shacl:message>
+        <shacl:targetClass rdf:resource="http://example.org/fair-assessment#TestOutcome"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
