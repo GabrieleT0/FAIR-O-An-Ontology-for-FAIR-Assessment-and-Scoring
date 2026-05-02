@@ -1,0 +1,1092 @@
+<h2 id="crossreference" class="list">Cross-reference for FAIR Assessment Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by FAIR Assessment Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AggregationMethod"
+            title="http://example.org/fair-assessment#AggregationMethod">Aggregation Method</a>
+      </li>
+      <li>
+         <a href="#AssessmentScope"
+            title="http://example.org/fair-assessment#AssessmentScope">Assessment Scope</a>
+      </li>
+      <li>
+         <a href="#FAIRAssessment"
+            title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+      </li>
+      <li>
+         <a href="#CalculationAlgorithm"
+            title="http://example.org/fair-assessment#CalculationAlgorithm">Scoring Algorithm</a>
+      </li>
+      <li>
+         <a href="#ScoringFunction"
+            title="http://example.org/fair-assessment#ScoringFunction">Scoring Function</a>
+      </li>
+      <li>
+         <a href="#SubPrincipleResult"
+            title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+      </li>
+      <li>
+         <a href="#TestOutcome" title="http://example.org/fair-assessment#TestOutcome">Test Outcome</a>
+      </li>
+   </ul>
+   <div class="entity" id="AggregationMethod">
+      <h3>Aggregation Method<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#AggregationMethod</p>
+      <div class="comment">
+         <span class="markdown">A method for combining individual sub-principle scores into principle-level or overall scores.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Plan"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Plan">plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#usesAggregationMethod"
+               title="http://example.org/fair-assessment#usesAggregationMethod">uses aggregation method</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AssessmentScope">
+      <h3>Assessment Scope<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#AssessmentScope</p>
+      <div class="comment">
+         <span class="markdown">The scope of what is being assessed: data, metadata, or both.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#DataAndMetadata"
+               title="http://example.org/fair-assessment#DataAndMetadata">Data and Metadata</a> , <a href="#DataScope" title="http://example.org/fair-assessment#DataScope">Data</a> , <a href="#MetadataScope" title="http://example.org/fair-assessment#MetadataScope">Metadata</a> }</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#appliesTo" title="http://example.org/fair-assessment#appliesTo">applies to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#assessmentScope"
+               title="http://example.org/fair-assessment#assessmentScope">assessment scope</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#DataScope" title="http://example.org/fair-assessment#DataScope">Data</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataAndMetadata"
+               title="http://example.org/fair-assessment#DataAndMetadata">Data and Metadata</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MetadataScope" title="http://example.org/fair-assessment#MetadataScope">Metadata</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FAIRAssessment">
+      <h3>FAIR Assessment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#FAIRAssessment</p>
+      <div class="comment">
+         <span class="markdown">A quality assessment of a digital object against FAIR principles at a specific point in time.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#aScore" title="http://example.org/fair-assessment#aScore">A score</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#fScore" title="http://example.org/fair-assessment#fScore">F score</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#iScore" title="http://example.org/fair-assessment#iScore">I score</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#rScore" title="http://example.org/fair-assessment#rScore">R score</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSubPrincipleResult"
+               title="http://example.org/fair-assessment#hasSubPrincipleResult">has sub-principle result</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#fairScore" title="http://example.org/fair-assessment#fairScore">overall score</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#usesAggregationMethod"
+               title="http://example.org/fair-assessment#usesAggregationMethod">uses aggregation method</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#wasAssessedBy" title="http://example.org/fair-assessment#wasAssessedBy">was assessed by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CalculationAlgorithm">
+      <h3>Scoring Algorithm<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#CalculationAlgorithm</p>
+      <div class="comment">
+         <span class="markdown">The computational procedure or method used to evaluate a sub-principle and produce a score.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Plan"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Plan">plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#algorithmDescription"
+               title="http://example.org/fair-assessment#algorithmDescription">algorithm description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#appliesScoringFunction"
+               title="http://example.org/fair-assessment#appliesScoringFunction">applies scoring function</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#implementedBy" title="http://example.org/fair-assessment#implementedBy">implemented by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#sourceCode" title="http://example.org/fair-assessment#sourceCode">source code</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#computedUsing" title="http://example.org/fair-assessment#computedUsing">computed using</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ScoringFunction">
+      <h3>Scoring Function<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#ScoringFunction</p>
+      <div class="comment">
+         <span class="markdown">A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#maxValue" title="http://example.org/fair-assessment#maxValue">maximum value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#minValue" title="http://example.org/fair-assessment#minValue">minimum value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#appliesScoringFunction"
+               title="http://example.org/fair-assessment#appliesScoringFunction">applies scoring function</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SubPrincipleResult">
+      <h3>Sub-Principle Result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#SubPrincipleResult</p>
+      <div class="comment">
+         <span class="markdown">The assessment result for a specific FAIR sub-principle (e.g., F1, A1.1, I2).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#assessmentScope"
+               title="http://example.org/fair-assessment#assessmentScope">assessment scope</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#computedUsing" title="http://example.org/fair-assessment#computedUsing">computed using</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#evidence" title="http://example.org/fair-assessment#evidence">evidence</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#forSubPrinciple"
+               title="http://example.org/fair-assessment#forSubPrinciple">for sub-principle</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#testResult" title="http://example.org/fair-assessment#testResult">test result</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#value" title="http://example.org/fair-assessment#value">value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSubPrincipleResult"
+               title="http://example.org/fair-assessment#hasSubPrincipleResult">has sub-principle result</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TestOutcome">
+      <h3>Test Outcome<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#TestOutcome</p>
+      <div class="comment">
+         <span class="markdown">The result of a FAIR test (e.g., Pass, Fail, or Indeterminate).</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#Fail" title="http://example.org/fair-assessment#Fail">Fail</a> , <a href="#Indeterminate" title="http://example.org/fair-assessment#Indeterminate">Indeterminate</a> , <a href="#Pass" title="http://example.org/fair-assessment#Pass">Pass</a> }</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#testResult" title="http://example.org/fair-assessment#testResult">test result</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Fail" title="http://example.org/fair-assessment#Fail">Fail</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Indeterminate" title="http://example.org/fair-assessment#Indeterminate">Indeterminate</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Pass" title="http://example.org/fair-assessment#Pass">Pass</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#appliesScoringFunction"
+            title="http://example.org/fair-assessment#appliesScoringFunction">applies scoring function</a>
+      </li>
+      <li>
+         <a href="#appliesTo" title="http://example.org/fair-assessment#appliesTo">applies to</a>
+      </li>
+      <li>
+         <a href="#assessmentScope"
+            title="http://example.org/fair-assessment#assessmentScope">assessment scope</a>
+      </li>
+      <li>
+         <a href="#computedUsing" title="http://example.org/fair-assessment#computedUsing">computed using</a>
+      </li>
+      <li>
+         <a href="#forSubPrinciple"
+            title="http://example.org/fair-assessment#forSubPrinciple">for sub-principle</a>
+      </li>
+      <li>
+         <a href="#hasSubPrincipleResult"
+            title="http://example.org/fair-assessment#hasSubPrincipleResult">has sub-principle result</a>
+      </li>
+      <li>
+         <a href="#implementedBy" title="http://example.org/fair-assessment#implementedBy">implemented by</a>
+      </li>
+      <li>
+         <a href="#testResult" title="http://example.org/fair-assessment#testResult">test result</a>
+      </li>
+      <li>
+         <a href="#usesAggregationMethod"
+            title="http://example.org/fair-assessment#usesAggregationMethod">uses aggregation method</a>
+      </li>
+      <li>
+         <a href="#wasAssessedBy" title="http://example.org/fair-assessment#wasAssessedBy">was assessed by</a>
+      </li>
+   </ul>
+   <div class="entity" id="appliesScoringFunction">
+      <h3>applies scoring function<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#appliesScoringFunction</p>
+      <div class="comment">
+         <span class="markdown">Links an algorithm to the scoring function it uses.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CalculationAlgorithm"
+                  title="http://example.org/fair-assessment#CalculationAlgorithm">Scoring Algorithm</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ScoringFunction"
+                  title="http://example.org/fair-assessment#ScoringFunction">Scoring Function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="appliesTo">
+      <h3>applies to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#appliesTo</p>
+      <div class="comment">
+         <span class="markdown">Indicates whether a sub-principle applies to data, metadata, or both.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"
+                  target="_blank"
+                  title="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple">f a i r sub principle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AssessmentScope"
+                  title="http://example.org/fair-assessment#AssessmentScope">Assessment Scope</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="assessmentScope">
+      <h3>assessment scope<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#assessmentScope</p>
+      <div class="comment">
+         <span class="markdown">Indicates whether the sub-principle result pertains to data, metadata, or both.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SubPrincipleResult"
+                  title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AssessmentScope"
+                  title="http://example.org/fair-assessment#AssessmentScope">Assessment Scope</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="computedUsing">
+      <h3>computed using<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#computedUsing</p>
+      <div class="comment">
+         <span class="markdown">Links a sub-principle result to the algorithm used to compute it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SubPrincipleResult"
+                  title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CalculationAlgorithm"
+                  title="http://example.org/fair-assessment#CalculationAlgorithm">Scoring Algorithm</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="forSubPrinciple">
+      <h3>for sub-principle<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#forSubPrinciple</p>
+      <div class="comment">
+         <span class="markdown">Links a sub-principle result to the specific FAIR sub-principle it evaluates (defined in the official FAIR Vocabulary).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SubPrincipleResult"
+                  title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"
+                  target="_blank"
+                  title="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple">f a i r sub principle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubPrincipleResult">
+      <h3>has sub-principle result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#hasSubPrincipleResult</p>
+      <div class="comment">
+         <span class="markdown">Links an assessment to individual sub-principle results.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SubPrincipleResult"
+                  title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="implementedBy">
+      <h3>implemented by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#implementedBy</p>
+      <div class="comment">
+         <span class="markdown">Links the algorithm to the software that implements it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CalculationAlgorithm"
+                  title="http://example.org/fair-assessment#CalculationAlgorithm">Scoring Algorithm</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/prov#SoftwareAgent"
+                  target="_blank"
+                  title="http://www.w3.org/ns/prov#SoftwareAgent">software agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="testResult">
+      <h3>test result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#testResult</p>
+      <div class="comment">
+         <span class="markdown">The outcome of the test for the sub-principle.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SubPrincipleResult"
+                  title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TestOutcome" title="http://example.org/fair-assessment#TestOutcome">Test Outcome</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="usesAggregationMethod">
+      <h3>uses aggregation method<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#usesAggregationMethod</p>
+      <div class="comment">
+         <span class="markdown">Links an assessment to the method used to aggregate sub-principle scores.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AggregationMethod"
+                  title="http://example.org/fair-assessment#AggregationMethod">Aggregation Method</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="wasAssessedBy">
+      <h3>was assessed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#wasAssessedBy</p>
+      <div class="comment">
+         <span class="markdown">Links a resource to a FAIR assessment that evaluated it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/prov#Entity"
+                  target="_blank"
+                  title="http://www.w3.org/ns/prov#Entity">entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#aScore" title="http://example.org/fair-assessment#aScore">A score</a>
+      </li>
+      <li>
+         <a href="#algorithmDescription"
+            title="http://example.org/fair-assessment#algorithmDescription">algorithm description</a>
+      </li>
+      <li>
+         <a href="#evidence" title="http://example.org/fair-assessment#evidence">evidence</a>
+      </li>
+      <li>
+         <a href="#fScore" title="http://example.org/fair-assessment#fScore">F score</a>
+      </li>
+      <li>
+         <a href="#formula" title="http://example.org/fair-assessment#formula">formula</a>
+      </li>
+      <li>
+         <a href="#iScore" title="http://example.org/fair-assessment#iScore">I score</a>
+      </li>
+      <li>
+         <a href="#maxValue" title="http://example.org/fair-assessment#maxValue">maximum value</a>
+      </li>
+      <li>
+         <a href="#minValue" title="http://example.org/fair-assessment#minValue">minimum value</a>
+      </li>
+      <li>
+         <a href="#fairScore" title="http://example.org/fair-assessment#fairScore">overall score</a>
+      </li>
+      <li>
+         <a href="#rScore" title="http://example.org/fair-assessment#rScore">R score</a>
+      </li>
+      <li>
+         <a href="#sourceCode" title="http://example.org/fair-assessment#sourceCode">source code</a>
+      </li>
+      <li>
+         <a href="#value" title="http://example.org/fair-assessment#value">value</a>
+      </li>
+   </ul>
+   <div class="entity" id="aScore">
+      <h3>A score<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#aScore</p>
+      <div class="comment">
+         <span class="markdown">An aggregate score for the Accessible principle.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="algorithmDescription">
+      <h3>algorithm description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#algorithmDescription</p>
+      <div class="comment">
+         <span class="markdown">A human-readable description of how the algorithm works.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CalculationAlgorithm"
+                  title="http://example.org/fair-assessment#CalculationAlgorithm">Scoring Algorithm</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="evidence">
+      <h3>evidence<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#evidence</p>
+      <div class="comment">
+         <span class="markdown">Textual evidence supporting the sub-principle result.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SubPrincipleResult"
+                  title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="fScore">
+      <h3>F score<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#fScore</p>
+      <div class="comment">
+         <span class="markdown">An aggregate score for the Findable principle.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="formula">
+      <h3>formula<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#formula</p>
+      <div class="comment">
+         <span class="markdown">A textual or mathematical representation of the scoring formula.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="iScore">
+      <h3>I score<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#iScore</p>
+      <div class="comment">
+         <span class="markdown">An aggregate score for the Interoperable principle.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="maxValue">
+      <h3>maximum value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#maxValue</p>
+      <div class="comment">
+         <span class="markdown">The maximum possible score this function can produce.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ScoringFunction"
+                  title="http://example.org/fair-assessment#ScoringFunction">Scoring Function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minValue">
+      <h3>minimum value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#minValue</p>
+      <div class="comment">
+         <span class="markdown">The minimum possible score this function can produce.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ScoringFunction"
+                  title="http://example.org/fair-assessment#ScoringFunction">Scoring Function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="fairScore">
+      <h3>overall score<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#fairScore</p>
+      <div class="comment">
+         <span class="markdown">An aggregate score for the entire FAIR assessment.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="rScore">
+      <h3>R score<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#rScore</p>
+      <div class="comment">
+         <span class="markdown">An aggregate score for the Reusable principle.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FAIRAssessment"
+                  title="http://example.org/fair-assessment#FAIRAssessment">FAIR Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sourceCode">
+      <h3>source code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#sourceCode</p>
+      <div class="comment">
+         <span class="markdown">URI pointing to the source code implementing this algorithm.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CalculationAlgorithm"
+                  title="http://example.org/fair-assessment#CalculationAlgorithm">Scoring Algorithm</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">anyURI</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="value">
+      <h3>value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#value</p>
+      <div class="comment">
+         <span class="markdown">The numeric value assigned to the sub-principle result.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SubPrincipleResult"
+                  title="http://example.org/fair-assessment#SubPrincipleResult">Sub-Principle Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#DataScope" title="http://example.org/fair-assessment#DataScope">Data</a>
+      </li>
+      <li>
+         <a href="#DataAndMetadata"
+            title="http://example.org/fair-assessment#DataAndMetadata">Data and Metadata</a>
+      </li>
+      <li>
+         <a href="#Fail" title="http://example.org/fair-assessment#Fail">Fail</a>
+      </li>
+      <li>
+         <a href="#Indeterminate" title="http://example.org/fair-assessment#Indeterminate">Indeterminate</a>
+      </li>
+      <li>
+         <a href="#MetadataScope" title="http://example.org/fair-assessment#MetadataScope">Metadata</a>
+      </li>
+      <li>
+         <a href="#Pass" title="http://example.org/fair-assessment#Pass">Pass</a>
+      </li>
+   </ul>
+   <div class="entity" id="DataScope">
+      <h3>Data<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#DataScope</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#AssessmentScope"
+               title="http://example.org/fair-assessment#AssessmentScope">Assessment Scope</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataAndMetadata">
+      <h3>Data and Metadata<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#DataAndMetadata</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#AssessmentScope"
+               title="http://example.org/fair-assessment#AssessmentScope">Assessment Scope</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fail">
+      <h3>Fail<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#Fail</p>
+      <div class="comment">
+         <span class="markdown">The test was not satisfied (score = 0).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TestOutcome" title="http://example.org/fair-assessment#TestOutcome">Test Outcome</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Indeterminate">
+      <h3>Indeterminate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#Indeterminate</p>
+      <div class="comment">
+         <span class="markdown">The test was partially satisfied (0 &lt; score &lt; 1).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TestOutcome" title="http://example.org/fair-assessment#TestOutcome">Test Outcome</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MetadataScope">
+      <h3>Metadata<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#MetadataScope</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#AssessmentScope"
+               title="http://example.org/fair-assessment#AssessmentScope">Assessment Scope</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Pass">
+      <h3>Pass<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://example.org/fair-assessment#Pass</p>
+      <div class="comment">
+         <span class="markdown">The test was fully satisfied (score = 1).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TestOutcome" title="http://example.org/fair-assessment#TestOutcome">Test Outcome</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="rules">
+   <h3 class="list" id="rule">Rules</h3>
+   <ul class="hlist"/>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
