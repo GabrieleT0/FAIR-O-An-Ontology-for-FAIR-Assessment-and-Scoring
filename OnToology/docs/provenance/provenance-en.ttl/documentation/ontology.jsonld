@@ -1,0 +1,50 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "file:/home/ahmad/repos/gabrieletuozzo@gmail.com/docs/provenance/provenance-en.ttlagent0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Agent"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Gabriele Tuozzo and Maria Angela Pellegrino"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#Entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasAttributedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasGeneratedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o/1.0.0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "FAIR-O: An Ontology for FAIR Assessment and Scoring"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ],
+  "http://www.w3.org/ns/prov#wasAttributedTo" : [ {
+    "@id" : "file:/home/ahmad/repos/gabrieletuozzo@gmail.com/docs/provenance/provenance-en.ttlagent0"
+  }, {
+    "@id" : "http://www.essepuntato.it/lode/"
+  }, {
+    "@id" : "https://github.com/dgarijo/Widoco/"
+  } ],
+  "http://www.w3.org/ns/prov#wasGeneratedAt" : [ {
+    "@value" : "2026-02-01"
+  } ]
+} ]
