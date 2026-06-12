@@ -17,6 +17,8 @@ permissions:
 jobs:
   build-docs:
     runs-on: ubuntu-latest
+    env:
+      ONTOLOGY_VERSION: "1.0.0"
 
     steps:
       - name: Checkout repository
@@ -55,21 +57,35 @@ jobs:
             cp docs/index-en.html docs/index.html
           fi
 
+          # Publish a versioned copy for the owl:versionIRI.
+          mkdir -p "docs/${ONTOLOGY_VERSION}"
+          cp -R /tmp/widoco-output/. "docs/${ONTOLOGY_VERSION}/"
+
+          if [ -f "docs/${ONTOLOGY_VERSION}/index-en.html" ]; then
+            cp "docs/${ONTOLOGY_VERSION}/index-en.html" \
+              "docs/${ONTOLOGY_VERSION}/index.html"
+          fi
+
       - name: Replace WIDOCO placeholder sections
         run: |
-          mkdir -p docs/sections
+          for output_dir in docs "docs/${ONTOLOGY_VERSION}"; do
+            mkdir -p "${output_dir}/sections"
 
-          if [ -f widoco-sections/abstract-en.html ]; then
-            cp widoco-sections/abstract-en.html docs/sections/abstract-en.html
-          fi
+            if [ -f widoco-sections/abstract-en.html ]; then
+              cp widoco-sections/abstract-en.html \
+                "${output_dir}/sections/abstract-en.html"
+            fi
 
-          if [ -f widoco-sections/introduction-en.html ]; then
-            cp widoco-sections/introduction-en.html docs/sections/introduction-en.html
-          fi
+            if [ -f widoco-sections/introduction-en.html ]; then
+              cp widoco-sections/introduction-en.html \
+                "${output_dir}/sections/introduction-en.html"
+            fi
 
-          if [ -f widoco-sections/description-en.html ]; then
-            cp widoco-sections/description-en.html docs/sections/description-en.html
-          fi
+            if [ -f widoco-sections/description-en.html ]; then
+              cp widoco-sections/description-en.html \
+                "${output_dir}/sections/description-en.html"
+            fi
+          done
 
       - name: Commit generated documentation
         uses: stefanzweifel/git-auto-commit-action@v5
