@@ -1,0 +1,81 @@
+[ {
+  "@id" : "https://w3id.org/fair-o#AggregationMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A FAIR-O aggregation method describes how sub-principle or principle scores are combined into aggregate FAIR scores."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "https://w3id.org/ftr#ScoringAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o#CalculationAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A FAIR-O calculation algorithm is aligned with FTR scoring algorithms, but FAIR-O uses it specifically to describe how a sub-principle result is computed."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "https://w3id.org/ftr#ScoringAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o#FAIRAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A FAIR-O assessment groups interpreted FAIR assessment outcomes for one assessed digital object. It can be related to an FTR result set when test-level execution details are available."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "https://w3id.org/ftr#TestResultSet"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o#SubPrincipleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A FAIR-O sub-principle result may be derived from one or more FTR test results, but it is normalized at the FAIR sub-principle level rather than at the individual test level."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "https://w3id.org/ftr#TestResult"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-06-15"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Gabriele Tuozzo and Maria Angela Pellegrino"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Alignment between FAIR-O and the FAIR Testing Resource Vocabulary. The mappings are intentionally conservative because FAIR-O is assessment-outcome-centric, while FTR is test- and benchmark-centric."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "FAIR-O to FTR Alignment Module"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This module provides machine-readable mappings between FAIR-O and FTR without changing the FAIR-O core ontology. Since several concepts are related but not logically equivalent, skos:closeMatch is used instead of owl:equivalentClass."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://ostrails.github.io/FAIR_testing_resource_vocabulary/release/1.2.0/index-en.html"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/fair-o"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ftr#ScoringAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ftr#TestResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/ftr#TestResultSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+} ]
