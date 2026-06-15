@@ -1,0 +1,34 @@
+@prefix fairo: <https://w3id.org/fair-o#> .
+@prefix ftr:   <https://w3id.org/ftr#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/fair-o/ftr-alignment>
+    a owl:Ontology ;
+    dct:title "FAIR-O to FTR Alignment Module"@en ;
+    dct:description "Alignment between FAIR-O and the FAIR Testing Resource Vocabulary. The mappings are intentionally conservative because FAIR-O is assessment-outcome-centric, while FTR is test- and benchmark-centric."@en ;
+    dct:creator "Gabriele Tuozzo and Maria Angela Pellegrino" ;
+    dct:created "2026-06-15"^^xsd:date ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:imports <https://w3id.org/fair-o> ;
+    rdfs:seeAlso <https://ostrails.github.io/FAIR_testing_resource_vocabulary/release/1.2.0/index-en.html> ;
+    rdfs:comment "This module provides machine-readable mappings between FAIR-O and FTR without changing the FAIR-O core ontology. Since several concepts are related but not logically equivalent, skos:closeMatch is used instead of owl:equivalentClass."@en .
+
+fairo:CalculationAlgorithm
+    skos:closeMatch ftr:ScoringAlgorithm ;
+    rdfs:comment "A FAIR-O calculation algorithm is aligned with FTR scoring algorithms, but FAIR-O uses it specifically to describe how a sub-principle result is computed."@en .
+
+fairo:SubPrincipleResult
+    skos:closeMatch ftr:TestResult ;
+    rdfs:comment "A FAIR-O sub-principle result may be derived from one or more FTR test results, but it is normalized at the FAIR sub-principle level rather than at the individual test level."@en .
+
+fairo:FAIRAssessment
+    skos:closeMatch ftr:TestResultSet ;
+    rdfs:comment "A FAIR-O assessment groups interpreted FAIR assessment outcomes for one assessed digital object. It can be related to an FTR result set when test-level execution details are available."@en .
+
+fairo:AggregationMethod
+    skos:closeMatch ftr:ScoringAlgorithm ;
+    rdfs:comment "A FAIR-O aggregation method describes how sub-principle or principle scores are combined into aggregate FAIR scores."@en .
