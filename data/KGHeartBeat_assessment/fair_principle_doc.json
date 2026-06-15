@@ -17,6 +17,14 @@
       "description": "A scoring function that assigns a score of 1 if the condition is satisfied and 0 otherwise."
     },
     {
+      "id": "accessPointScoringFunction",
+      "label": "Access Point Scoring Function",
+      "formula": "IF a SPARQL endpoint or RDF dump is operational THEN 1 ELSE IF one is online but cannot be queried THEN 0.5 ELSE 0",
+      "minValue": 0,
+      "maxValue": 1,
+      "description": "A three-level scoring function for dataset access points based on whether a SPARQL endpoint or RDF dump is operational, online but not queryable, or unavailable."
+    },
+    {
       "id": "derefRatio",
       "label": "Dereferenceability Ratio",
       "formula": "Number of dereferenceable URIs / Total number of URIs",
@@ -42,7 +50,7 @@
         "definition": "Assign a globally unique and persistent identifier to (meta)data."
       },
       "description": "Checks whether the dataset, identified by its dataset identifier, is indexed in the Linked Open Data Cloud, DataHub or CHeCLOUD search engines. In parallel, it verifies the presence of a Digital Object Identifier (DOI) associated with the same dataset. If at least one of these two conditions holds—namely, the dataset is discoverable via the search engine or it is associated with a DOI.",
-      "scoringFunction": "binaryScoringFunction"
+      "scoringFunction": "accessPointScoringFunction"
     },
     {
       "id": "algF1D",
@@ -102,7 +110,7 @@
         "definition": "The protocol should be open, freely implementable, and universally usable."
       },
       "description": "evaluates the accessibility of the dataset by checking the availability of a SPARQL endpoint and an RDF dump. If the SPARQL endpoint or a RDF dump is available and operative, a value of 1 is assigned. If one of it is only indicated but not operative, 0.5 is assigned. 0 if is either sparql endpoint and rdf dump are not indicated.",
-      "scoringFunction": null
+      "scoringFunction": "binaryScoringFunction"
     },
     {
       "id": "algA11M",
