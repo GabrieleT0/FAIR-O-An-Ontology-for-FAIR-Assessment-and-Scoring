@@ -27,8 +27,8 @@
     owl:versionInfo "1.0" ;
     owl:versionIRI <https://w3id.org/fair-o/1.0.0> ;
     bibo:doi "10.5281/zenodo.20027101" .
-    foaf:depiction <https://raw.githubusercontent.com/FAIR-ontology/FAIR-O/main/assets/diagram.png> ;
-    foaf:logo <https://raw.githubusercontent.com/FAIR-ontology/FAIR-O/main/assets/logo.png> ;
+    foaf:depiction <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png> ;
+    foaf:logo <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png> ;
     rdfs:comment "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."@en ;
     owl:imports <http://www.w3.org/ns/prov#> ,
                 <http://www.w3.org/2004/02/skos/core#> ,
