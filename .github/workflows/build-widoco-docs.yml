@@ -47,6 +47,30 @@ jobs:
             -getOntologyMetadata \
             -oops
 
+      - name: Add context to JSON-LD
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("/tmp/widoco-output/ontology.jsonld")
+          graph = json.loads(path.read_text(encoding="utf-8"))
+          document = {
+              "@context": {
+                  "fairo": "https://w3id.org/fair-o#",
+                  "dcterms": "http://purl.org/dc/terms/",
+                  "owl": "http://www.w3.org/2002/07/owl#",
+                  "prov": "http://www.w3.org/ns/prov#",
+                  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+                  "skos": "http://www.w3.org/2004/02/skos/core#",
+                  "xsd": "http://www.w3.org/2001/XMLSchema#"
+              },
+              "@graph": graph
+          }
+          path.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
+          PY
+
       - name: Replace docs folder
         run: |
           sudo rm -rf docs
