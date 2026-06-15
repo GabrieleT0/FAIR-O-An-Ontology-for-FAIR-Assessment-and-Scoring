@@ -120,14 +120,6 @@ dt {
 	border:1px solid gray;
 }
 
-#description img {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    margin: 1.5rem auto;
-}
-
 .endnote {
 	margin-top: 40px;
 	border-top: 1px solid gray;
@@ -140,4 +132,11 @@ dt {
 .literal {
     color:var(--literal);
     font-style:italic;
+}
+#description img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 1.5rem auto;
 }
