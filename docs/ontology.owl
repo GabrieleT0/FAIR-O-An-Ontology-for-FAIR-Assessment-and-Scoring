@@ -1,16 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/fair-o#"
      xml:base="https://w3id.org/fair-o"
+     xmlns:x="http://purl.org/nanopub/x/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:nschema="http://www.nanopub.org/nschema#">
     <owl:Ontology rdf:about="https://w3id.org/fair-o">
         <owl:versionIRI rdf:resource="https://w3id.org/fair-o/1.0.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
@@ -54,20 +57,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/created -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
     <!-- http://purl.org/dc/terms/modified -->
 
 
@@ -86,20 +75,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
