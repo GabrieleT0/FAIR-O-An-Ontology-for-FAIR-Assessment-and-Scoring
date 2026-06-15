@@ -7,7 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
-################################################################################
+
 # FAIR Assessment Shape
 
 :FAIRAssessmentShape
@@ -27,37 +27,41 @@
     sh:property [
         sh:path fairo:fScore ;
         sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:minInclusive 0.0 ;
         sh:maxInclusive 1.0 ;
-        sh:message "The Findable score must be a decimal between 0 and 1." ;
+        sh:message "A FAIR assessment must have exactly one Findable score between 0 and 1." ;
     ] ;
 
     sh:property [
         sh:path fairo:aScore ;
         sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:minInclusive 0.0 ;
         sh:maxInclusive 1.0 ;
-        sh:message "The Accessible score must be a decimal between 0 and 1." ;
+        sh:message "A FAIR assessment must have exactly one Accessible score between 0 and 1." ;
     ] ;
 
     sh:property [
         sh:path fairo:iScore ;
         sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:minInclusive 0.0 ;
         sh:maxInclusive 1.0 ;
-        sh:message "The Interoperable score must be a decimal between 0 and 1." ;
+        sh:message "A FAIR assessment must have exactly one Interoperable score between 0 and 1." ;
     ] ;
 
     sh:property [
         sh:path fairo:rScore ;
         sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:minInclusive 0.0 ;
         sh:maxInclusive 1.0 ;
-        sh:message "The Reusable score must be a decimal between 0 and 1." ;
+        sh:message "A FAIR assessment must have exactly one Reusable score between 0 and 1." ;
     ] ;
 
     sh:property [
@@ -70,22 +74,71 @@
     sh:property [
         sh:path fairo:usesAggregationMethod ;
         sh:class fairo:AggregationMethod ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "If present, the aggregation method must be an instance of fairo:AggregationMethod." ;
+        sh:message "A FAIR assessment must use exactly one aggregation method." ;
+    ] ;
+
+    sh:property [
+        sh:path prov:used ;
+        sh:class prov:Entity ;
+        sh:minCount 1 ;
+        sh:message "A FAIR assessment must declare at least one assessed resource using prov:used." ;
     ] ;
 
     sh:property [
         sh:path prov:startedAtTime ;
         sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "Assessment start time must be a valid xsd:dateTime." ;
+        sh:message "A FAIR assessment must have exactly one valid start time as xsd:dateTime." ;
     ] ;
 
     sh:property [
         sh:path prov:endedAtTime ;
         sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "Assessment end time must be a valid xsd:dateTime." ;
+        sh:message "A FAIR assessment must have exactly one valid end time as xsd:dateTime." ;
+    ] ;
+
+    sh:property [
+        sh:path [ sh:inversePath fairo:wasAssessedBy ] ;
+        sh:minCount 1 ;
+        sh:message "Every FAIR assessment must be linked from at least one assessed resource through fairo:wasAssessedBy." ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The assessment start time must not be later than the assessment end time." ;
+        sh:select """
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+
+            SELECT $this
+            WHERE {
+                $this prov:startedAtTime ?start ;
+                      prov:endedAtTime ?end .
+                FILTER (?start > ?end)
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The overall FAIR score must not be greater than the sum of the F, A, I, and R scores." ;
+        sh:select """
+            PREFIX fairo: <https://w3id.org/fair-o#>
+
+            SELECT $this
+            WHERE {
+                $this fairo:fairScore ?fair ;
+                      fairo:fScore ?f ;
+                      fairo:aScore ?a ;
+                      fairo:iScore ?i ;
+                      fairo:rScore ?r .
+                FILTER (?fair > (?f + ?a + ?i + ?r))
+            }
+        """ ;
     ] .
 
 # Assessed Resource Shape
@@ -101,6 +154,7 @@
         sh:message "A resource assessed by fairo:wasAssessedBy must point to a FAIR assessment." ;
     ] .
 
+
 # Sub-Principle Result Shape
 
 :SubPrincipleResultShape
@@ -109,6 +163,7 @@
 
     sh:property [
         sh:path fairo:forSubPrinciple ;
+        sh:nodeKind sh:IRI ;
         sh:class fairVocab:FAIR-SubPrinciple ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -153,22 +208,24 @@
         sh:path fairo:evidence ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
-        sh:message "A sub-principle result should include textual evidence." ;
+        sh:minLength 1 ;
+        sh:message "A sub-principle result must include non-empty textual evidence." ;
     ] ;
 
     sh:property [
         sh:path fairo:computedUsing ;
         sh:class fairo:CalculationAlgorithm ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "If present, computedUsing must point to a CalculationAlgorithm." ;
-    ] .
+        sh:message "Every sub-principle result must be computed using exactly one calculation algorithm." ;
+    ] ;
 
-
-# Outcome / Score Consistency Rules
-
-:PassResultShape
-    a sh:NodeShape ;
-    sh:targetClass fairo:SubPrincipleResult ;
+    sh:property [
+        sh:path [ sh:inversePath fairo:hasSubPrincipleResult ] ;
+        sh:class fairo:FAIRAssessment ;
+        sh:minCount 1 ;
+        sh:message "Every sub-principle result must be linked from at least one FAIR assessment." ;
+    ] ;
 
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -183,11 +240,7 @@
                 FILTER (?value != 1.0)
             }
         """ ;
-    ] .
-
-:FailResultShape
-    a sh:NodeShape ;
-    sh:targetClass fairo:SubPrincipleResult ;
+    ] ;
 
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -202,11 +255,7 @@
                 FILTER (?value != 0.0)
             }
         """ ;
-    ] .
-
-:IndeterminateResultShape
-    a sh:NodeShape ;
-    sh:targetClass fairo:SubPrincipleResult ;
+    ] ;
 
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -221,8 +270,43 @@
                 FILTER (?value <= 0.0 || ?value >= 1.0)
             }
         """ ;
-    ] .
+    ] ;
 
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The assessment scope of a sub-principle result must be consistent with the scope declared for the corresponding FAIR sub-principle, when such scope is declared." ;
+        sh:select """
+            PREFIX fairo: <https://w3id.org/fair-o#>
+
+            SELECT $this
+            WHERE {
+                $this fairo:forSubPrinciple ?subPrinciple ;
+                      fairo:assessmentScope ?resultScope .
+
+                ?subPrinciple fairo:appliesTo ?expectedScope .
+
+                FILTER (?resultScope != ?expectedScope)
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Each sub-principle result must have a complete computation chain: calculation algorithm, scoring function, and implementing software agent." ;
+        sh:select """
+            PREFIX fairo: <https://w3id.org/fair-o#>
+
+            SELECT $this
+            WHERE {
+                $this fairo:computedUsing ?algorithm .
+                FILTER (
+                    NOT EXISTS { ?algorithm fairo:appliesScoringFunction ?scoringFunction . }
+                    ||
+                    NOT EXISTS { ?algorithm fairo:implementedBy ?softwareAgent . }
+                )
+            }
+        """ ;
+    ] .
 
 # Assessment Scope Shape
 
@@ -271,6 +355,7 @@
         sh:message "A FAIR sub-principle may specify whether it applies to data, metadata, or both." ;
     ] .
 
+
 # Scoring Function Shape
 
 :ScoringFunctionShape
@@ -296,8 +381,10 @@
     sh:property [
         sh:path fairo:formula ;
         sh:datatype xsd:string ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "A scoring function formula must be a string." ;
+        sh:minLength 1 ;
+        sh:message "Every scoring function must have exactly one non-empty scoring formula." ;
     ] ;
 
     sh:sparql [
@@ -313,7 +400,23 @@
                 FILTER (?min > ?max)
             }
         """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A scoring function used for FAIR-O sub-principle values must have a minimum value >= 0 and a maximum value <= 1." ;
+        sh:select """
+            PREFIX fairo: <https://w3id.org/fair-o#>
+
+            SELECT $this
+            WHERE {
+                $this fairo:minValue ?min ;
+                      fairo:maxValue ?max .
+                FILTER (?min < 0.0 || ?max > 1.0)
+            }
+        """ ;
     ] .
+
 
 # Calculation Algorithm Shape
 
@@ -325,7 +428,8 @@
         sh:path fairo:algorithmDescription ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
-        sh:message "A calculation algorithm should have a human-readable description." ;
+        sh:minLength 1 ;
+        sh:message "A calculation algorithm must have a non-empty human-readable description." ;
     ] ;
 
     sh:property [
@@ -338,15 +442,24 @@
     sh:property [
         sh:path fairo:appliesScoringFunction ;
         sh:class fairo:ScoringFunction ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "If present, appliesScoringFunction must point to a ScoringFunction." ;
+        sh:message "Every calculation algorithm must apply exactly one scoring function." ;
     ] ;
 
     sh:property [
         sh:path fairo:implementedBy ;
         sh:class prov:SoftwareAgent ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "If present, implementedBy must point to a prov:SoftwareAgent." ;
+        sh:message "Every calculation algorithm must be linked to exactly one implementing software agent." ;
+    ] ;
+
+    sh:property [
+        sh:path [ sh:inversePath fairo:computedUsing ] ;
+        sh:minCount 1 ;
+        sh:class fairo:SubPrincipleResult ;
+        sh:message "Every calculation algorithm must be used by at least one sub-principle result through fairo:computedUsing." ;
     ] .
 
 # Aggregation Method Shape
@@ -358,19 +471,15 @@
     sh:property [
         sh:path fairo:formula ;
         sh:datatype xsd:string ;
+        sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "An aggregation formula must be represented as a string." ;
-    ] .
-
-# Every SubPrincipleResult should be attached to at least one FAIRAssessment
-
-:SubPrincipleResultAttachedToAssessmentShape
-    a sh:NodeShape ;
-    sh:targetClass fairo:SubPrincipleResult ;
+        sh:minLength 1 ;
+        sh:message "Every aggregation method must have exactly one non-empty formula." ;
+    ] ;
 
     sh:property [
-        sh:path [ sh:inversePath fairo:hasSubPrincipleResult ] ;
-        sh:class fairo:FAIRAssessment ;
+        sh:path [ sh:inversePath fairo:usesAggregationMethod ] ;
         sh:minCount 1 ;
-        sh:message "Every sub-principle result should be linked from at least one FAIR assessment." ;
+        sh:class fairo:FAIRAssessment ;
+        sh:message "Every aggregation method must be linked from at least one FAIR assessment through fairo:usesAggregationMethod." ;
     ] .
