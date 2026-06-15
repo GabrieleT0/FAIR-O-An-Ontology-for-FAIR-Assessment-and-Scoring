@@ -1,5 +1,7 @@
-@prefix fairo: <https://w3id.org/fair-o#>.
+@prefix fairo: <https://w3id.org/fair-o#> .
 @prefix fairVocab: <https://w3id.org/fair/principles/terms/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -26,7 +28,7 @@
     vann:preferredNamespaceUri "https://w3id.org/fair-o#" ;
     owl:versionInfo "1.0" ;
     owl:versionIRI <https://w3id.org/fair-o/1.0.0> ;
-    bibo:doi "10.5281/zenodo.20027101" .
+    bibo:doi "10.5281/zenodo.20027101" ;
     foaf:depiction <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png> ;
     foaf:logo <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png> ;
     rdfs:comment "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."@en ;
