@@ -53,6 +53,18 @@
       ]
     },
     {
+      "@id": "http://purl.org/dc/terms/created",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/license",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
       "@id": "http://purl.org/dc/terms/modified",
       "@type": [
         "http://www.w3.org/2002/07/owl#AnnotationProperty"
@@ -60,6 +72,24 @@
     },
     {
       "@id": "http://purl.org/dc/terms/subject",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/ontology/bibo/doi",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
       "@type": [
         "http://www.w3.org/2002/07/owl#AnnotationProperty"
       ]
@@ -95,6 +125,18 @@
       ]
     },
     {
+      "@id": "http://xmlns.com/foaf/0.1/depiction",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://xmlns.com/foaf/0.1/logo",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
       "@id": "https://w3id.org/fair-o",
       "@type": [
         "http://www.w3.org/2002/07/owl#Ontology"
@@ -124,7 +166,7 @@
       "http://purl.org/dc/terms/modified": [
         {
           "@type": "http://www.w3.org/2001/XMLSchema#date",
-          "@value": "2026-05-04"
+          "@value": "2026-06-15"
         }
       ],
       "http://purl.org/dc/terms/subject": [
@@ -150,8 +192,14 @@
           "@value": "FAIR-O: An Ontology for FAIR Assessment and Scoring"
         }
       ],
+      "http://purl.org/ontology/bibo/doi": [
+        {
+          "@value": "10.5281/zenodo.20027101"
+        }
+      ],
       "http://purl.org/vocab/vann/preferredNamespacePrefix": [
         {
+          "@language": "en",
           "@value": "fairo"
         }
       ],
@@ -189,6 +237,16 @@
       "http://www.w3.org/2002/07/owl#versionInfo": [
         {
           "@value": "1.0"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/depiction": [
+        {
+          "@id": "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/logo": [
+        {
+          "@id": "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png"
         }
       ]
     },
