@@ -116,6 +116,21 @@ jobs:
             fi
           done
 
+      - name: Constrain generated documentation images
+        run: |
+          for output_dir in docs "docs/${ONTOLOGY_VERSION}"; do
+            {
+              printf '\n'
+              printf '#description img {\n'
+              printf '    display: block;\n'
+              printf '    width: 100%%;\n'
+              printf '    max-width: 900px;\n'
+              printf '    height: auto;\n'
+              printf '    margin: 1.5rem auto;\n'
+              printf '}\n'
+            } >> "${output_dir}/resources/extra.css"
+          done
+
       - name: Commit generated documentation
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
