@@ -1,0 +1,355 @@
+<https://w3id.org/fair-o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/fair-o/1.0.0> .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov#> .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/fair/principles/terms/FAIR-Vocabulary> .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/created> "2026-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/creator> "Gabriele Tuozzo and Maria Angela Pellegrino" .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/description> "The FAIR Assessment Ontology provides a structured and extensible model for representing the evaluation of digital resources against the FAIR (Findable, Accessible, Interoperable, Reusable) principles. It enables the formal description of assessment activities, detailed results at the level of individual FAIR sub-principles, and associated evidence, scoring functions, and computational methods. \n                       The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."@en .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/modified> "2026-05-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/subject> "FAIR principles" .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/subject> "assessment" .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/subject> "metadata quality" .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/subject> "ontology" .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/subject> "research data" .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/title> "FAIR-O: An Ontology for FAIR Assessment and Scoring"@en .
+<https://w3id.org/fair-o> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fairo" .
+<https://w3id.org/fair-o> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fair-o#" .
+<https://w3id.org/fair-o> <http://www.w3.org/2000/01/rdf-schema#comment> "The FAIR Assessment Ontology is designed to model the process and outcomes of evaluating digital objects according to the FAIR principles. It captures FAIR assessments as provenance-aware activities, linking evaluated resources to detailed results for each FAIR sub-principle.\n                    Each assessment can include multiple sub-principle results, associated evidence, quantitative scores, and test outcomes (e.g., pass, fail, indeterminate). The ontology also models the computational aspects of FAIR evaluation, including scoring functions, calculation algorithms, and aggregation methods used to derive higher-level scores.\n                    The ontology is aligned with the FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for the definition of principles and sub-principles, and reuses established standards such as PROV-O for provenance and SKOS for controlled vocabularies. This ensures interoperability with existing FAIR tools and supports integration into automated FAIR assessment pipelines."@en .
+<https://w3id.org/fair-o> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."@en .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/fair-o#appliesScoringFunction
+<https://w3id.org/fair-o#appliesScoringFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#CalculationAlgorithm> .
+<https://w3id.org/fair-o#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#ScoringFunction> .
+<https://w3id.org/fair-o#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an algorithm to the scoring function it uses."@en .
+<https://w3id.org/fair-o#appliesScoringFunction> <http://www.w3.org/2000/01/rdf-schema#label> "applies scoring function"@en .
+# 
+# https://w3id.org/fair-o#appliesTo
+<https://w3id.org/fair-o#appliesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#appliesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> .
+<https://w3id.org/fair-o#appliesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#AssessmentScope> .
+<https://w3id.org/fair-o#appliesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a sub-principle applies to data, metadata, or both."@en .
+<https://w3id.org/fair-o#appliesTo> <http://www.w3.org/2000/01/rdf-schema#label> "applies to"@en .
+# 
+# https://w3id.org/fair-o#assessmentScope
+<https://w3id.org/fair-o#assessmentScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#AssessmentScope> .
+<https://w3id.org/fair-o#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the sub-principle result pertains to data, metadata, or both."@en .
+<https://w3id.org/fair-o#assessmentScope> <http://www.w3.org/2000/01/rdf-schema#label> "assessment scope"@en .
+# 
+# https://w3id.org/fair-o#computedUsing
+<https://w3id.org/fair-o#computedUsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#computedUsing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#computedUsing> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#CalculationAlgorithm> .
+<https://w3id.org/fair-o#computedUsing> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sub-principle result to the algorithm used to compute it."@en .
+<https://w3id.org/fair-o#computedUsing> <http://www.w3.org/2000/01/rdf-schema#label> "computed using"@en .
+# 
+# https://w3id.org/fair-o#forSubPrinciple
+<https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> .
+<https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sub-principle result to the specific FAIR sub-principle it evaluates (defined in the official FAIR Vocabulary)."@en .
+<https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "for sub-principle"@en .
+# 
+# https://w3id.org/fair-o#hasSubPrincipleResult
+<https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an assessment to individual sub-principle results."@en .
+<https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-principle result"@en .
+# 
+# https://w3id.org/fair-o#implementedBy
+<https://w3id.org/fair-o#implementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#implementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#CalculationAlgorithm> .
+<https://w3id.org/fair-o#implementedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<https://w3id.org/fair-o#implementedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the algorithm to the software that implements it."@en .
+<https://w3id.org/fair-o#implementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "implemented by"@en .
+# 
+# https://w3id.org/fair-o#testResult
+<https://w3id.org/fair-o#testResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#testResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#testResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#TestOutcome> .
+<https://w3id.org/fair-o#testResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome of the test for the sub-principle."@en .
+<https://w3id.org/fair-o#testResult> <http://www.w3.org/2000/01/rdf-schema#label> "test result"@en .
+# 
+# https://w3id.org/fair-o#usesAggregationMethod
+<https://w3id.org/fair-o#usesAggregationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#AggregationMethod> .
+<https://w3id.org/fair-o#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an assessment to the method used to aggregate sub-principle scores."@en .
+<https://w3id.org/fair-o#usesAggregationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "uses aggregation method"@en .
+# 
+# https://w3id.org/fair-o#wasAssessedBy
+<https://w3id.org/fair-o#wasAssessedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/fair-o#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to a FAIR assessment that evaluated it."@en .
+<https://w3id.org/fair-o#wasAssessedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was assessed by"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/fair-o#aScore
+<https://w3id.org/fair-o#aScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#aScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#aScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#aScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Accessible principle."@en .
+<https://w3id.org/fair-o#aScore> <http://www.w3.org/2000/01/rdf-schema#label> "A score"@en .
+# 
+# https://w3id.org/fair-o#algorithmDescription
+<https://w3id.org/fair-o#algorithmDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#CalculationAlgorithm> .
+<https://w3id.org/fair-o#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/fair-o#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of how the algorithm works."@en .
+<https://w3id.org/fair-o#algorithmDescription> <http://www.w3.org/2000/01/rdf-schema#label> "algorithm description"@en .
+# 
+# https://w3id.org/fair-o#evidence
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Textual evidence supporting the sub-principle result."@en .
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence"@en .
+# 
+# https://w3id.org/fair-o#fScore
+<https://w3id.org/fair-o#fScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#fScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#fScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#fScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Findable principle."@en .
+<https://w3id.org/fair-o#fScore> <http://www.w3.org/2000/01/rdf-schema#label> "F score"@en .
+# 
+# https://w3id.org/fair-o#fairScore
+<https://w3id.org/fair-o#fairScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#fairScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#fairScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#fairScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the entire FAIR assessment."@en .
+<https://w3id.org/fair-o#fairScore> <http://www.w3.org/2000/01/rdf-schema#label> "overall score"@en .
+# 
+# https://w3id.org/fair-o#formula
+<https://w3id.org/fair-o#formula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#formula> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/fair-o#formula> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual or mathematical representation of the scoring formula."@en .
+<https://w3id.org/fair-o#formula> <http://www.w3.org/2000/01/rdf-schema#label> "formula"@en .
+# 
+# https://w3id.org/fair-o#iScore
+<https://w3id.org/fair-o#iScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#iScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#iScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#iScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Interoperable principle."@en .
+<https://w3id.org/fair-o#iScore> <http://www.w3.org/2000/01/rdf-schema#label> "I score"@en .
+# 
+# https://w3id.org/fair-o#maxValue
+<https://w3id.org/fair-o#maxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#maxValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#ScoringFunction> .
+<https://w3id.org/fair-o#maxValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#maxValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum possible score this function can produce."@en .
+<https://w3id.org/fair-o#maxValue> <http://www.w3.org/2000/01/rdf-schema#label> "maximum value"@en .
+# 
+# https://w3id.org/fair-o#minValue
+<https://w3id.org/fair-o#minValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#minValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#ScoringFunction> .
+<https://w3id.org/fair-o#minValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#minValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimum possible score this function can produce."@en .
+<https://w3id.org/fair-o#minValue> <http://www.w3.org/2000/01/rdf-schema#label> "minimum value"@en .
+# 
+# https://w3id.org/fair-o#rScore
+<https://w3id.org/fair-o#rScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#rScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://w3id.org/fair-o#rScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#rScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregate score for the Reusable principle."@en .
+<https://w3id.org/fair-o#rScore> <http://www.w3.org/2000/01/rdf-schema#label> "R score"@en .
+# 
+# https://w3id.org/fair-o#sourceCode
+<https://w3id.org/fair-o#sourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#sourceCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#CalculationAlgorithm> .
+<https://w3id.org/fair-o#sourceCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/fair-o#sourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "URI pointing to the source code implementing this algorithm."@en .
+<https://w3id.org/fair-o#sourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "source code"@en .
+# 
+# https://w3id.org/fair-o#value
+<https://w3id.org/fair-o#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fair-o#value> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/fair-o#value> <http://www.w3.org/2000/01/rdf-schema#comment> "The numeric value assigned to the sub-principle result."@en .
+<https://w3id.org/fair-o#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Plan
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#SoftwareAgent
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/fair-o#AggregationMethod
+<https://w3id.org/fair-o#AggregationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#AggregationMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<https://w3id.org/fair-o#AggregationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A method for combining individual sub-principle scores into principle-level or overall scores."@en .
+<https://w3id.org/fair-o#AggregationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Method"@en .
+# 
+# https://w3id.org/fair-o#AssessmentScope
+<https://w3id.org/fair-o#AssessmentScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#AssessmentScope> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fair-o#MetadataScope> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fair-o#DataScope> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fair-o#DataAndMetadata> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#AssessmentScope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/fair-o#AssessmentScope> <http://www.w3.org/2000/01/rdf-schema#comment> "The scope of what is being assessed: data, metadata, or both."@en .
+<https://w3id.org/fair-o#AssessmentScope> <http://www.w3.org/2000/01/rdf-schema#label> "Assessment Scope"@en .
+# 
+# https://w3id.org/fair-o#CalculationAlgorithm
+<https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "The computational procedure or method used to evaluate a sub-principle and produce a score."@en .
+<https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Scoring Algorithm"@en .
+# 
+# https://w3id.org/fair-o#FAIRAssessment
+<https://w3id.org/fair-o#FAIRAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#FAIRAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/fair-o#FAIRAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality assessment of a digital object against FAIR principles at a specific point in time."@en .
+<https://w3id.org/fair-o#FAIRAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "FAIR Assessment"@en .
+# 
+# https://w3id.org/fair-o#ScoringFunction
+<https://w3id.org/fair-o#ScoringFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#ScoringFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/fair-o#ScoringFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle."@en .
+<https://w3id.org/fair-o#ScoringFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Scoring Function"@en .
+# 
+# https://w3id.org/fair-o#SubPrincipleResult
+<https://w3id.org/fair-o#SubPrincipleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#SubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/fair-o#SubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The assessment result for a specific FAIR sub-principle (e.g., F1, A1.1, I2)."@en .
+<https://w3id.org/fair-o#SubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#label> "Sub-Principle Result"@en .
+# 
+# https://w3id.org/fair-o#TestOutcome
+<https://w3id.org/fair-o#TestOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#TestOutcome> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#oneOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fair-o#Pass> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fair-o#Indeterminate> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fair-o#Fail> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#TestOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/fair-o#TestOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of a FAIR test (e.g., Pass, Fail, or Indeterminate)."@en .
+<https://w3id.org/fair-o#TestOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "Test Outcome"@en .
+# 
+# https://w3id.org/fair/principles/terms/FAIR-SubPrinciple
+<https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/fair-o#DataAndMetadata
+<https://w3id.org/fair-o#DataAndMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fair-o#DataAndMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#AssessmentScope> .
+<https://w3id.org/fair-o#DataAndMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "Data and Metadata"@en .
+# 
+# https://w3id.org/fair-o#DataScope
+<https://w3id.org/fair-o#DataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fair-o#DataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#AssessmentScope> .
+<https://w3id.org/fair-o#DataScope> <http://www.w3.org/2000/01/rdf-schema#label> "Data"@en .
+# 
+# https://w3id.org/fair-o#Fail
+<https://w3id.org/fair-o#Fail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fair-o#Fail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#TestOutcome> .
+<https://w3id.org/fair-o#Fail> <http://www.w3.org/2004/02/skos/core#notation> "FAIL" .
+<https://w3id.org/fair-o#Fail> <http://www.w3.org/2000/01/rdf-schema#comment> "The test was not satisfied (score = 0)."@en .
+<https://w3id.org/fair-o#Fail> <http://www.w3.org/2000/01/rdf-schema#label> "Fail"@en .
+# 
+# https://w3id.org/fair-o#Indeterminate
+<https://w3id.org/fair-o#Indeterminate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fair-o#Indeterminate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#TestOutcome> .
+<https://w3id.org/fair-o#Indeterminate> <http://www.w3.org/2004/02/skos/core#notation> "INDETERMINATE" .
+<https://w3id.org/fair-o#Indeterminate> <http://www.w3.org/2000/01/rdf-schema#comment> "The test was partially satisfied (0 < score < 1)."@en .
+<https://w3id.org/fair-o#Indeterminate> <http://www.w3.org/2000/01/rdf-schema#label> "Indeterminate"@en .
+# 
+# https://w3id.org/fair-o#MetadataScope
+<https://w3id.org/fair-o#MetadataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fair-o#MetadataScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#AssessmentScope> .
+<https://w3id.org/fair-o#MetadataScope> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata"@en .
+# 
+# https://w3id.org/fair-o#Pass
+<https://w3id.org/fair-o#Pass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fair-o#Pass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#TestOutcome> .
+<https://w3id.org/fair-o#Pass> <http://www.w3.org/2004/02/skos/core#notation> "PASS" .
+<https://w3id.org/fair-o#Pass> <http://www.w3.org/2000/01/rdf-schema#comment> "The test was fully satisfied (score = 1)."@en .
+<https://w3id.org/fair-o#Pass> <http://www.w3.org/2000/01/rdf-schema#label> "Pass"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
