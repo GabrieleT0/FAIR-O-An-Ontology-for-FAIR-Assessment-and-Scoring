@@ -53,7 +53,43 @@
       ]
     },
     {
+      "@id": "http://purl.org/dc/terms/bibliographicCitation",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/created",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/license",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
       "@id": "http://purl.org/dc/terms/modified",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/publisher",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/terms/source",
       "@type": [
         "http://www.w3.org/2002/07/owl#AnnotationProperty"
       ]
@@ -66,6 +102,24 @@
     },
     {
       "@id": "http://purl.org/ontology/bibo/doi",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/ontology/bibo/status",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
       "@type": [
         "http://www.w3.org/2002/07/owl#AnnotationProperty"
       ]
@@ -113,9 +167,26 @@
       ]
     },
     {
+      "@id": "https://schema.org/codeRepository",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
+      "@id": "https://schema.org/includedInDataCatalog",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      ]
+    },
+    {
       "@id": "https://w3id.org/fair-o",
       "@type": [
         "http://www.w3.org/2002/07/owl#Ontology"
+      ],
+      "http://purl.org/dc/terms/bibliographicCitation": [
+        {
+          "@value": "Tuozzo, G., & Pellegrino, M. A. (2026). FAIR-O: An Ontology for FAIR Assessment and Scoring (Version 1.0) [Ontology]. Zenodo. http://doi.org/10.5281/zenodo.20027101"
+        }
       ],
       "http://purl.org/dc/terms/created": [
         {
@@ -134,6 +205,12 @@
           "@value": "The FAIR Assessment Ontology provides a structured and extensible model for representing the evaluation of digital resources against the FAIR (Findable, Accessible, Interoperable, Reusable) principles. It enables the formal description of assessment activities, detailed results at the level of individual FAIR sub-principles, and associated evidence, scoring functions, and computational methods. \n                       The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."
         }
       ],
+      "http://purl.org/dc/terms/issued": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#date",
+          "@value": "2026-02-01"
+        }
+      ],
       "http://purl.org/dc/terms/license": [
         {
           "@id": "https://creativecommons.org/licenses/by/4.0/"
@@ -143,6 +220,16 @@
         {
           "@type": "http://www.w3.org/2001/XMLSchema#date",
           "@value": "2026-06-15"
+        }
+      ],
+      "http://purl.org/dc/terms/publisher": [
+        {
+          "@value": "Gabriele Tuozzo and Maria Angela Pellegrino"
+        }
+      ],
+      "http://purl.org/dc/terms/source": [
+        {
+          "@id": "https://www.go-fair.org/fair-principles/"
         }
       ],
       "http://purl.org/dc/terms/subject": [
@@ -171,6 +258,11 @@
       "http://purl.org/ontology/bibo/doi": [
         {
           "@value": "10.5281/zenodo.20027101"
+        }
+      ],
+      "http://purl.org/ontology/bibo/status": [
+        {
+          "@value": "Under Review"
         }
       ],
       "http://purl.org/vocab/vann/preferredNamespacePrefix": [
@@ -223,6 +315,16 @@
       "http://xmlns.com/foaf/0.1/logo": [
         {
           "@id": "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png"
+        }
+      ],
+      "https://schema.org/codeRepository": [
+        {
+          "@id": "https://github.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring"
+        }
+      ],
+      "https://schema.org/includedInDataCatalog": [
+        {
+          "@id": "https://zenodo.org/records/20027101"
         }
       ]
     },

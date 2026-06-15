@@ -11,12 +11,16 @@
                            owl:imports <http://www.w3.org/2004/02/skos/core#> ,
                                        <http://www.w3.org/ns/prov#> ,
                                        <https://w3id.org/fair/principles/terms/FAIR-Vocabulary> ;
+                           <http://purl.org/dc/terms/bibliographicCitation> "Tuozzo, G., & Pellegrino, M. A. (2026). FAIR-O: An Ontology for FAIR Assessment and Scoring (Version 1.0) [Ontology]. Zenodo. http://doi.org/10.5281/zenodo.20027101" ;
                            <http://purl.org/dc/terms/created> "2026-02-01"^^xsd:date ;
                            <http://purl.org/dc/terms/creator> "Gabriele Tuozzo and Maria Angela Pellegrino" ;
                            <http://purl.org/dc/terms/description> """The FAIR Assessment Ontology provides a structured and extensible model for representing the evaluation of digital resources against the FAIR (Findable, Accessible, Interoperable, Reusable) principles. It enables the formal description of assessment activities, detailed results at the level of individual FAIR sub-principles, and associated evidence, scoring functions, and computational methods. 
                        The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."""@en ;
+                           <http://purl.org/dc/terms/issued> "2026-02-01"^^xsd:date ;
                            <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                            <http://purl.org/dc/terms/modified> "2026-06-15"^^xsd:date ;
+                           <http://purl.org/dc/terms/publisher> "Gabriele Tuozzo and Maria Angela Pellegrino" ;
+                           <http://purl.org/dc/terms/source> <https://www.go-fair.org/fair-principles/> ;
                            <http://purl.org/dc/terms/subject> "FAIR principles" ,
                                                               "assessment" ,
                                                               "metadata quality" ,
@@ -24,6 +28,7 @@
                                                               "research data" ;
                            <http://purl.org/dc/terms/title> "FAIR-O: An Ontology for FAIR Assessment and Scoring"@en ;
                            <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.20027101" ;
+                           <http://purl.org/ontology/bibo/status> "Under Review" ;
                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "fairo"@en ;
                            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fair-o#" ;
                            rdfs:comment """The FAIR Assessment Ontology is designed to model the process and outcomes of evaluating digital objects according to the FAIR principles. It captures FAIR assessments as provenance-aware activities, linking evaluated resources to detailed results for each FAIR sub-principle.
@@ -32,14 +37,40 @@
                                         "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."@en ;
                            owl:versionInfo "1.0" ;
                            <http://xmlns.com/foaf/0.1/depiction> <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png> ;
-                           <http://xmlns.com/foaf/0.1/logo> <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png> .
+                           <http://xmlns.com/foaf/0.1/logo> <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png> ;
+                           <https://schema.org/codeRepository> <https://github.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring> ;
+                           <https://schema.org/includedInDataCatalog> <https://zenodo.org/records/20027101> .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/subject
@@ -50,12 +81,32 @@
 <http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/depiction
 <http://xmlns.com/foaf/0.1/depiction> rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/logo
 <http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/codeRepository
+<https://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
