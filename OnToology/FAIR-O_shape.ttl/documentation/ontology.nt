@@ -1,0 +1,360 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/shacl#class
+<http://www.w3.org/ns/shacl#class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#datatype
+<http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#in
+<http://www.w3.org/ns/shacl#in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#inversePath
+<http://www.w3.org/ns/shacl#inversePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#maxCount
+<http://www.w3.org/ns/shacl#maxCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#maxInclusive
+<http://www.w3.org/ns/shacl#maxInclusive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#message
+<http://www.w3.org/ns/shacl#message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#minCount
+<http://www.w3.org/ns/shacl#minCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#minInclusive
+<http://www.w3.org/ns/shacl#minInclusive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#minLength
+<http://www.w3.org/ns/shacl#minLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#nodeKind
+<http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#path
+<http://www.w3.org/ns/shacl#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#property
+<http://www.w3.org/ns/shacl#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#select
+<http://www.w3.org/ns/shacl#select> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#sparql
+<http://www.w3.org/ns/shacl#sparql> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#targetSubjectsOf
+<http://www.w3.org/ns/shacl#targetSubjectsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/shacl#SPARQLConstraint
+<http://www.w3.org/ns/shacl#SPARQLConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/fair-o-shapes#AggregationMethodShape
+<http://w3id.org/fair-o-shapes#AggregationMethodShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#AggregationMethodShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#AggregationMethodShape> <http://www.w3.org/ns/shacl#property> _:genid2 .
+_:genid2 <http://www.w3.org/ns/shacl#path> _:genid3 .
+_:genid3 <http://www.w3.org/ns/shacl#inversePath> <https://w3id.org/fair-o#usesAggregationMethod> .
+_:genid2 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid2 <http://www.w3.org/ns/shacl#message> "Every aggregation method must be linked from at least one FAIR assessment through fairo:usesAggregationMethod." .
+_:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#FAIRAssessment> .
+<http://w3id.org/fair-o-shapes#AggregationMethodShape> <http://www.w3.org/ns/shacl#property> _:genid4 .
+_:genid4 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#formula> .
+_:genid4 <http://www.w3.org/ns/shacl#minLength> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/ns/shacl#message> "Every aggregation method must have exactly one non-empty formula." .
+_:genid4 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/fair-o-shapes#AggregationMethodShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair-o#AggregationMethod> .
+# 
+# http://w3id.org/fair-o-shapes#AssessedResourceShape
+<http://w3id.org/fair-o-shapes#AssessedResourceShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#AssessedResourceShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#AssessedResourceShape> <http://www.w3.org/ns/shacl#property> _:genid5 .
+_:genid5 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#wasAssessedBy> .
+_:genid5 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid5 <http://www.w3.org/ns/shacl#message> "A resource assessed by fairo:wasAssessedBy must point to a FAIR assessment." .
+_:genid5 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#FAIRAssessment> .
+<http://w3id.org/fair-o-shapes#AssessedResourceShape> <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://w3id.org/fair-o#wasAssessedBy> .
+# 
+# http://w3id.org/fair-o-shapes#AssessmentScopeShape
+<http://w3id.org/fair-o-shapes#AssessmentScopeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#AssessmentScopeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#AssessmentScopeShape> <http://www.w3.org/ns/shacl#in> _:genid6 .
+<http://w3id.org/fair-o-shapes#AssessmentScopeShape> <http://www.w3.org/ns/shacl#message> "Assessment scope must be one of DataScope, MetadataScope, or DataAndMetadata." .
+<http://w3id.org/fair-o-shapes#AssessmentScopeShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair-o#AssessmentScope> .
+# 
+# http://w3id.org/fair-o-shapes#CalculationAlgorithmShape
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/ns/shacl#property> _:genid7 .
+_:genid7 <http://www.w3.org/ns/shacl#path> _:genid8 .
+_:genid8 <http://www.w3.org/ns/shacl#inversePath> <https://w3id.org/fair-o#computedUsing> .
+_:genid7 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid7 <http://www.w3.org/ns/shacl#message> "Every calculation algorithm must be used by at least one sub-principle result through fairo:computedUsing." .
+_:genid7 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#SubPrincipleResult> .
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/ns/shacl#property> _:genid9 .
+_:genid9 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#implementedBy> .
+_:genid9 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid9 <http://www.w3.org/ns/shacl#message> "Every calculation algorithm must be linked to exactly one implementing software agent." .
+_:genid9 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid9 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/ns/shacl#property> _:genid10 .
+_:genid10 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#algorithmDescription> .
+_:genid10 <http://www.w3.org/ns/shacl#minLength> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid10 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid10 <http://www.w3.org/ns/shacl#message> "A calculation algorithm must have a non-empty human-readable description." .
+_:genid10 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/ns/shacl#property> _:genid11 .
+_:genid11 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#appliesScoringFunction> .
+_:genid11 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid11 <http://www.w3.org/ns/shacl#message> "Every calculation algorithm must apply exactly one scoring function." .
+_:genid11 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid11 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#ScoringFunction> .
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/ns/shacl#property> _:genid12 .
+_:genid12 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#sourceCode> .
+_:genid12 <http://www.w3.org/ns/shacl#message> "Source code must be provided as a URI." .
+_:genid12 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid12 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://w3id.org/fair-o-shapes#CalculationAlgorithmShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair-o#CalculationAlgorithm> .
+# 
+# http://w3id.org/fair-o-shapes#FAIRAssessmentShape
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid13 .
+_:genid13 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/prov#endedAtTime> .
+_:genid13 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have exactly one valid end time as xsd:dateTime." .
+_:genid13 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid14 .
+_:genid14 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/prov#startedAtTime> .
+_:genid14 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have exactly one valid start time as xsd:dateTime." .
+_:genid14 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid15 .
+_:genid15 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/prov#used> .
+_:genid15 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid15 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must declare at least one assessed resource using prov:used." .
+_:genid15 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid16 .
+_:genid16 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#usesAggregationMethod> .
+_:genid16 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must use exactly one aggregation method." .
+_:genid16 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#AggregationMethod> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid17 .
+_:genid17 <http://www.w3.org/ns/shacl#path> _:genid18 .
+_:genid18 <http://www.w3.org/ns/shacl#inversePath> <https://w3id.org/fair-o#wasAssessedBy> .
+_:genid17 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid17 <http://www.w3.org/ns/shacl#message> "Every FAIR assessment must be linked from at least one assessed resource through fairo:wasAssessedBy." .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid19 .
+_:genid19 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#hasSubPrincipleResult> .
+_:genid19 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid19 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have at least one sub-principle result." .
+_:genid19 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#SubPrincipleResult> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid20 .
+_:genid20 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#fairScore> .
+_:genid20 <http://www.w3.org/ns/shacl#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid20 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have exactly one overall FAIR score between 0 and 4." .
+_:genid20 <http://www.w3.org/ns/shacl#maxInclusive> "4.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid20 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid21 .
+_:genid21 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#rScore> .
+_:genid21 <http://www.w3.org/ns/shacl#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid21 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid21 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have exactly one Reusable score between 0 and 1." .
+_:genid21 <http://www.w3.org/ns/shacl#maxInclusive> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid21 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid21 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid22 .
+_:genid22 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#iScore> .
+_:genid22 <http://www.w3.org/ns/shacl#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid22 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid22 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have exactly one Interoperable score between 0 and 1." .
+_:genid22 <http://www.w3.org/ns/shacl#maxInclusive> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid22 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid22 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid23 .
+_:genid23 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#aScore> .
+_:genid23 <http://www.w3.org/ns/shacl#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid23 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid23 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have exactly one Accessible score between 0 and 1." .
+_:genid23 <http://www.w3.org/ns/shacl#maxInclusive> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid23 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid23 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#property> _:genid24 .
+_:genid24 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#fScore> .
+_:genid24 <http://www.w3.org/ns/shacl#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid24 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid24 <http://www.w3.org/ns/shacl#message> "A FAIR assessment must have exactly one Findable score between 0 and 1." .
+_:genid24 <http://www.w3.org/ns/shacl#maxInclusive> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid24 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid24 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#sparql> _:genid25 .
+_:genid25 <http://www.w3.org/ns/shacl#select> "\n            PREFIX prov: <http://www.w3.org/ns/prov#>\n\n            SELECT $this\n            WHERE {\n                $this prov:startedAtTime ?start ;\n                      prov:endedAtTime ?end .\n                FILTER (?start > ?end)\n            }\n        " .
+_:genid25 <http://www.w3.org/ns/shacl#message> "The assessment start time must not be later than the assessment end time." .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#sparql> _:genid26 .
+_:genid26 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:fairScore ?fair ;\n                      fairo:fScore ?f ;\n                      fairo:aScore ?a ;\n                      fairo:iScore ?i ;\n                      fairo:rScore ?r .\n                FILTER (?fair > (?f + ?a + ?i + ?r))\n            }\n        " .
+_:genid26 <http://www.w3.org/ns/shacl#message> "The overall FAIR score must not be greater than the sum of the F, A, I, and R scores." .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#FAIRAssessmentShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair-o#FAIRAssessment> .
+# 
+# http://w3id.org/fair-o-shapes#FAIRSubPrincipleShape
+<http://w3id.org/fair-o-shapes#FAIRSubPrincipleShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#FAIRSubPrincipleShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#FAIRSubPrincipleShape> <http://www.w3.org/ns/shacl#property> _:genid27 .
+_:genid27 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#appliesTo> .
+_:genid27 <http://www.w3.org/ns/shacl#message> "A FAIR sub-principle may specify whether it applies to data, metadata, or both." .
+_:genid27 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid27 <http://www.w3.org/ns/shacl#in> _:genid28 .
+<http://w3id.org/fair-o-shapes#FAIRSubPrincipleShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> .
+# 
+# http://w3id.org/fair-o-shapes#ScoringFunctionShape
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/ns/shacl#property> _:genid29 .
+_:genid29 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#minValue> .
+_:genid29 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid29 <http://www.w3.org/ns/shacl#message> "A scoring function must have exactly one minimum value." .
+_:genid29 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid29 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/ns/shacl#property> _:genid30 .
+_:genid30 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#maxValue> .
+_:genid30 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid30 <http://www.w3.org/ns/shacl#message> "A scoring function must have exactly one maximum value." .
+_:genid30 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid30 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/ns/shacl#property> _:genid31 .
+_:genid31 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#formula> .
+_:genid31 <http://www.w3.org/ns/shacl#minLength> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid31 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid31 <http://www.w3.org/ns/shacl#message> "Every scoring function must have exactly one non-empty scoring formula." .
+_:genid31 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid31 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/ns/shacl#sparql> _:genid32 .
+_:genid32 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:minValue ?min ;\n                      fairo:maxValue ?max .\n                FILTER (?min > ?max)\n            }\n        " .
+_:genid32 <http://www.w3.org/ns/shacl#message> "The minimum value of a scoring function must not be greater than its maximum value." .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/ns/shacl#sparql> _:genid33 .
+_:genid33 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:minValue ?min ;\n                      fairo:maxValue ?max .\n                FILTER (?min < 0.0 || ?max > 1.0)\n            }\n        " .
+_:genid33 <http://www.w3.org/ns/shacl#message> "A scoring function used for FAIR-O sub-principle values must have a minimum value >= 0 and a maximum value <= 1." .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#ScoringFunctionShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair-o#ScoringFunction> .
+# 
+# http://w3id.org/fair-o-shapes#SubPrincipleResultShape
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#property> _:genid34 .
+_:genid34 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#testResult> .
+_:genid34 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid34 <http://www.w3.org/ns/shacl#message> "A sub-principle result must have exactly one test outcome: Pass, Fail, or Indeterminate." .
+_:genid34 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid34 <http://www.w3.org/ns/shacl#in> _:genid35 .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#property> _:genid36 .
+_:genid36 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#forSubPrinciple> .
+_:genid36 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+_:genid36 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid36 <http://www.w3.org/ns/shacl#message> "A sub-principle result must refer to exactly one FAIR sub-principle." .
+_:genid36 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid36 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair/principles/terms/FAIR-SubPrinciple> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#property> _:genid37 .
+_:genid37 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#assessmentScope> .
+_:genid37 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid37 <http://www.w3.org/ns/shacl#message> "A sub-principle result must specify exactly one assessment scope." .
+_:genid37 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid37 <http://www.w3.org/ns/shacl#in> _:genid38 .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#property> _:genid39 .
+_:genid39 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#value> .
+_:genid39 <http://www.w3.org/ns/shacl#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid39 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid39 <http://www.w3.org/ns/shacl#message> "A sub-principle result must have exactly one decimal value between 0 and 1." .
+_:genid39 <http://www.w3.org/ns/shacl#maxInclusive> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid39 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid39 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#property> _:genid40 .
+_:genid40 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#evidence> .
+_:genid40 <http://www.w3.org/ns/shacl#minLength> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid40 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid40 <http://www.w3.org/ns/shacl#message> "A sub-principle result must include non-empty textual evidence." .
+_:genid40 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#property> _:genid41 .
+_:genid41 <http://www.w3.org/ns/shacl#path> <https://w3id.org/fair-o#computedUsing> .
+_:genid41 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid41 <http://www.w3.org/ns/shacl#message> "Every sub-principle result must be computed using exactly one calculation algorithm." .
+_:genid41 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid41 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#CalculationAlgorithm> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#property> _:genid42 .
+_:genid42 <http://www.w3.org/ns/shacl#path> _:genid43 .
+_:genid43 <http://www.w3.org/ns/shacl#inversePath> <https://w3id.org/fair-o#hasSubPrincipleResult> .
+_:genid42 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid42 <http://www.w3.org/ns/shacl#message> "Every sub-principle result must be linked from at least one FAIR assessment." .
+_:genid42 <http://www.w3.org/ns/shacl#class> <https://w3id.org/fair-o#FAIRAssessment> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#sparql> _:genid44 .
+_:genid44 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:testResult fairo:Pass ;\n                      fairo:value ?value .\n                FILTER (?value != 1.0)\n            }\n        " .
+_:genid44 <http://www.w3.org/ns/shacl#message> "If testResult is Pass, the value must be exactly 1.0." .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#sparql> _:genid45 .
+_:genid45 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:testResult fairo:Fail ;\n                      fairo:value ?value .\n                FILTER (?value != 0.0)\n            }\n        " .
+_:genid45 <http://www.w3.org/ns/shacl#message> "If testResult is Fail, the value must be exactly 0.0." .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#sparql> _:genid46 .
+_:genid46 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:testResult fairo:Indeterminate ;\n                      fairo:value ?value .\n                FILTER (?value <= 0.0 || ?value >= 1.0)\n            }\n        " .
+_:genid46 <http://www.w3.org/ns/shacl#message> "If testResult is Indeterminate, the value must be greater than 0 and less than 1." .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#sparql> _:genid47 .
+_:genid47 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:forSubPrinciple ?subPrinciple ;\n                      fairo:assessmentScope ?resultScope .\n\n                ?subPrinciple fairo:appliesTo ?expectedScope .\n\n                FILTER (?resultScope != ?expectedScope)\n            }\n        " .
+_:genid47 <http://www.w3.org/ns/shacl#message> "The assessment scope of a sub-principle result must be consistent with the scope declared for the corresponding FAIR sub-principle, when such scope is declared." .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#sparql> _:genid48 .
+_:genid48 <http://www.w3.org/ns/shacl#select> "\n            PREFIX fairo: <https://w3id.org/fair-o#>\n\n            SELECT $this\n            WHERE {\n                $this fairo:computedUsing ?algorithm .\n                FILTER (\n                    NOT EXISTS { ?algorithm fairo:appliesScoringFunction ?scoringFunction . }\n                    ||\n                    NOT EXISTS { ?algorithm fairo:implementedBy ?softwareAgent . }\n                )\n            }\n        " .
+_:genid48 <http://www.w3.org/ns/shacl#message> "Each sub-principle result must have a complete computation chain: calculation algorithm, scoring function, and implementing software agent." .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#SPARQLConstraint> .
+<http://w3id.org/fair-o-shapes#SubPrincipleResultShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair-o#SubPrincipleResult> .
+# 
+# http://w3id.org/fair-o-shapes#TestOutcomeShape
+<http://w3id.org/fair-o-shapes#TestOutcomeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fair-o-shapes#TestOutcomeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://w3id.org/fair-o-shapes#TestOutcomeShape> <http://www.w3.org/ns/shacl#in> _:genid49 .
+<http://w3id.org/fair-o-shapes#TestOutcomeShape> <http://www.w3.org/ns/shacl#message> "Test outcome must be one of Pass, Fail, or Indeterminate." .
+<http://w3id.org/fair-o-shapes#TestOutcomeShape> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/fair-o#TestOutcome> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
