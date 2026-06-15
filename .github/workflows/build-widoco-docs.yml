@@ -47,6 +47,11 @@ jobs:
             -getOntologyMetadata \
             -oops
 
+      - name: Fix WIDOCO output permissions
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" /tmp/widoco-output
+          chmod -R u+rwX /tmp/widoco-output
+
       - name: Add context to JSON-LD
         run: |
           python3 - <<'PY'
