@@ -7,7 +7,7 @@ from rdflib import Graph
 from pyshacl import validate
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DEFAULT_DATA = BASE_DIR / "FAIR-O_data.ttl"
+DEFAULT_DATA = BASE_DIR / "data" / "KGHeartBeat_assessment" / "kgheartbeat_assessment_fair-o.ttl"
 DEFAULT_SHAPES = BASE_DIR / "FAIR-O_shape.ttl"
 DEFAULT_ONTOLOGY = BASE_DIR / "FAIR-O.ttl"
 
