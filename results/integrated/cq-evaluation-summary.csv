@@ -1,0 +1,18 @@
+Tool,Assessment file,CQ,Query file,Rows returned,Status
+integrated,FAIR-O_data.trig,CQ1,CQ1-assessed-object.rq,121644,Answered
+integrated,FAIR-O_data.trig,CQ2,CQ2-assessment-for-object.rq,60822,Answered
+integrated,FAIR-O_data.trig,CQ3,CQ3-aggregate-scores.rq,25905,Answered
+integrated,FAIR-O_data.trig,CQ4,CQ4-evaluated-subprinciples.rq,453736,Answered
+integrated,FAIR-O_data.trig,CQ5,CQ5-subprinciple-score-outcome.rq,453736,Answered
+integrated,FAIR-O_data.trig,CQ6,CQ6-evidence.rq,453736,Answered
+integrated,FAIR-O_data.trig,CQ7,CQ7-calculation-algorithm.rq,406948,Answered
+integrated,FAIR-O_data.trig,CQ8,CQ8-scoring-function.rq,43,Answered
+integrated,FAIR-O_data.trig,CQ9,CQ9-software-agent.rq,406948,Answered
+integrated,FAIR-O_data.trig,CQ10,CQ10-aggregation-method.rq,25905,Answered
+integrated,FAIR-O_data.trig,CQ11,CQ11-score-evolution-over-time.rq,60822,Answered
+integrated,FAIR-O_data.trig,CQ12,CQ12-outcomes-by-subprinciple.rq,1057138,Answered
+integrated,FAIR-O_data.trig,CQ13,CQ13-indeterminate-results-with-evidence.rq,24785,Answered
+integrated,FAIR-O_data.trig,CQ14,CQ14-assessment-result-scope.rq,453736,Answered
+integrated,FAIR-O_data.trig,CQ15,CQ15-cross-tool-disagreements.rq,287417,Answered
+integrated,FAIR-O_data.trig,CQ16,CQ16-most-frequent-failures-by-scope.rq,14,Answered
+integrated,FAIR-O_data.trig,CQ17,CQ17-tool-results-for-object-subprinciple.rq,407124,Answered

@@ -215,3 +215,4 @@ faiss_index/
 !.github
 /data/KGHeartBeat_assessment/*.csv
 CQ*.csv
+!cq-evaluation-summary.csv

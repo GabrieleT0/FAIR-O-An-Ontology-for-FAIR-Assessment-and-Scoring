@@ -1,0 +1,15 @@
+Tool,Assessment file,CQ,Query file,Rows returned,Status
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ1,CQ1-assessed-object.rq,46810,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ10,CQ10-aggregation-method.rq,23394,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ11,CQ11-score-evolution-over-time.rq,23405,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ12,CQ12-outcomes-by-subprinciple.rq,421290,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ13,CQ13-indeterminate-results-with-evidence.rq,24737,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ14,CQ14-assessment-result-scope.rq,421092,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ2,CQ2-assessment-for-object.rq,23405,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ3,CQ3-aggregate-scores.rq,23394,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ4,CQ4-evaluated-subprinciples.rq,421092,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ5,CQ5-subprinciple-score-outcome.rq,421092,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ6,CQ6-evidence.rq,421092,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ7,CQ7-calculation-algorithm.rq,421092,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ8,CQ8-scoring-function.rq,18,Answered
+KGHeartBeat,data/KGHeartBeat_assessment/kgheartbeat_assessment_fair-o.ttl,CQ9,CQ9-software-agent.rq,421092,Answered

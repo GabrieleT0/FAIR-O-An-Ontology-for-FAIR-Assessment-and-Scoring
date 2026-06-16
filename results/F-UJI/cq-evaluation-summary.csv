@@ -1,0 +1,15 @@
+Tool,Assessment file,CQ,Query file,Rows returned,Status
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ1,CQ1-assessed-object.rq,2512,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ10,CQ10-aggregation-method.rq,1256,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ11,CQ11-score-evolution-over-time.rq,1256,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ12,CQ12-outcomes-by-subprinciple.rq,17584,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ13,CQ13-indeterminate-results-with-evidence.rq,0,No results
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ14,CQ14-assessment-result-scope.rq,17584,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ2,CQ2-assessment-for-object.rq,1256,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ3,CQ3-aggregate-scores.rq,1256,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ4,CQ4-evaluated-subprinciples.rq,17584,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ5,CQ5-subprinciple-score-outcome.rq,17584,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ6,CQ6-evidence.rq,17584,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ7,CQ7-calculation-algorithm.rq,17584,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ8,CQ8-scoring-function.rq,14,Answered
+F-UJI,data/F-UJI_assessment/fuji_assessment_fair-o.ttl,CQ9,CQ9-software-agent.rq,17584,Answered
