@@ -2,18 +2,18 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/fair-o", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/fair/principles/terms", "http://www.w3.org/2004/02/skos/core" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/fair-o", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/fair/principles/terms", "http://www.nanopub.org/nschema", "http://www.w3.org/2004/02/skos/core" ],
     "title" : {
       "en" : "FAIR-O: An Ontology for FAIR Assessment and Scoring"
     },
     "iri" : "https://w3id.org/fair-o",
-    "version" : "1.0",
+    "version" : "1.0.0",
     "author" : [ "Gabriele Tuozzo and Maria Angela Pellegrino" ],
     "description" : {
       "en" : "The FAIR Assessment Ontology provides a structured and extensible model for representing the evaluation of digital resources against the FAIR (Findable, Accessible, Interoperable, Reusable) principles. It enables the formal description of assessment activities, detailed results at the level of individual FAIR sub-principles, and associated evidence, scoring functions, and computational methods. \n                       The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."
     },
     "comments" : {
-      "en" : "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."
+      "en" : "The FAIR Assessment Ontology is designed to model the process and outcomes of evaluating digital objects according to the FAIR principles. It captures FAIR assessments as provenance-aware activities, linking evaluated resources to detailed results for each FAIR sub-principle.\n                    Each assessment can include multiple sub-principle results, associated evidence, quantitative scores, and test outcomes (e.g., pass, fail, indeterminate). The ontology also models the computational aspects of FAIR evaluation, including scoring functions, calculation algorithms, and aggregation methods used to derive higher-level scores.\n                    The ontology is aligned with the FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for the definition of principles and sub-principles, and reuses established standards such as PROV-O for provenance and SKOS for controlled vocabularies. This ensures interoperability with existing FAIR tools and supports integration into automated FAIR assessment pipelines."
     },
     "other" : {
       "creator" : [ {
@@ -22,20 +22,16 @@
         "value" : "Gabriele Tuozzo and Maria Angela Pellegrino",
         "type" : "label"
       } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-02-01",
+        "type" : "label"
+      } ],
       "subject" : [ {
         "identifier" : "subject",
         "language" : "undefined",
-        "value" : "metadata quality",
-        "type" : "label"
-      }, {
-        "identifier" : "subject",
-        "language" : "undefined",
-        "value" : "research data",
-        "type" : "label"
-      }, {
-        "identifier" : "subject",
-        "language" : "undefined",
-        "value" : "FAIR principles",
+        "value" : "ontology",
         "type" : "label"
       }, {
         "identifier" : "subject",
@@ -45,13 +41,23 @@
       }, {
         "identifier" : "subject",
         "language" : "undefined",
-        "value" : "ontology",
+        "value" : "FAIR principles",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "research data",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "metadata quality",
         "type" : "label"
       } ],
-      "created" : [ {
-        "identifier" : "created",
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "2026-02-01",
+        "value" : "1.0.0",
         "type" : "label"
       } ],
       "source" : [ {
@@ -59,12 +65,6 @@
         "language" : "undefined",
         "value" : "https://www.go-fair.org/fair-principles/",
         "type" : "iri"
-      } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.0",
-        "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -114,16 +114,16 @@
         "value" : "https://github.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring",
         "type" : "iri"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/fair-o#",
-        "type" : "label"
-      } ],
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "undefined",
         "value" : "Tuozzo, G., & Pellegrino, M. A. (2026). FAIR-O: An Ontology for FAIR Assessment and Scoring (Version 1.0) [Ontology]. Zenodo. http://doi.org/10.5281/zenodo.20027101",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fair-o#",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -132,17 +132,17 @@
         "value" : "2026-02-01",
         "type" : "label"
       } ],
-      "status" : [ {
-        "identifier" : "status",
-        "language" : "undefined",
-        "value" : "Under Review",
-        "type" : "label"
-      } ],
       "depiction" : [ {
         "identifier" : "depiction",
         "language" : "undefined",
         "value" : "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png",
         "type" : "iri"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "undefined",
+        "value" : "Under Review",
+        "type" : "label"
       } ],
       "doi" : [ {
         "identifier" : "doi",
@@ -166,16 +166,16 @@
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "45",
@@ -241,13 +241,16 @@
     "id" : "43",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "18",
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "30",
@@ -460,9 +463,9 @@
       "IRI-based" : "Entity",
       "undefined" : "Entity"
     },
-    "subClasses" : [ "20", "21" ],
+    "subClasses" : [ "18", "19" ],
     "attributes" : [ "external" ],
-    "id" : "19"
+    "id" : "17"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -500,19 +503,6 @@
     "attributes" : [ "external" ],
     "id" : "41"
   }, {
-    "iri" : "https://w3id.org/fair-o#ScoringFunction",
-    "baseIri" : "https://w3id.org/fair-o",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ScoringFunction",
-      "en" : "Scoring Function"
-    },
-    "comment" : {
-      "en" : "A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle."
-    },
-    "id" : "20",
-    "superClasses" : [ "19" ]
-  }, {
     "iri" : "https://w3id.org/fair-o#CalculationAlgorithm",
     "baseIri" : "https://w3id.org/fair-o",
     "instances" : 0,
@@ -525,6 +515,19 @@
     },
     "id" : "23",
     "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/fair-o#ScoringFunction",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScoringFunction",
+      "en" : "Scoring Function"
+    },
+    "comment" : {
+      "en" : "A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle."
+    },
+    "id" : "18",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "45",
@@ -626,12 +629,12 @@
       "dm" : [ {
         "identifier" : "dm",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
         "type" : "label"
       }, {
         "identifier" : "dm",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
+        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent",
         "type" : "label"
       } ],
       "definition" : [ {
@@ -659,12 +662,12 @@
       "n" : [ {
         "identifier" : "n",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types",
+        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-n.html#expression-types",
         "type" : "label"
       }, {
         "identifier" : "n",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-n.html#expression-types",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types",
         "type" : "label"
       } ]
     },
@@ -739,7 +742,7 @@
   }, {
     "instances" : 0,
     "union" : [ "15", "1" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "65"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -784,6 +787,71 @@
       "IRI-based" : "string"
     }
   }, {
+    "iri" : "http://www.nanopub.org/nschema#Nanopublication",
+    "baseIri" : "http://www.nanopub.org/nschema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Nanopublication"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg",
+      "baseIri" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary",
+      "annotations" : {
+        "hasProvenance" : [ {
+          "identifier" : "hasProvenance",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#provenance",
+          "type" : "iri"
+        } ],
+        "hasAssertion" : [ {
+          "identifier" : "hasAssertion",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#assertion",
+          "type" : "iri"
+        } ],
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "https://orcid.org/0000-0003-4727-9435",
+          "type" : "iri"
+        }, {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "https://orcid.org/0000-0002-1267-0234",
+          "type" : "iri"
+        } ],
+        "hasPublicationInfo" : [ {
+          "identifier" : "hasPublicationInfo",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#pubinfo",
+          "type" : "iri"
+        } ],
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2019-07-12T08:07:27.988+02:00",
+          "type" : "label"
+        } ],
+        "rights" : [ {
+          "identifier" : "rights",
+          "language" : "undefined",
+          "value" : "http://creativecommons.org/licenses/by/4.0/",
+          "type" : "iri"
+        } ],
+        "supersedes" : [ {
+          "identifier" : "supersedes",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RA42Ifild4QRyoA2-A3tam25oe5fd6sDqqzXSVmzOpuYw",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "69"
+  }, {
     "iri" : "https://w3id.org/fair/principles/terms/FAIR-SubPrinciple",
     "baseIri" : "https://w3id.org/fair/principles/terms",
     "instances" : 0,
@@ -791,7 +859,7 @@
       "IRI-based" : "FAIR-SubPrinciple"
     },
     "attributes" : [ "external" ],
-    "id" : "18"
+    "id" : "21"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Collection",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -834,8 +902,8 @@
     "comment" : {
       "en" : "The assessment result for a specific FAIR sub-principle (e.g., F1, A1.1, I2)."
     },
-    "id" : "21",
-    "superClasses" : [ "19" ]
+    "id" : "19",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Plan",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -904,7 +972,7 @@
     "id" : "16",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "17",
+    "id" : "20",
     "type" : "owl:objectProperty"
   }, {
     "id" : "3",
@@ -988,31 +1056,31 @@
     "id" : "64",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "69",
+    "id" : "70",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "44",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "70",
+    "id" : "71",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "71",
+    "id" : "72",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "72",
+    "id" : "73",
     "type" : "owl:disjointWith"
   }, {
     "id" : "59",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "73",
+    "id" : "74",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "74",
+    "id" : "75",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "75",
+    "id" : "76",
     "type" : "owl:objectProperty"
   }, {
     "id" : "60",
@@ -1021,31 +1089,31 @@
     "id" : "12",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "76",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "77",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
     "type" : "owl:objectProperty"
   }, {
     "id" : "2",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "79",
     "type" : "owl:objectProperty"
   }, {
     "id" : "80",
     "type" : "owl:objectProperty"
   }, {
     "id" : "81",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "82",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
     "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -1152,12 +1220,12 @@
       "IRI-based" : "appliesTo",
       "en" : "applies to"
     },
-    "domain" : "18",
+    "domain" : "21",
     "comment" : {
       "en" : "Indicates whether a sub-principle applies to data, metadata, or both."
     },
     "attributes" : [ "object" ],
-    "id" : "17"
+    "id" : "20"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
     "inverse" : "2",
@@ -1190,7 +1258,7 @@
     "superproperty" : [ "0" ],
     "domain" : "11",
     "subproperty" : [ "13" ],
-    "attributes" : [ "object", "external", "transitive" ],
+    "attributes" : [ "object", "transitive", "external" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/fair-o#computedUsing",
@@ -1200,7 +1268,7 @@
       "IRI-based" : "computedUsing",
       "en" : "computed using"
     },
-    "domain" : "21",
+    "domain" : "19",
     "comment" : {
       "en" : "Links a sub-principle result to the algorithm used to compute it."
     },
@@ -1228,7 +1296,7 @@
       "IRI-based" : "value",
       "en" : "value"
     },
-    "domain" : "21",
+    "domain" : "19",
     "comment" : {
       "en" : "The numeric value assigned to the sub-principle result."
     },
@@ -1237,22 +1305,22 @@
   }, {
     "range" : "30",
     "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "28"
   }, {
     "range" : "15",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
     "range" : "30",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
     "range" : "1",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
     "iri" : "https://w3id.org/fair-o#implementedBy",
@@ -1271,17 +1339,17 @@
   }, {
     "range" : "1",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "36"
   }, {
-    "range" : "19",
-    "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "17",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
-    "range" : "19",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "17",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/fair-o#algorithmDescription",
@@ -1375,7 +1443,7 @@
     "comment" : {
       "en" : "skos:related is disjoint with skos:broaderTransitive"
     },
-    "attributes" : [ "object", "external", "symmetric" ],
+    "attributes" : [ "object", "symmetric", "external" ],
     "id" : "4"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#notation",
@@ -1406,7 +1474,7 @@
       "en" : "notation"
     },
     "domain" : "11",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/fair-o#rScore",
@@ -1425,7 +1493,7 @@
   }, {
     "range" : "6",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "49"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#mappingRelation",
@@ -1465,7 +1533,7 @@
       "IRI-based" : "wasAssessedBy",
       "en" : "was assessed by"
     },
-    "domain" : "19",
+    "domain" : "17",
     "comment" : {
       "en" : "Links a resource to a FAIR assessment that evaluated it."
     },
@@ -1542,7 +1610,7 @@
     "superproperty" : [ "5" ],
     "domain" : "11",
     "subproperty" : [ "60" ],
-    "attributes" : [ "object", "external", "symmetric" ],
+    "attributes" : [ "object", "symmetric", "external" ],
     "id" : "53"
   }, {
     "iri" : "https://w3id.org/fair-o#aScore",
@@ -1587,7 +1655,7 @@
   }, {
     "range" : "41",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "64"
   }, {
     "iri" : "https://w3id.org/fair-o#fScore",
@@ -1602,7 +1670,7 @@
       "en" : "An aggregate score for the Findable principle."
     },
     "attributes" : [ "datatype" ],
-    "id" : "69"
+    "id" : "70"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1627,7 +1695,7 @@
     },
     "superproperty" : [ "4", "5" ],
     "domain" : "11",
-    "attributes" : [ "object", "external", "symmetric" ],
+    "attributes" : [ "object", "symmetric", "external" ],
     "id" : "44"
   }, {
     "iri" : "https://w3id.org/fair-o#usesAggregationMethod",
@@ -1642,17 +1710,17 @@
       "en" : "Links an assessment to the method used to aggregate sub-principle scores."
     },
     "attributes" : [ "object" ],
-    "id" : "70"
+    "id" : "71"
   }, {
     "range" : "1",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "71"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
   }, {
     "range" : "41",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "72"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1692,25 +1760,25 @@
       "en" : "An aggregate score for the entire FAIR assessment."
     },
     "attributes" : [ "datatype" ],
-    "id" : "73"
+    "id" : "74"
   }, {
     "iri" : "https://w3id.org/fair-o#forSubPrinciple",
     "baseIri" : "https://w3id.org/fair-o",
-    "range" : "18",
+    "range" : "21",
     "label" : {
       "IRI-based" : "forSubPrinciple",
       "en" : "for sub-principle"
     },
-    "domain" : "21",
+    "domain" : "19",
     "comment" : {
       "en" : "Links a sub-principle result to the specific FAIR sub-principle it evaluates (defined in the official FAIR Vocabulary)."
     },
     "attributes" : [ "object" ],
-    "id" : "74"
+    "id" : "75"
   }, {
     "iri" : "https://w3id.org/fair-o#appliesScoringFunction",
     "baseIri" : "https://w3id.org/fair-o",
-    "range" : "20",
+    "range" : "18",
     "label" : {
       "IRI-based" : "appliesScoringFunction",
       "en" : "applies scoring function"
@@ -1720,7 +1788,7 @@
       "en" : "Links an algorithm to the scoring function it uses."
     },
     "attributes" : [ "object" ],
-    "id" : "75"
+    "id" : "76"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#exactMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1748,7 +1816,7 @@
     "comment" : {
       "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
     },
-    "attributes" : [ "object", "external", "symmetric", "transitive" ],
+    "attributes" : [ "object", "symmetric", "transitive", "external" ],
     "id" : "60"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
@@ -1784,12 +1852,12 @@
       "IRI-based" : "evidence",
       "en" : "evidence"
     },
-    "domain" : "21",
+    "domain" : "19",
     "comment" : {
       "en" : "Textual evidence supporting the sub-principle result."
     },
     "attributes" : [ "datatype" ],
-    "id" : "76"
+    "id" : "77"
   }, {
     "iri" : "https://w3id.org/fair-o#minValue",
     "baseIri" : "https://w3id.org/fair-o",
@@ -1798,16 +1866,16 @@
       "IRI-based" : "minValue",
       "en" : "minimum value"
     },
-    "domain" : "20",
+    "domain" : "18",
     "comment" : {
       "en" : "The minimum possible score this function can produce."
     },
     "attributes" : [ "datatype" ],
-    "id" : "77"
+    "id" : "78"
   }, {
     "iri" : "https://w3id.org/fair-o#hasSubPrincipleResult",
     "baseIri" : "https://w3id.org/fair-o",
-    "range" : "21",
+    "range" : "19",
     "label" : {
       "IRI-based" : "hasSubPrincipleResult",
       "en" : "has sub-principle result"
@@ -1817,7 +1885,7 @@
       "en" : "Links an assessment to individual sub-principle results."
     },
     "attributes" : [ "object" ],
-    "id" : "78"
+    "id" : "79"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1849,7 +1917,7 @@
     "superproperty" : [ "0" ],
     "domain" : "11",
     "subproperty" : [ "16" ],
-    "attributes" : [ "object", "external", "transitive" ],
+    "attributes" : [ "object", "transitive", "external" ],
     "id" : "2"
   }, {
     "iri" : "https://w3id.org/fair-o#testResult",
@@ -1859,12 +1927,12 @@
       "IRI-based" : "testResult",
       "en" : "test result"
     },
-    "domain" : "21",
+    "domain" : "19",
     "comment" : {
       "en" : "The outcome of the test for the sub-principle."
     },
     "attributes" : [ "object" ],
-    "id" : "79"
+    "id" : "80"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#memberList",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1891,8 +1959,8 @@
     "comment" : {
       "en" : "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
     },
-    "attributes" : [ "object", "external", "functional" ],
-    "id" : "80"
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "81"
   }, {
     "iri" : "https://w3id.org/fair-o#maxValue",
     "baseIri" : "https://w3id.org/fair-o",
@@ -1901,12 +1969,12 @@
       "IRI-based" : "maxValue",
       "en" : "maximum value"
     },
-    "domain" : "20",
+    "domain" : "18",
     "comment" : {
       "en" : "The maximum possible score this function can produce."
     },
     "attributes" : [ "datatype" ],
-    "id" : "81"
+    "id" : "82"
   }, {
     "iri" : "https://w3id.org/fair-o#assessmentScope",
     "baseIri" : "https://w3id.org/fair-o",
@@ -1915,12 +1983,12 @@
       "IRI-based" : "assessmentScope",
       "en" : "assessment scope"
     },
-    "domain" : "21",
+    "domain" : "19",
     "comment" : {
       "en" : "Indicates whether the sub-principle result pertains to data, metadata, or both."
     },
     "attributes" : [ "object" ],
-    "id" : "82"
+    "id" : "83"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#member",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1945,6 +2013,6 @@
     },
     "domain" : "15",
     "attributes" : [ "object", "external" ],
-    "id" : "83"
+    "id" : "84"
   } ]
 }

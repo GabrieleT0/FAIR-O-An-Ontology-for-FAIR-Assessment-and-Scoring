@@ -59,19 +59,7 @@
       ]
     },
     {
-      "@id": "http://purl.org/dc/terms/created",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#AnnotationProperty"
-      ]
-    },
-    {
       "@id": "http://purl.org/dc/terms/issued",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#AnnotationProperty"
-      ]
-    },
-    {
-      "@id": "http://purl.org/dc/terms/license",
       "@type": [
         "http://www.w3.org/2002/07/owl#AnnotationProperty"
       ]
@@ -108,18 +96,6 @@
     },
     {
       "@id": "http://purl.org/ontology/bibo/status",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#AnnotationProperty"
-      ]
-    },
-    {
-      "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#AnnotationProperty"
-      ]
-    },
-    {
-      "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
       "@type": [
         "http://www.w3.org/2002/07/owl#AnnotationProperty"
       ]
@@ -304,7 +280,7 @@
       ],
       "http://www.w3.org/2002/07/owl#versionInfo": [
         {
-          "@value": "1.0"
+          "@value": "1.0.0"
         }
       ],
       "http://xmlns.com/foaf/0.1/depiction": [
