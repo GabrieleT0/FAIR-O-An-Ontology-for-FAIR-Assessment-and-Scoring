@@ -53,6 +53,7 @@ ALLOWED_COLUMNS = [
 AGGREGATE_CODES = {"FAIR", "F", "A", "I", "R"}
 SOFTWARE_AGENT_ID = "KGHeartBeat"
 SOFTWARE_AGENT_LABEL = "KGHeartBeat"
+TOOL_ID = "kgheartbeat"
 
 
 @dataclass(frozen=True)
@@ -235,7 +236,7 @@ def test_outcome_from_value(value: str) -> str:
 def stable_result_id(key: ResultKey) -> str:
 	base = "|".join([key.metric, key.subprinciple, key.scope, key.value])
 	digest = hashlib.sha1(base.encode("utf-8")).hexdigest()[:16]
-	return f"result_{digest}"
+	return f"result_{TOOL_ID}_{digest}"
 
 
 def extract_snapshot_date(csv_path: str) -> Optional[date]:
@@ -436,6 +437,15 @@ def find_algorithm_for_metric(metric: str, algorithms: List[Dict]) -> Optional[s
 		notation = subprinciple_info.get("notation", "")
 		if notation in metric:
 			return alg.get("id")
+
+	# Some KGHeartBeat metric names use a broader principle notation than the
+	# documented algorithm (for example, A1-D versus A1.1-D). In those cases,
+	# match the descriptive part of the metric instead.
+	for alg in algorithms:
+		subprinciple_info = alg.get("implementsSubPrinciple", {})
+		monitored_aspect = subprinciple_info.get("monitoredAspect", "")
+		if monitored_aspect and monitored_aspect.casefold() in metric.casefold():
+			return alg.get("id")
 	return None
 
 
@@ -535,7 +545,10 @@ def build_kg(df_long: pd.DataFrame, output_path: str, principles_doc: Dict) -> T
 				lines.append("")
 
 		for date_text, assessment_df in dataset_df.groupby("Analysis date", sort=True):
-			assessment_uri = f"assessment_{uri_segment(kg_id)}_{uri_segment(date_text)}"
+			assessment_uri = (
+				f"assessment_{TOOL_ID}_{uri_segment(kg_id)}_"
+				f"{uri_segment(date_text)}"
+			)
 			dt = f"{date_text}T00:00:00Z"
 
 			lines.append(f":{assessment_uri} a fairo:FAIRAssessment, prov:Activity ;")

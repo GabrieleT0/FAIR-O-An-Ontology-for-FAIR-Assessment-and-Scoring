@@ -11,6 +11,7 @@ from urllib.parse import quote
 ANALYSIS_DATE_DEFAULT = "2026-04-01"
 SOFTWARE_AGENT_ID = "FAIRChecker"
 SOFTWARE_AGENT_LABEL = "FAIRChecker"
+TOOL_ID = "fairchecker"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 
@@ -325,7 +326,10 @@ def build_graph(rows: Iterable[DatasetRow], analysis_date: str) -> List[str]:
 
         processed_url = (row.get("processed_url") or "").strip()
         dataset_uri = f"dataset_{uri_segment(dataset_id)}"
-        assessment_uri = f"assessment_{uri_segment(dataset_id)}_{uri_segment(analysis_date)}"
+        assessment_uri = (
+            f"assessment_{TOOL_ID}_{uri_segment(dataset_id)}_"
+            f"{uri_segment(analysis_date)}"
+        )
 
         emit_dataset(lines, dataset_uri, dataset_id, processed_url)
 
@@ -343,7 +347,8 @@ def build_graph(rows: Iterable[DatasetRow], analysis_date: str) -> List[str]:
             if raw_value is None:
                 continue
             result_uri = (
-                f"result_{uri_segment(dataset_id)}_{uri_segment(metric_name)}_"
+                f"result_{TOOL_ID}_{uri_segment(dataset_id)}_"
+                f"{uri_segment(metric_name)}_"
                 f"{uri_segment(analysis_date)}"
             )
             emit_result(lines, result_uri, metric_name, raw_value, dataset.source_file)
