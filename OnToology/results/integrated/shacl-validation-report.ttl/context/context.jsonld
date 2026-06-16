@@ -1,0 +1,7 @@
+{
+  "@context" : {
+    "ValidationReport" : {
+      "@id" : "http://www.w3.org/ns/shacl#ValidationReport"
+    }
+  }
+}
