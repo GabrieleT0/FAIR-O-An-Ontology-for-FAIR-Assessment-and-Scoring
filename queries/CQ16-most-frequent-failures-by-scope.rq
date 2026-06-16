@@ -1,0 +1,33 @@
+PREFIX fairo: <https://w3id.org/fair-o#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?subPrinciple ?subPrincipleLabel
+       (COUNT(DISTINCT ?result) AS ?failureCount)
+       (COUNT(DISTINCT ?tool) AS ?toolCount)
+       (COUNT(DISTINCT ?digitalObject) AS ?digitalObjectCount)
+       (GROUP_CONCAT(DISTINCT ?scopeCategory; separator=", ") AS ?failureScope)
+WHERE {
+  GRAPH ?toolGraph {
+    ?digitalObject fairo:wasAssessedBy ?assessment .
+    ?assessment a fairo:FAIRAssessment ;
+                fairo:hasSubPrincipleResult ?result .
+    ?result a fairo:SubPrincipleResult ;
+            fairo:forSubPrinciple ?subPrinciple ;
+            fairo:testResult fairo:Fail ;
+            fairo:assessmentScope ?scope ;
+            fairo:computedUsing ?algorithm .
+    ?algorithm fairo:implementedBy ?tool .
+  }
+
+  OPTIONAL { ?subPrinciple rdfs:label ?subPrincipleLabel . }
+
+  BIND(
+    IF(?scope = fairo:DataScope, "data",
+      IF(?scope = fairo:MetadataScope, "metadata",
+        IF(?scope = fairo:DataAndMetadata, "data and metadata", STR(?scope))
+      )
+    ) AS ?scopeCategory
+  )
+}
+GROUP BY ?subPrinciple ?subPrincipleLabel
+ORDER BY DESC(?failureCount) DESC(?toolCount) ?subPrinciple

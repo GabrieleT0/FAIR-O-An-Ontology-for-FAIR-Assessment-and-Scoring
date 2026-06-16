@@ -1,0 +1,35 @@
+PREFIX fairo: <https://w3id.org/fair-o#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# @bind digitalObject subPrinciple
+
+SELECT ?digitalObject ?title ?subPrinciple ?subPrincipleLabel
+       ?toolGraph ?tool ?toolLabel ?assessment ?result ?scope
+       ?value ?outcome ?outcomeLabel ?evidence
+WHERE {
+  # Bind ?digitalObject and ?subPrinciple from the query runner, for example:
+  # --object https://w3id.org/fair-o/resource/dataset_2000-us-census-rdf
+  # --sub-principle https://w3id.org/fair/principles/terms/A1.2
+
+  GRAPH ?toolGraph {
+    ?digitalObject fairo:wasAssessedBy ?assessment .
+    ?assessment a fairo:FAIRAssessment ;
+                fairo:hasSubPrincipleResult ?result .
+    ?result a fairo:SubPrincipleResult ;
+            fairo:forSubPrinciple ?subPrinciple ;
+            fairo:testResult ?outcome ;
+            fairo:computedUsing ?algorithm .
+    ?algorithm fairo:implementedBy ?tool .
+
+    OPTIONAL { ?digitalObject dct:title ?title . }
+    OPTIONAL { ?result fairo:assessmentScope ?scope . }
+    OPTIONAL { ?result fairo:value ?value . }
+    OPTIONAL { ?result fairo:evidence ?evidence . }
+    OPTIONAL { ?tool rdfs:label ?toolLabel . }
+  }
+
+  OPTIONAL { ?subPrinciple rdfs:label ?subPrincipleLabel . }
+  OPTIONAL { ?outcome rdfs:label ?outcomeLabel . }
+}
+ORDER BY ?digitalObject ?subPrinciple ?toolGraph ?tool ?result

@@ -1,0 +1,37 @@
+PREFIX fairo: <https://w3id.org/fair-o#>
+
+# @bind digitalObject subPrinciple
+
+SELECT ?digitalObject ?subPrinciple
+       ?toolGraph1 ?assessment1 ?result1 ?outcome1
+       ?toolGraph2 ?assessment2 ?result2 ?outcome2
+WHERE {
+  # Bind ?digitalObject and ?subPrinciple from the query runner to inspect a
+  # concrete cross-tool disagreement, for example:
+  # --object https://w3id.org/fair-o/resource/dataset_2000-us-census-rdf
+  # --sub-principle https://w3id.org/fair/principles/terms/A1.2
+  VALUES (?toolGraph1 ?toolGraph2) {
+    (<https://w3id.org/fair-o/graph/fairchecker> <https://w3id.org/fair-o/graph/fuji>)
+    (<https://w3id.org/fair-o/graph/fairchecker> <https://w3id.org/fair-o/graph/kgheartbeat>)
+    (<https://w3id.org/fair-o/graph/fuji> <https://w3id.org/fair-o/graph/kgheartbeat>)
+  }
+
+  GRAPH ?toolGraph1 {
+    ?digitalObject fairo:wasAssessedBy ?assessment1 .
+    ?assessment1 a fairo:FAIRAssessment ;
+                 fairo:hasSubPrincipleResult ?result1 .
+    ?result1 fairo:forSubPrinciple ?subPrinciple ;
+             fairo:testResult ?outcome1 .
+  }
+
+  GRAPH ?toolGraph2 {
+    ?digitalObject fairo:wasAssessedBy ?assessment2 .
+    ?assessment2 a fairo:FAIRAssessment ;
+                 fairo:hasSubPrincipleResult ?result2 .
+    ?result2 fairo:forSubPrinciple ?subPrinciple ;
+             fairo:testResult ?outcome2 .
+  }
+
+  FILTER(?outcome1 != ?outcome2)
+}
+ORDER BY ?digitalObject ?subPrinciple ?toolGraph1 ?toolGraph2 ?result1 ?result2
