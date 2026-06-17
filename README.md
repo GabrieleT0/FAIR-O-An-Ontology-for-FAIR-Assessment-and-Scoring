@@ -35,14 +35,6 @@ FAIR-O provides a structured and extensible model for representing the evaluatio
 - WebVOWL visualization: [https://gabrielet0.github.io/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/webvowl/index.html#](https://gabrielet0.github.io/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/webvowl/index.html#)
 - Provenance report: [https://gabrielet0.github.io/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/provenance/provenance-en.html](https://gabrielet0.github.io/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/provenance/provenance-en.html)
 
-## Use cases
-
-### FAIR-O explanations in CHeCLOUD
-
-FAIR-O assessment data was integrated into [CHeCLOUD](https://checloud.di.unisa.it/) to support the "Explain this assessment" feature. The integrated FAIR-O data improves LLM-generated explanations of FAIR scores by grounding them in structured assessment results, evidence, scoring functions, and provenance. This demonstrates how FAIR-O enables transparent, evidence-based explanations of FAIR assessments.
-
-![CHeCLOUD "Explain this assessment" demonstration](assets/checloud.png)
-
 ## Queries and results
 
 The [queries](queries) folder contains competency queries (CQ1-CQ17) that exercise key modeling features of FAIR-O. The [results](results) folder includes example outputs and a summary CSV.
@@ -161,3 +153,11 @@ The command prints the validation report and returns a non-zero exit code when c
 ## License
 
 Released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. See [LICENSE](LICENSE).
+
+## Use cases
+
+### FAIR-O explanations in CHeCLOUD
+
+FAIR-O assessment data was integrated into [CHeCLOUD](https://checloud.di.unisa.it/) to support the "Explain this assessment" feature. The integrated FAIR-O data improves LLM-generated explanations of FAIR scores by grounding them in structured assessment results, evidence, scoring functions, and provenance. This demonstrates how FAIR-O enables transparent, evidence-based explanations of FAIR assessments.
+
+<img src="assets/checloud.png" alt="CHeCLOUD &quot;Explain this assessment&quot; demonstration" width="70%" />
