@@ -150,10 +150,6 @@ python src/validate_data.py \
 
 The command prints the validation report and returns a non-zero exit code when constraints are violated.
 
-## License
-
-Released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. See [LICENSE](LICENSE).
-
 ## Use cases
 
 ### FAIR-O explanations in CHeCLOUD
@@ -161,3 +157,7 @@ Released under the Creative Commons Attribution 4.0 International (CC BY 4.0) li
 FAIR-O assessment data was integrated into [CHeCLOUD](https://checloud.di.unisa.it/) to support the "Explain this assessment" feature. The integrated FAIR-O data improves LLM-generated explanations of FAIR scores by grounding them in structured assessment results, evidence, scoring functions, and provenance. This demonstrates how FAIR-O enables transparent, evidence-based explanations of FAIR assessments.
 
 <img src="assets/checloud.png" alt="CHeCLOUD &quot;Explain this assessment&quot; demonstration" width="70%" />
+
+## License
+
+Released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. See [LICENSE](LICENSE).
