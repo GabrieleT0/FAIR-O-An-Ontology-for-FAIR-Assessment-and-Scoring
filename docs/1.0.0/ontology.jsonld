@@ -262,6 +262,11 @@
           "@value": "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."
         }
       ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "https://w3id.org/fair-o/ftr-alignment"
+        }
+      ],
       "http://www.w3.org/2002/07/owl#imports": [
         {
           "@id": "http://www.w3.org/2004/02/skos/core#"
