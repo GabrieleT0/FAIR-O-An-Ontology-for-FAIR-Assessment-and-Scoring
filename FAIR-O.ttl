@@ -20,14 +20,16 @@
                     Each assessment can include multiple sub-principle results, associated evidence, quantitative scores, and test outcomes (e.g., pass, fail, indeterminate). The ontology also models the computational aspects of FAIR evaluation, including scoring functions, calculation algorithms, and aggregation methods used to derive higher-level scores.
                     The ontology is aligned with the FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for the definition of principles and sub-principles, and reuses established standards such as PROV-O for provenance and SKOS for controlled vocabularies. This ensures interoperability with existing FAIR tools and supports integration into automated FAIR assessment pipelines."""@en ;
     dcterms:created "2026-02-01"^^xsd:date ;
-    dcterms:modified "2026-06-15"^^xsd:date ;
+    dcterms:modified "2026-10-13"^^xsd:date ;
     dcterms:creator "Gabriele Tuozzo and Maria Angela Pellegrino" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:subject "FAIR principles", "ontology", "research data", "assessment", "metadata quality" ;
     vann:preferredNamespacePrefix "fairo"@en ;
     vann:preferredNamespaceUri "https://w3id.org/fair-o#" ;
-    owl:versionInfo "1.0.0" ;
-    owl:versionIRI <https://w3id.org/fair-o/1.0.0> ;
+    owl:versionInfo "1.1.0" ;
+    owl:versionIRI <https://w3id.org/fair-o/1.1.0> ;
+    owl:priorVersion <https://w3id.org/fair-o/1.0.0> ;
+    owl:backwardCompatibleWith <https://w3id.org/fair-o/1.0.0> ;
     bibo:doi "10.5281/zenodo.20027101" ;
     foaf:depiction <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png> ;
     foaf:logo <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png> ;
@@ -57,6 +59,11 @@ fairo:SubPrincipleResult a owl:Class ;
     rdfs:subClassOf prov:Entity ;
     rdfs:label "Sub-Principle Result"@en ;
     rdfs:comment "The assessment result for a specific FAIR sub-principle (e.g., F1, A1.1, I2)."@en .
+
+fairo:Evidence a owl:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Assessment Evidence"@en ;
+    rdfs:comment """An information artifact used to justify a FAIR assessment result, such as a recorded observation, test output, or supporting report. Evidence may support, contradict, or qualify a conclusion. Evidence can be described using dcterms:description, linked to supporting resources using dcterms:source, and enriched with PROV-O provenance, such as prov:wasDerivedFrom, prov:wasGeneratedBy, prov:wasAttributedTo, and prov:generatedAtTime. No particular evidence format or type vocabulary is required."""@en .
 
 fairo:AssessmentScope a owl:Class ;
     rdfs:subClassOf skos:Concept ;
@@ -124,6 +131,12 @@ fairo:hasSubPrincipleResult a owl:ObjectProperty ;
     rdfs:range fairo:SubPrincipleResult ;
     rdfs:label "has sub-principle result"@en ;
     rdfs:comment "Links an assessment to individual sub-principle results."@en .
+
+fairo:hasEvidence a owl:ObjectProperty ;
+    rdfs:domain fairo:SubPrincipleResult ;
+    rdfs:range fairo:Evidence ;
+    rdfs:label "has evidence"@en ;
+    rdfs:comment "Links a sub-principle result to an evidence item used to justify it. A result may link to multiple evidence items. This property is the preferred representation for structured evidence; the textual fairo:evidence property remains available for backward compatibility."@en .
 
 fairo:forSubPrinciple a owl:ObjectProperty ;
     rdfs:domain fairo:SubPrincipleResult ;
@@ -218,7 +231,8 @@ fairo:evidence a owl:DatatypeProperty ;
     rdfs:domain fairo:SubPrincipleResult ;
     rdfs:range xsd:string ;
     rdfs:label "evidence"@en ;
-    rdfs:comment "Textual evidence supporting the sub-principle result."@en .
+    rdfs:comment "Textual evidence supporting the sub-principle result. Retained for backward compatibility; use fairo:hasEvidence to link to structured evidence with descriptions, supporting resources, and provenance. Textual and structured evidence may be used independently or together."@en ;
+    rdfs:seeAlso fairo:hasEvidence .
 
 fairo:formula a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
