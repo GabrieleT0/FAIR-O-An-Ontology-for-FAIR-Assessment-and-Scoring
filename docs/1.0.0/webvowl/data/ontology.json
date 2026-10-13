@@ -178,10 +178,10 @@
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
     "id" : "45",
@@ -489,16 +489,16 @@
         "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "en",
         "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
         "type" : "label"
       } ]
     },
@@ -508,19 +508,6 @@
     },
     "attributes" : [ "external" ],
     "id" : "41"
-  }, {
-    "iri" : "https://w3id.org/fair-o#ScoringFunction",
-    "baseIri" : "https://w3id.org/fair-o",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ScoringFunction",
-      "en" : "Scoring Function"
-    },
-    "comment" : {
-      "en" : "A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle."
-    },
-    "id" : "20",
-    "superClasses" : [ "19" ]
   }, {
     "iri" : "https://w3id.org/fair-o#CalculationAlgorithm",
     "baseIri" : "https://w3id.org/fair-o",
@@ -534,6 +521,19 @@
     },
     "id" : "23",
     "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/fair-o#ScoringFunction",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScoringFunction",
+      "en" : "Scoring Function"
+    },
+    "comment" : {
+      "en" : "A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle."
+    },
+    "id" : "20",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "45",
@@ -624,23 +624,23 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/prov-o#",
+        "value" : "http://www.w3.org/ns/prov#",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/prov#",
+        "value" : "http://www.w3.org/ns/prov-o#",
         "type" : "iri"
       } ],
       "dm" : [ {
         "identifier" : "dm",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
+        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent",
         "type" : "label"
       }, {
         "identifier" : "dm",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
         "type" : "label"
       } ],
       "definition" : [ {
@@ -809,21 +809,21 @@
           "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#provenance",
           "type" : "iri"
         } ],
-        "hasAssertion" : [ {
-          "identifier" : "hasAssertion",
-          "language" : "undefined",
-          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#assertion",
-          "type" : "iri"
-        } ],
         "creator" : [ {
           "identifier" : "creator",
           "language" : "undefined",
-          "value" : "https://orcid.org/0000-0003-4727-9435",
+          "value" : "https://orcid.org/0000-0002-1267-0234",
           "type" : "iri"
         }, {
           "identifier" : "creator",
           "language" : "undefined",
-          "value" : "https://orcid.org/0000-0002-1267-0234",
+          "value" : "https://orcid.org/0000-0003-4727-9435",
+          "type" : "iri"
+        } ],
+        "hasAssertion" : [ {
+          "identifier" : "hasAssertion",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#assertion",
           "type" : "iri"
         } ],
         "hasPublicationInfo" : [ {
@@ -1311,22 +1311,22 @@
   }, {
     "range" : "30",
     "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "28"
   }, {
     "range" : "15",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
     "range" : "30",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
     "range" : "1",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
     "iri" : "https://w3id.org/fair-o#implementedBy",
@@ -1345,17 +1345,17 @@
   }, {
     "range" : "1",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "36"
   }, {
     "range" : "19",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
     "range" : "19",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/fair-o#algorithmDescription",
@@ -1449,7 +1449,7 @@
     "comment" : {
       "en" : "skos:related is disjoint with skos:broaderTransitive"
     },
-    "attributes" : [ "external", "object", "symmetric" ],
+    "attributes" : [ "external", "symmetric", "object" ],
     "id" : "4"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#notation",
@@ -1480,7 +1480,7 @@
       "en" : "notation"
     },
     "domain" : "11",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/fair-o#rScore",
@@ -1499,7 +1499,7 @@
   }, {
     "range" : "6",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "49"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#mappingRelation",
@@ -1616,7 +1616,7 @@
     "superproperty" : [ "5" ],
     "domain" : "11",
     "subproperty" : [ "60" ],
-    "attributes" : [ "external", "object", "symmetric" ],
+    "attributes" : [ "external", "symmetric", "object" ],
     "id" : "53"
   }, {
     "iri" : "https://w3id.org/fair-o#aScore",
@@ -1661,7 +1661,7 @@
   }, {
     "range" : "41",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "64"
   }, {
     "iri" : "https://w3id.org/fair-o#fScore",
@@ -1701,7 +1701,7 @@
     },
     "superproperty" : [ "4", "5" ],
     "domain" : "11",
-    "attributes" : [ "external", "object", "symmetric" ],
+    "attributes" : [ "external", "symmetric", "object" ],
     "id" : "44"
   }, {
     "iri" : "https://w3id.org/fair-o#usesAggregationMethod",
@@ -1720,12 +1720,12 @@
   }, {
     "range" : "1",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "72"
   }, {
     "range" : "41",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
@@ -1822,7 +1822,7 @@
     "comment" : {
       "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
     },
-    "attributes" : [ "transitive", "external", "object", "symmetric" ],
+    "attributes" : [ "transitive", "external", "symmetric", "object" ],
     "id" : "60"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
