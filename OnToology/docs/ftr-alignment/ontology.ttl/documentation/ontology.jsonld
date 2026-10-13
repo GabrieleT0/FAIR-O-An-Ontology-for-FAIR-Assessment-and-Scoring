@@ -1,0 +1,169 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#used",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#AggregationMethod",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Both may aggregate scores, but their units of aggregation need not coincide."
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#relatedClass" : [ {
+    "@id" : "https://w3id.org/ftr#ScoringAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o#CalculationAlgorithm",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "FAIR-O methods calculate sub-principle outcomes; FTR algorithms score test results against benchmarks. Correspondence is contextual."
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#relatedClass" : [ {
+    "@id" : "https://w3id.org/ftr#ScoringAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o#FAIRAssessment",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "FAIRAssessment is a prov:Activity; a TestResultSet is a prov:Entity. Link their instances via a usage relation, not class equivalence."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://w3id.org/ftr#TestResultSet"
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#relatedClass" : [ {
+    "@id" : "https://w3id.org/ftr#TestExecutionActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o#SubPrincipleResult",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A FAIR sub-principle result may be derived from one or many FTR test results, and may correspond to a benchmark score if the benchmark is scoped to that sub-principle."
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#relatedClass" : [ {
+    "@id" : "https://w3id.org/ftr#BenchmarkScore"
+  }, {
+    "@id" : "https://w3id.org/ftr#TestResult"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "Conservative class-level correspondences and explicit data-level bridges between FAIR-O and FTR 1.3.0."
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-06-15"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Conservative class-level correspondences and explicit data-level bridges between FAIR-O and FTR 1.3.0."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "FAIR-O to FTR Alignment Module"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This module relates FAIR-O assessment activities and sub-principle results to FTR test executions, test results, and benchmark scores. It records contextual class relationships and defines provenance-based links for using FTR outputs as evidence in FAIR-O assessments."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://w3id.org/ftr#"
+  }, {
+    "@id" : "https://w3id.org/ftr/1.3.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/fair-o"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ftr#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "assesses FAIR sub-principle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fair-o#SubPrincipleResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "derived from benchmark score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ftr#BenchmarkScore"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fair-o#SubPrincipleResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "derived from test result"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ftr#TestResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#relatedClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Conceptually related class in an external ontology, does not entail class equivalence or subclass membership."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related OWL class"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#usesTestResultSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fair-o#FAIRAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses test result set"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ftr#TestResultSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#used"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ftr#BenchmarkScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#Metric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#TestResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#TestResultSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]
