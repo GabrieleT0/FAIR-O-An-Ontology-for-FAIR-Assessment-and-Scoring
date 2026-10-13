@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "FAIR-O.ttl"
+      - "FAIR-O_FTR_alignment.ttl"
       - "widoco-sections/**"
       - ".github/workflows/build-widoco-docs.yml"
 
@@ -30,13 +31,15 @@ jobs:
 
       - name: Prepare temporary workspace
         run: |
-          sudo rm -rf /tmp/widoco-input /tmp/widoco-output
+          sudo rm -rf /tmp/widoco-input /tmp/widoco-output /tmp/widoco-alignment-output
           mkdir -p /tmp/widoco-input
           mkdir -p /tmp/widoco-output
+          mkdir -p /tmp/widoco-alignment-output
           mkdir -p /tmp/widoco-output/resources
           mkdir -p /tmp/widoco-output/webvowl
           cp FAIR-O.ttl /tmp/widoco-input/FAIR-O.ttl
-          chmod -R 777 /tmp/widoco-output
+          cp FAIR-O_FTR_alignment.ttl /tmp/widoco-input/FAIR-O_FTR_alignment.ttl
+          chmod -R 777 /tmp/widoco-output /tmp/widoco-alignment-output
 
       - name: Generate WIDOCO documentation with OOPS
         run: |
@@ -80,6 +83,22 @@ jobs:
           path.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
           PY
 
+      - name: Generate alignment documentation
+        run: |
+          docker run --rm \
+            -v /tmp/widoco-input:/input \
+            -v /tmp/widoco-alignment-output:/output \
+            ghcr.io/dgarijo/widoco:latest \
+            -ontFile /input/FAIR-O_FTR_alignment.ttl \
+            -outFolder /output \
+            -rewriteAll \
+            -getOntologyMetadata
+
+      - name: Fix alignment output permissions
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" /tmp/widoco-alignment-output
+          chmod -R u+rwX /tmp/widoco-alignment-output
+
       - name: Replace docs folder
         run: |
           sudo rm -rf docs
@@ -97,6 +116,16 @@ jobs:
           if [ -f "docs/${ONTOLOGY_VERSION}/index-en.html" ]; then
             cp "docs/${ONTOLOGY_VERSION}/index-en.html" \
               "docs/${ONTOLOGY_VERSION}/index.html"
+          fi
+
+      - name: Publish alignment documentation
+        run: |
+          mkdir -p docs/ftr-alignment
+          cp -R /tmp/widoco-alignment-output/. docs/ftr-alignment/
+          cp FAIR-O_FTR_alignment.ttl docs/ftr-alignment/ontology.ttl
+
+          if [ -f docs/ftr-alignment/index-en.html ]; then
+            cp docs/ftr-alignment/index-en.html docs/ftr-alignment/index.html
           fi
 
       - name: Replace WIDOCO placeholder sections
