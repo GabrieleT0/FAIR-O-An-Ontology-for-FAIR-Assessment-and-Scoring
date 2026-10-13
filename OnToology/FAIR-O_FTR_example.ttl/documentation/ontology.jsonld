@@ -1,0 +1,377 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#Entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#generated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#hadMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#used",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasAssociatedWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasInformedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://example.org/fair-assessment/F1Result42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/fair-o#SubPrincipleResult"
+  } ],
+  "http://www.w3.org/ns/prov#wasGeneratedBy" : [ {
+    "@id" : "https://example.org/fair-assessment/assessment42"
+  } ],
+  "https://w3id.org/fair-o#assessmentScope" : [ {
+    "@id" : "https://w3id.org/fair-o#DataScope"
+  } ],
+  "https://w3id.org/fair-o#computedUsing" : [ {
+    "@id" : "https://example.org/fair-assessment/algorithmF1"
+  } ],
+  "https://w3id.org/fair-o#evidence" : [ {
+    "@language" : "en",
+    "@value" : "Unique identifier check passed; persistence check failed."
+  } ],
+  "https://w3id.org/fair-o#forSubPrinciple" : [ {
+    "@id" : "https://w3id.org/fair/principles/terms/F1"
+  } ],
+  "https://w3id.org/fair-o#testResult" : [ {
+    "@id" : "https://w3id.org/fair-o#Indeterminate"
+  } ],
+  "https://w3id.org/fair-o#value" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.5"
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore" : [ {
+    "@id" : "https://example.org/fair-assessment/benchmarkScoreF1"
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult" : [ {
+    "@id" : "https://example.org/fair-assessment/testResultPersistentID"
+  }, {
+    "@id" : "https://example.org/fair-assessment/testResultUniqueID"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/algorithmF1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/fair-o#CalculationAlgorithm"
+  } ],
+  "https://w3id.org/fair-o#algorithmDescription" : [ {
+    "@language" : "en",
+    "@value" : "Interpret the two FTR test results for F1; score = (1 + 0) / 2 = 0.5."
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/assessment42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/fair-o#FAIRAssessment"
+  } ],
+  "http://www.w3.org/ns/prov#used" : [ {
+    "@id" : "https://example.org/fair-assessment/benchmarkScoreF1"
+  } ],
+  "http://www.w3.org/ns/prov#wasInformedBy" : [ {
+    "@id" : "https://example.org/fair-assessment/testExecution42"
+  } ],
+  "https://w3id.org/fair-o#hasSubPrincipleResult" : [ {
+    "@id" : "https://example.org/fair-assessment/F1Result42"
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#usesTestResultSet" : [ {
+    "@id" : "https://example.org/fair-assessment/resultSet42"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/benchmarkF1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#Benchmark"
+  } ],
+  "https://w3id.org/ftr#hasAssociatedMetric" : [ {
+    "@id" : "https://example.org/fair-assessment/metricPersistentID"
+  }, {
+    "@id" : "https://example.org/fair-assessment/metricUniqueID"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/benchmarkScoreF1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#BenchmarkScore"
+  } ],
+  "http://www.w3.org/ns/prov#value" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.5"
+  } ],
+  "https://w3id.org/ftr#outputFromAlgorithm" : [ {
+    "@id" : "https://example.org/fair-assessment/ftrScoringAlgorithmF1"
+  } ],
+  "https://w3id.org/ftr#scoredTestResults" : [ {
+    "@id" : "https://example.org/fair-assessment/resultSet42"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/dataset42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Example research dataset"
+  } ],
+  "https://w3id.org/fair-o#wasAssessedBy" : [ {
+    "@id" : "https://example.org/fair-assessment/assessment42"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/ftrScoringAlgorithmF1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#ScoringAlgorithm"
+  } ],
+  "https://w3id.org/ftr#invokesTest" : [ {
+    "@id" : "https://example.org/fair-assessment/testPersistentID"
+  }, {
+    "@id" : "https://example.org/fair-assessment/testUniqueID"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/metricPersistentID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Check persistent identifier"
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple" : [ {
+    "@id" : "https://w3id.org/fair/principles/terms/F1"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/metricUniqueID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Check globally unique identifier"
+  } ],
+  "https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple" : [ {
+    "@id" : "https://w3id.org/fair/principles/terms/F1"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/resultSet42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#TestResultSet"
+  } ],
+  "http://www.w3.org/ns/prov#hadMember" : [ {
+    "@id" : "https://example.org/fair-assessment/testResultPersistentID"
+  }, {
+    "@id" : "https://example.org/fair-assessment/testResultUniqueID"
+  } ],
+  "http://www.w3.org/ns/prov#wasGeneratedBy" : [ {
+    "@id" : "https://example.org/fair-assessment/testExecution42"
+  } ],
+  "https://w3id.org/ftr#assessmentTarget" : [ {
+    "@id" : "https://example.org/fair-assessment/dataset42"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/testExecution42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#TestExecutionActivity"
+  } ],
+  "http://www.w3.org/ns/prov#generated" : [ {
+    "@id" : "https://example.org/fair-assessment/resultSet42"
+  }, {
+    "@id" : "https://example.org/fair-assessment/testResultPersistentID"
+  }, {
+    "@id" : "https://example.org/fair-assessment/testResultUniqueID"
+  } ],
+  "http://www.w3.org/ns/prov#used" : [ {
+    "@id" : "https://example.org/fair-assessment/dataset42"
+  } ],
+  "http://www.w3.org/ns/prov#wasAssociatedWith" : [ {
+    "@id" : "https://example.org/fair-assessment/testPersistentID"
+  }, {
+    "@id" : "https://example.org/fair-assessment/testUniqueID"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/testPersistentID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#Test"
+  } ],
+  "https://semanticscience.org/resource/SIO_000233" : [ {
+    "@id" : "https://example.org/fair-assessment/metricPersistentID"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/testResultPersistentID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#TestResult"
+  } ],
+  "http://www.w3.org/ns/prov#value" : [ {
+    "@value" : "FAIL"
+  } ],
+  "http://www.w3.org/ns/prov#wasGeneratedBy" : [ {
+    "@id" : "https://example.org/fair-assessment/testExecution42"
+  } ],
+  "https://w3id.org/ftr#assessmentTarget" : [ {
+    "@id" : "https://example.org/fair-assessment/dataset42"
+  } ],
+  "https://w3id.org/ftr#completion" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.0"
+  } ],
+  "https://w3id.org/ftr#log" : [ {
+    "@language" : "en",
+    "@value" : "Identifier persistence could not be established."
+  } ],
+  "https://w3id.org/ftr#outputFromTest" : [ {
+    "@id" : "https://example.org/fair-assessment/testPersistentID"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/testResultUniqueID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#TestResult"
+  } ],
+  "http://www.w3.org/ns/prov#value" : [ {
+    "@value" : "PASS"
+  } ],
+  "http://www.w3.org/ns/prov#wasGeneratedBy" : [ {
+    "@id" : "https://example.org/fair-assessment/testExecution42"
+  } ],
+  "https://w3id.org/ftr#assessmentTarget" : [ {
+    "@id" : "https://example.org/fair-assessment/dataset42"
+  } ],
+  "https://w3id.org/ftr#completion" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "1.0"
+  } ],
+  "https://w3id.org/ftr#log" : [ {
+    "@language" : "en",
+    "@value" : "Identifier is globally unique."
+  } ],
+  "https://w3id.org/ftr#outputFromTest" : [ {
+    "@id" : "https://example.org/fair-assessment/testUniqueID"
+  } ]
+}, {
+  "@id" : "https://example.org/fair-assessment/testUniqueID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ftr#Test"
+  } ],
+  "https://semanticscience.org/resource/SIO_000233" : [ {
+    "@id" : "https://example.org/fair-assessment/metricUniqueID"
+  } ]
+}, {
+  "@id" : "https://semanticscience.org/resource/SIO_000233",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#CalculationAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#FAIRAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#SubPrincipleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#algorithmDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#assessmentScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#computedUsing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#evidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#forSubPrinciple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#hasSubPrincipleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#testResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o#wasAssessedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/fair-o/ftr-alignment#usesTestResultSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#Benchmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#BenchmarkScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#Metric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#ScoringAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#Test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#TestExecutionActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#TestResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#TestResultSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ftr#assessmentTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#completion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#hasAssociatedMetric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#invokesTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#log",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#outputFromAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#outputFromTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/ftr#scoredTestResults",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

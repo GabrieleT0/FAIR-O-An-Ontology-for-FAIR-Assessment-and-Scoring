@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:ftr="https://w3id.org/ftr#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fair-o="https://w3id.org/fair-o#"
+     xmlns:resource="https://semanticscience.org/resource/"
+     xmlns:ftr-alignment="https://w3id.org/fair-o/ftr-alignment#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#generated -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#generated"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#hadMember -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#hadMember"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#used -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#used"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#value -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#value"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasInformedBy -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasInformedBy"/>
+    
+
+
+    <!-- https://semanticscience.org/resource/SIO_000233 -->
+
+
+    <AnnotationProperty rdf:about="https://semanticscience.org/resource/SIO_000233"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#algorithmDescription -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#algorithmDescription"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#assessmentScope -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#assessmentScope"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#computedUsing -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#computedUsing"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#evidence -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#evidence"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#forSubPrinciple -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#forSubPrinciple"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#hasSubPrincipleResult -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#hasSubPrincipleResult"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#testResult -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#testResult"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#value -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#value"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#wasAssessedBy -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o#wasAssessedBy"/>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple"/>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore"/>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult"/>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#usesTestResultSet -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#usesTestResultSet"/>
+    
+
+
+    <!-- https://w3id.org/ftr#assessmentTarget -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#assessmentTarget"/>
+    
+
+
+    <!-- https://w3id.org/ftr#completion -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#completion"/>
+    
+
+
+    <!-- https://w3id.org/ftr#hasAssociatedMetric -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#hasAssociatedMetric"/>
+    
+
+
+    <!-- https://w3id.org/ftr#invokesTest -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#invokesTest"/>
+    
+
+
+    <!-- https://w3id.org/ftr#log -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#log"/>
+    
+
+
+    <!-- https://w3id.org/ftr#outputFromAlgorithm -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#outputFromAlgorithm"/>
+    
+
+
+    <!-- https://w3id.org/ftr#outputFromTest -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#outputFromTest"/>
+    
+
+
+    <!-- https://w3id.org/ftr#scoredTestResults -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/ftr#scoredTestResults"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#CalculationAlgorithm -->
+
+
+    <Class rdf:about="https://w3id.org/fair-o#CalculationAlgorithm"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#FAIRAssessment -->
+
+
+    <Class rdf:about="https://w3id.org/fair-o#FAIRAssessment"/>
+    
+
+
+    <!-- https://w3id.org/fair-o#SubPrincipleResult -->
+
+
+    <Class rdf:about="https://w3id.org/fair-o#SubPrincipleResult"/>
+    
+
+
+    <!-- https://w3id.org/ftr#Benchmark -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#Benchmark"/>
+    
+
+
+    <!-- https://w3id.org/ftr#BenchmarkScore -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#BenchmarkScore"/>
+    
+
+
+    <!-- https://w3id.org/ftr#Metric -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#Metric"/>
+    
+
+
+    <!-- https://w3id.org/ftr#ScoringAlgorithm -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#ScoringAlgorithm"/>
+    
+
+
+    <!-- https://w3id.org/ftr#Test -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#Test"/>
+    
+
+
+    <!-- https://w3id.org/ftr#TestExecutionActivity -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#TestExecutionActivity"/>
+    
+
+
+    <!-- https://w3id.org/ftr#TestResult -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#TestResult"/>
+    
+
+
+    <!-- https://w3id.org/ftr#TestResultSet -->
+
+
+    <Class rdf:about="https://w3id.org/ftr#TestResultSet"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://example.org/fair-assessment/F1Result42 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/F1Result42">
+        <rdf:type rdf:resource="https://w3id.org/fair-o#SubPrincipleResult"/>
+        <prov:wasGeneratedBy rdf:resource="https://example.org/fair-assessment/assessment42"/>
+        <fair-o:assessmentScope rdf:resource="https://w3id.org/fair-o#DataScope"/>
+        <fair-o:computedUsing rdf:resource="https://example.org/fair-assessment/algorithmF1"/>
+        <fair-o:evidence xml:lang="en">Unique identifier check passed; persistence check failed.</fair-o:evidence>
+        <fair-o:forSubPrinciple rdf:resource="https://w3id.org/fair/principles/terms/F1"/>
+        <fair-o:testResult rdf:resource="https://w3id.org/fair-o#Indeterminate"/>
+        <fair-o:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</fair-o:value>
+        <ftr-alignment:derivedFromBenchmarkScore rdf:resource="https://example.org/fair-assessment/benchmarkScoreF1"/>
+        <ftr-alignment:derivedFromTestResult rdf:resource="https://example.org/fair-assessment/testResultPersistentID"/>
+        <ftr-alignment:derivedFromTestResult rdf:resource="https://example.org/fair-assessment/testResultUniqueID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/algorithmF1 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/algorithmF1">
+        <rdf:type rdf:resource="https://w3id.org/fair-o#CalculationAlgorithm"/>
+        <fair-o:algorithmDescription xml:lang="en">Interpret the two FTR test results for F1; score = (1 + 0) / 2 = 0.5.</fair-o:algorithmDescription>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/assessment42 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/assessment42">
+        <rdf:type rdf:resource="https://w3id.org/fair-o#FAIRAssessment"/>
+        <prov:used rdf:resource="https://example.org/fair-assessment/benchmarkScoreF1"/>
+        <prov:wasInformedBy rdf:resource="https://example.org/fair-assessment/testExecution42"/>
+        <fair-o:hasSubPrincipleResult rdf:resource="https://example.org/fair-assessment/F1Result42"/>
+        <ftr-alignment:usesTestResultSet rdf:resource="https://example.org/fair-assessment/resultSet42"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/benchmarkF1 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/benchmarkF1">
+        <rdf:type rdf:resource="https://w3id.org/ftr#Benchmark"/>
+        <ftr:hasAssociatedMetric rdf:resource="https://example.org/fair-assessment/metricPersistentID"/>
+        <ftr:hasAssociatedMetric rdf:resource="https://example.org/fair-assessment/metricUniqueID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/benchmarkScoreF1 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/benchmarkScoreF1">
+        <rdf:type rdf:resource="https://w3id.org/ftr#BenchmarkScore"/>
+        <prov:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</prov:value>
+        <ftr:outputFromAlgorithm rdf:resource="https://example.org/fair-assessment/ftrScoringAlgorithmF1"/>
+        <ftr:scoredTestResults rdf:resource="https://example.org/fair-assessment/resultSet42"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/dataset42 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/dataset42">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:label xml:lang="en">Example research dataset</rdfs:label>
+        <fair-o:wasAssessedBy rdf:resource="https://example.org/fair-assessment/assessment42"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/ftrScoringAlgorithmF1 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/ftrScoringAlgorithmF1">
+        <rdf:type rdf:resource="https://w3id.org/ftr#ScoringAlgorithm"/>
+        <ftr:invokesTest rdf:resource="https://example.org/fair-assessment/testPersistentID"/>
+        <ftr:invokesTest rdf:resource="https://example.org/fair-assessment/testUniqueID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/metricPersistentID -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/metricPersistentID">
+        <rdf:type rdf:resource="https://w3id.org/ftr#Metric"/>
+        <rdfs:label xml:lang="en">Check persistent identifier</rdfs:label>
+        <ftr-alignment:assessesSubPrinciple rdf:resource="https://w3id.org/fair/principles/terms/F1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/metricUniqueID -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/metricUniqueID">
+        <rdf:type rdf:resource="https://w3id.org/ftr#Metric"/>
+        <rdfs:label xml:lang="en">Check globally unique identifier</rdfs:label>
+        <ftr-alignment:assessesSubPrinciple rdf:resource="https://w3id.org/fair/principles/terms/F1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/resultSet42 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/resultSet42">
+        <rdf:type rdf:resource="https://w3id.org/ftr#TestResultSet"/>
+        <prov:hadMember rdf:resource="https://example.org/fair-assessment/testResultPersistentID"/>
+        <prov:hadMember rdf:resource="https://example.org/fair-assessment/testResultUniqueID"/>
+        <prov:wasGeneratedBy rdf:resource="https://example.org/fair-assessment/testExecution42"/>
+        <ftr:assessmentTarget rdf:resource="https://example.org/fair-assessment/dataset42"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/testExecution42 -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/testExecution42">
+        <rdf:type rdf:resource="https://w3id.org/ftr#TestExecutionActivity"/>
+        <prov:generated rdf:resource="https://example.org/fair-assessment/resultSet42"/>
+        <prov:generated rdf:resource="https://example.org/fair-assessment/testResultPersistentID"/>
+        <prov:generated rdf:resource="https://example.org/fair-assessment/testResultUniqueID"/>
+        <prov:used rdf:resource="https://example.org/fair-assessment/dataset42"/>
+        <prov:wasAssociatedWith rdf:resource="https://example.org/fair-assessment/testPersistentID"/>
+        <prov:wasAssociatedWith rdf:resource="https://example.org/fair-assessment/testUniqueID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/testPersistentID -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/testPersistentID">
+        <rdf:type rdf:resource="https://w3id.org/ftr#Test"/>
+        <resource:SIO_000233 rdf:resource="https://example.org/fair-assessment/metricPersistentID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/testResultPersistentID -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/testResultPersistentID">
+        <rdf:type rdf:resource="https://w3id.org/ftr#TestResult"/>
+        <prov:value>FAIL</prov:value>
+        <prov:wasGeneratedBy rdf:resource="https://example.org/fair-assessment/testExecution42"/>
+        <ftr:assessmentTarget rdf:resource="https://example.org/fair-assessment/dataset42"/>
+        <ftr:completion rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</ftr:completion>
+        <ftr:log xml:lang="en">Identifier persistence could not be established.</ftr:log>
+        <ftr:outputFromTest rdf:resource="https://example.org/fair-assessment/testPersistentID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/testResultUniqueID -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/testResultUniqueID">
+        <rdf:type rdf:resource="https://w3id.org/ftr#TestResult"/>
+        <prov:value>PASS</prov:value>
+        <prov:wasGeneratedBy rdf:resource="https://example.org/fair-assessment/testExecution42"/>
+        <ftr:assessmentTarget rdf:resource="https://example.org/fair-assessment/dataset42"/>
+        <ftr:completion rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ftr:completion>
+        <ftr:log xml:lang="en">Identifier is globally unique.</ftr:log>
+        <ftr:outputFromTest rdf:resource="https://example.org/fair-assessment/testUniqueID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.org/fair-assessment/testUniqueID -->
+
+
+    <NamedIndividual rdf:about="https://example.org/fair-assessment/testUniqueID">
+        <rdf:type rdf:resource="https://w3id.org/ftr#Test"/>
+        <resource:SIO_000233 rdf:resource="https://example.org/fair-assessment/metricUniqueID"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

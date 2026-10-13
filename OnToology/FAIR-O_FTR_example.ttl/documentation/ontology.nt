@@ -1,0 +1,264 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#generated
+<http://www.w3.org/ns/prov#generated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#hadMember
+<http://www.w3.org/ns/prov#hadMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#used
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#value
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#wasAssociatedWith
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#wasInformedBy
+<http://www.w3.org/ns/prov#wasInformedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://semanticscience.org/resource/SIO_000233
+<https://semanticscience.org/resource/SIO_000233> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#algorithmDescription
+<https://w3id.org/fair-o#algorithmDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#assessmentScope
+<https://w3id.org/fair-o#assessmentScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#computedUsing
+<https://w3id.org/fair-o#computedUsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#evidence
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#forSubPrinciple
+<https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#hasSubPrincipleResult
+<https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#testResult
+<https://w3id.org/fair-o#testResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#value
+<https://w3id.org/fair-o#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o#wasAssessedBy
+<https://w3id.org/fair-o#wasAssessedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple
+<https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore
+<https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult
+<https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/fair-o/ftr-alignment#usesTestResultSet
+<https://w3id.org/fair-o/ftr-alignment#usesTestResultSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#assessmentTarget
+<https://w3id.org/ftr#assessmentTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#completion
+<https://w3id.org/ftr#completion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#hasAssociatedMetric
+<https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#invokesTest
+<https://w3id.org/ftr#invokesTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#log
+<https://w3id.org/ftr#log> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#outputFromAlgorithm
+<https://w3id.org/ftr#outputFromAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#outputFromTest
+<https://w3id.org/ftr#outputFromTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/ftr#scoredTestResults
+<https://w3id.org/ftr#scoredTestResults> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/fair-o#CalculationAlgorithm
+<https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/fair-o#FAIRAssessment
+<https://w3id.org/fair-o#FAIRAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/fair-o#SubPrincipleResult
+<https://w3id.org/fair-o#SubPrincipleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#Benchmark
+<https://w3id.org/ftr#Benchmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#BenchmarkScore
+<https://w3id.org/ftr#BenchmarkScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#Metric
+<https://w3id.org/ftr#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#ScoringAlgorithm
+<https://w3id.org/ftr#ScoringAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#Test
+<https://w3id.org/ftr#Test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#TestExecutionActivity
+<https://w3id.org/ftr#TestExecutionActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#TestResult
+<https://w3id.org/ftr#TestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ftr#TestResultSet
+<https://w3id.org/ftr#TestResultSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://example.org/fair-assessment/F1Result42
+<https://example.org/fair-assessment/F1Result42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/F1Result42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://example.org/fair-assessment/F1Result42> <http://www.w3.org/ns/prov#wasGeneratedBy> <https://example.org/fair-assessment/assessment42> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o#assessmentScope> <https://w3id.org/fair-o#DataScope> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o#computedUsing> <https://example.org/fair-assessment/algorithmF1> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o#evidence> "Unique identifier check passed; persistence check failed."@en .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o#forSubPrinciple> <https://w3id.org/fair/principles/terms/F1> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o#testResult> <https://w3id.org/fair-o#Indeterminate> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o#value> "0.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore> <https://example.org/fair-assessment/benchmarkScoreF1> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult> <https://example.org/fair-assessment/testResultPersistentID> .
+<https://example.org/fair-assessment/F1Result42> <https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult> <https://example.org/fair-assessment/testResultUniqueID> .
+# 
+# https://example.org/fair-assessment/algorithmF1
+<https://example.org/fair-assessment/algorithmF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/algorithmF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#CalculationAlgorithm> .
+<https://example.org/fair-assessment/algorithmF1> <https://w3id.org/fair-o#algorithmDescription> "Interpret the two FTR test results for F1; score = (1 + 0) / 2 = 0.5."@en .
+# 
+# https://example.org/fair-assessment/assessment42
+<https://example.org/fair-assessment/assessment42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/assessment42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/fair-o#FAIRAssessment> .
+<https://example.org/fair-assessment/assessment42> <http://www.w3.org/ns/prov#used> <https://example.org/fair-assessment/benchmarkScoreF1> .
+<https://example.org/fair-assessment/assessment42> <http://www.w3.org/ns/prov#wasInformedBy> <https://example.org/fair-assessment/testExecution42> .
+<https://example.org/fair-assessment/assessment42> <https://w3id.org/fair-o#hasSubPrincipleResult> <https://example.org/fair-assessment/F1Result42> .
+<https://example.org/fair-assessment/assessment42> <https://w3id.org/fair-o/ftr-alignment#usesTestResultSet> <https://example.org/fair-assessment/resultSet42> .
+# 
+# https://example.org/fair-assessment/benchmarkF1
+<https://example.org/fair-assessment/benchmarkF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/benchmarkF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#Benchmark> .
+<https://example.org/fair-assessment/benchmarkF1> <https://w3id.org/ftr#hasAssociatedMetric> <https://example.org/fair-assessment/metricPersistentID> .
+<https://example.org/fair-assessment/benchmarkF1> <https://w3id.org/ftr#hasAssociatedMetric> <https://example.org/fair-assessment/metricUniqueID> .
+# 
+# https://example.org/fair-assessment/benchmarkScoreF1
+<https://example.org/fair-assessment/benchmarkScoreF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/benchmarkScoreF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#BenchmarkScore> .
+<https://example.org/fair-assessment/benchmarkScoreF1> <http://www.w3.org/ns/prov#value> "0.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://example.org/fair-assessment/benchmarkScoreF1> <https://w3id.org/ftr#outputFromAlgorithm> <https://example.org/fair-assessment/ftrScoringAlgorithmF1> .
+<https://example.org/fair-assessment/benchmarkScoreF1> <https://w3id.org/ftr#scoredTestResults> <https://example.org/fair-assessment/resultSet42> .
+# 
+# https://example.org/fair-assessment/dataset42
+<https://example.org/fair-assessment/dataset42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/dataset42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Entity> .
+<https://example.org/fair-assessment/dataset42> <http://www.w3.org/2000/01/rdf-schema#label> "Example research dataset"@en .
+<https://example.org/fair-assessment/dataset42> <https://w3id.org/fair-o#wasAssessedBy> <https://example.org/fair-assessment/assessment42> .
+# 
+# https://example.org/fair-assessment/ftrScoringAlgorithmF1
+<https://example.org/fair-assessment/ftrScoringAlgorithmF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/ftrScoringAlgorithmF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#ScoringAlgorithm> .
+<https://example.org/fair-assessment/ftrScoringAlgorithmF1> <https://w3id.org/ftr#invokesTest> <https://example.org/fair-assessment/testPersistentID> .
+<https://example.org/fair-assessment/ftrScoringAlgorithmF1> <https://w3id.org/ftr#invokesTest> <https://example.org/fair-assessment/testUniqueID> .
+# 
+# https://example.org/fair-assessment/metricPersistentID
+<https://example.org/fair-assessment/metricPersistentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/metricPersistentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#Metric> .
+<https://example.org/fair-assessment/metricPersistentID> <http://www.w3.org/2000/01/rdf-schema#label> "Check persistent identifier"@en .
+<https://example.org/fair-assessment/metricPersistentID> <https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple> <https://w3id.org/fair/principles/terms/F1> .
+# 
+# https://example.org/fair-assessment/metricUniqueID
+<https://example.org/fair-assessment/metricUniqueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/metricUniqueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#Metric> .
+<https://example.org/fair-assessment/metricUniqueID> <http://www.w3.org/2000/01/rdf-schema#label> "Check globally unique identifier"@en .
+<https://example.org/fair-assessment/metricUniqueID> <https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple> <https://w3id.org/fair/principles/terms/F1> .
+# 
+# https://example.org/fair-assessment/resultSet42
+<https://example.org/fair-assessment/resultSet42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/resultSet42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#TestResultSet> .
+<https://example.org/fair-assessment/resultSet42> <http://www.w3.org/ns/prov#hadMember> <https://example.org/fair-assessment/testResultPersistentID> .
+<https://example.org/fair-assessment/resultSet42> <http://www.w3.org/ns/prov#hadMember> <https://example.org/fair-assessment/testResultUniqueID> .
+<https://example.org/fair-assessment/resultSet42> <http://www.w3.org/ns/prov#wasGeneratedBy> <https://example.org/fair-assessment/testExecution42> .
+<https://example.org/fair-assessment/resultSet42> <https://w3id.org/ftr#assessmentTarget> <https://example.org/fair-assessment/dataset42> .
+# 
+# https://example.org/fair-assessment/testExecution42
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#TestExecutionActivity> .
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/ns/prov#generated> <https://example.org/fair-assessment/resultSet42> .
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/ns/prov#generated> <https://example.org/fair-assessment/testResultPersistentID> .
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/ns/prov#generated> <https://example.org/fair-assessment/testResultUniqueID> .
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/ns/prov#used> <https://example.org/fair-assessment/dataset42> .
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/ns/prov#wasAssociatedWith> <https://example.org/fair-assessment/testPersistentID> .
+<https://example.org/fair-assessment/testExecution42> <http://www.w3.org/ns/prov#wasAssociatedWith> <https://example.org/fair-assessment/testUniqueID> .
+# 
+# https://example.org/fair-assessment/testPersistentID
+<https://example.org/fair-assessment/testPersistentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/testPersistentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#Test> .
+<https://example.org/fair-assessment/testPersistentID> <https://semanticscience.org/resource/SIO_000233> <https://example.org/fair-assessment/metricPersistentID> .
+# 
+# https://example.org/fair-assessment/testResultPersistentID
+<https://example.org/fair-assessment/testResultPersistentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/testResultPersistentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#TestResult> .
+<https://example.org/fair-assessment/testResultPersistentID> <http://www.w3.org/ns/prov#value> "FAIL" .
+<https://example.org/fair-assessment/testResultPersistentID> <http://www.w3.org/ns/prov#wasGeneratedBy> <https://example.org/fair-assessment/testExecution42> .
+<https://example.org/fair-assessment/testResultPersistentID> <https://w3id.org/ftr#assessmentTarget> <https://example.org/fair-assessment/dataset42> .
+<https://example.org/fair-assessment/testResultPersistentID> <https://w3id.org/ftr#completion> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://example.org/fair-assessment/testResultPersistentID> <https://w3id.org/ftr#log> "Identifier persistence could not be established."@en .
+<https://example.org/fair-assessment/testResultPersistentID> <https://w3id.org/ftr#outputFromTest> <https://example.org/fair-assessment/testPersistentID> .
+# 
+# https://example.org/fair-assessment/testResultUniqueID
+<https://example.org/fair-assessment/testResultUniqueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/testResultUniqueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#TestResult> .
+<https://example.org/fair-assessment/testResultUniqueID> <http://www.w3.org/ns/prov#value> "PASS" .
+<https://example.org/fair-assessment/testResultUniqueID> <http://www.w3.org/ns/prov#wasGeneratedBy> <https://example.org/fair-assessment/testExecution42> .
+<https://example.org/fair-assessment/testResultUniqueID> <https://w3id.org/ftr#assessmentTarget> <https://example.org/fair-assessment/dataset42> .
+<https://example.org/fair-assessment/testResultUniqueID> <https://w3id.org/ftr#completion> "1.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://example.org/fair-assessment/testResultUniqueID> <https://w3id.org/ftr#log> "Identifier is globally unique."@en .
+<https://example.org/fair-assessment/testResultUniqueID> <https://w3id.org/ftr#outputFromTest> <https://example.org/fair-assessment/testUniqueID> .
+# 
+# https://example.org/fair-assessment/testUniqueID
+<https://example.org/fair-assessment/testUniqueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/fair-assessment/testUniqueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ftr#Test> .
+<https://example.org/fair-assessment/testUniqueID> <https://semanticscience.org/resource/SIO_000233> <https://example.org/fair-assessment/metricUniqueID> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

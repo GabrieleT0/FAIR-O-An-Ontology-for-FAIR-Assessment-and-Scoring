@@ -1,0 +1,127 @@
+{
+  "@context" : {
+    "assessesSubPrinciple" : {
+      "@id" : "https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple"
+    },
+    "wasGeneratedBy" : {
+      "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
+    },
+    "hasAssociatedMetric" : {
+      "@id" : "https://w3id.org/ftr#hasAssociatedMetric"
+    },
+    "CalculationAlgorithm" : {
+      "@id" : "https://w3id.org/fair-o#CalculationAlgorithm"
+    },
+    "invokesTest" : {
+      "@id" : "https://w3id.org/ftr#invokesTest"
+    },
+    "ScoringAlgorithm" : {
+      "@id" : "https://w3id.org/ftr#ScoringAlgorithm"
+    },
+    "Test" : {
+      "@id" : "https://w3id.org/ftr#Test"
+    },
+    "computedUsing" : {
+      "@id" : "https://w3id.org/fair-o#computedUsing"
+    },
+    "TestResult" : {
+      "@id" : "https://w3id.org/ftr#TestResult"
+    },
+    "TestResultSet" : {
+      "@id" : "https://w3id.org/ftr#TestResultSet"
+    },
+    "derivedFromTestResult" : {
+      "@id" : "https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "assessmentScope" : {
+      "@id" : "https://w3id.org/fair-o#assessmentScope"
+    },
+    "used" : {
+      "@id" : "http://www.w3.org/ns/prov#used"
+    },
+    "algorithmDescription" : {
+      "@id" : "https://w3id.org/fair-o#algorithmDescription"
+    },
+    "log" : {
+      "@id" : "https://w3id.org/ftr#log"
+    },
+    "Benchmark" : {
+      "@id" : "https://w3id.org/ftr#Benchmark"
+    },
+    "SubPrincipleResult" : {
+      "@id" : "https://w3id.org/fair-o#SubPrincipleResult"
+    },
+    "value" : {
+      "@id" : "https://w3id.org/fair-o#value"
+    },
+    "usesTestResultSet" : {
+      "@id" : "https://w3id.org/fair-o/ftr-alignment#usesTestResultSet"
+    },
+    "outputFromTest" : {
+      "@id" : "https://w3id.org/ftr#outputFromTest"
+    },
+    "wasAssessedBy" : {
+      "@id" : "https://w3id.org/fair-o#wasAssessedBy"
+    },
+    "derivedFromBenchmarkScore" : {
+      "@id" : "https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore"
+    },
+    "hasSubPrincipleResult" : {
+      "@id" : "https://w3id.org/fair-o#hasSubPrincipleResult"
+    },
+    "Metric" : {
+      "@id" : "https://w3id.org/ftr#Metric"
+    },
+    "wasAssociatedWith" : {
+      "@id" : "http://www.w3.org/ns/prov#wasAssociatedWith"
+    },
+    "outputFromAlgorithm" : {
+      "@id" : "https://w3id.org/ftr#outputFromAlgorithm"
+    },
+    "assessmentTarget" : {
+      "@id" : "https://w3id.org/ftr#assessmentTarget"
+    },
+    "FAIRAssessment" : {
+      "@id" : "https://w3id.org/fair-o#FAIRAssessment"
+    },
+    "completion" : {
+      "@id" : "https://w3id.org/ftr#completion"
+    },
+    "forSubPrinciple" : {
+      "@id" : "https://w3id.org/fair-o#forSubPrinciple"
+    },
+    "Entity" : {
+      "@id" : "http://www.w3.org/ns/prov#Entity"
+    },
+    "hadMember" : {
+      "@id" : "http://www.w3.org/ns/prov#hadMember"
+    },
+    "wasInformedBy" : {
+      "@id" : "http://www.w3.org/ns/prov#wasInformedBy"
+    },
+    "SIO_000233" : {
+      "@id" : "https://semanticscience.org/resource/SIO_000233"
+    },
+    "evidence" : {
+      "@id" : "https://w3id.org/fair-o#evidence"
+    },
+    "TestExecutionActivity" : {
+      "@id" : "https://w3id.org/ftr#TestExecutionActivity"
+    },
+    "testResult" : {
+      "@id" : "https://w3id.org/fair-o#testResult"
+    },
+    "scoredTestResults" : {
+      "@id" : "https://w3id.org/ftr#scoredTestResults"
+    },
+    "BenchmarkScore" : {
+      "@id" : "https://w3id.org/ftr#BenchmarkScore"
+    },
+    "generated" : {
+      "@id" : "http://www.w3.org/ns/prov#generated"
+    }
+  }
+}
