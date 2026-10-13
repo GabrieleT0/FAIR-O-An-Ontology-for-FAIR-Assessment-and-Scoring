@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/fair-o/1.0.0> a prov:Entity;
+	 dc:title "FAIR-O: An Ontology for FAIR Assessment and Scoring";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2026-02-01";
+.
+:agent0 a prov:Agent; foaf:name "Gabriele Tuozzo and Maria Angela Pellegrino".
