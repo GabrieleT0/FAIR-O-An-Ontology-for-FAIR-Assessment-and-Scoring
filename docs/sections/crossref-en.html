@@ -4,6 +4,7 @@ This section provides details for each class and property defined by FAIR-O: An 
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
   <li><a href="#AggregationMethod" title="https://w3id.org/fair-o#AggregationMethod">Aggregation Method</a></li>
+  <li><a href="#Evidence" title="https://w3id.org/fair-o#Evidence">Assessment Evidence</a></li>
   <li><a href="#AssessmentScope" title="https://w3id.org/fair-o#AssessmentScope">Assessment Scope</a></li>
   <li><a href="#FAIRAssessment" title="https://w3id.org/fair-o#FAIRAssessment">FAIR Assessment</a></li>
   <li><a href="#CalculationAlgorithm" title="https://w3id.org/fair-o#CalculationAlgorithm">Scoring Algorithm</a></li>
@@ -29,6 +30,27 @@ This section provides details for each class and property defined by FAIR-O: An 
    </dt>
    <dd>
     <a href="#usesAggregationMethod" title="https://w3id.org/fair-o#usesAggregationMethod">uses aggregation method</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Evidence">
+  <h3>Assessment Evidence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/fair-o#Evidence</p>
+  <div class="comment">
+   <span class="markdown">An information artifact used to justify a FAIR assessment result, such as a recorded observation, test output, or supporting report. Evidence may support, contradict, or qualify a conclusion. Evidence can be described using dcterms:description, linked to supporting resources using dcterms:source, and enriched with PROV-O provenance, such as prov:wasDerivedFrom, prov:wasGeneratedBy, prov:wasAttributedTo, and prov:generatedAtTime. No particular evidence format or type vocabulary is required.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEvidence" title="https://w3id.org/fair-o#hasEvidence">has evidence</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -163,7 +185,7 @@ This section provides details for each class and property defined by FAIR-O: An 
     is in domain of
    </dt>
    <dd>
-    <a href="#assessmentScope" title="https://w3id.org/fair-o#assessmentScope">assessment scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#computedUsing" title="https://w3id.org/fair-o#computedUsing">computed using</a> <sup class="type-op" title="object property">op</sup>, <a href="#evidence" title="https://w3id.org/fair-o#evidence">evidence</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#forSubPrinciple" title="https://w3id.org/fair-o#forSubPrinciple">for sub-principle</a> <sup class="type-op" title="object property">op</sup>, <a href="#testResult" title="https://w3id.org/fair-o#testResult">test result</a> <sup class="type-op" title="object property">op</sup>, <a href="#value" title="https://w3id.org/fair-o#value">value</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#assessmentScope" title="https://w3id.org/fair-o#assessmentScope">assessment scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#computedUsing" title="https://w3id.org/fair-o#computedUsing">computed using</a> <sup class="type-op" title="object property">op</sup>, <a href="#evidence" title="https://w3id.org/fair-o#evidence">evidence</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#forSubPrinciple" title="https://w3id.org/fair-o#forSubPrinciple">for sub-principle</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEvidence" title="https://w3id.org/fair-o#hasEvidence">has evidence</a> <sup class="type-op" title="object property">op</sup>, <a href="#testResult" title="https://w3id.org/fair-o#testResult">test result</a> <sup class="type-op" title="object property">op</sup>, <a href="#value" title="https://w3id.org/fair-o#value">value</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -214,6 +236,7 @@ This section provides details for each class and property defined by FAIR-O: An 
   <li><a href="#assessmentScope" title="https://w3id.org/fair-o#assessmentScope">assessment scope</a></li>
   <li><a href="#computedUsing" title="https://w3id.org/fair-o#computedUsing">computed using</a></li>
   <li><a href="#forSubPrinciple" title="https://w3id.org/fair-o#forSubPrinciple">for sub-principle</a></li>
+  <li><a href="#hasEvidence" title="https://w3id.org/fair-o#hasEvidence">has evidence</a></li>
   <li><a href="#hasSubPrincipleResult" title="https://w3id.org/fair-o#hasSubPrincipleResult">has sub-principle result</a></li>
   <li><a href="#implementedBy" title="https://w3id.org/fair-o#implementedBy">implemented by</a></li>
   <li><a href="#testResult" title="https://w3id.org/fair-o#testResult">test result</a></li>
@@ -331,6 +354,29 @@ This section provides details for each class and property defined by FAIR-O: An 
     </dt>
     <dd>
      <a href="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple" target="_blank" title="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple">F A I R Sub Principle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEvidence">
+  <h3>has evidence<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/fair-o#hasEvidence</p>
+  <div class="comment">
+   <span class="markdown">Links a sub-principle result to an evidence item used to justify it. A result may link to multiple evidence items. This property is the preferred representation for structured evidence; the textual fairo:evidence property remains available for backward compatibility.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubPrincipleResult" title="https://w3id.org/fair-o#SubPrincipleResult">Sub-Principle Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Evidence" title="https://w3id.org/fair-o#Evidence">Assessment Evidence</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -516,7 +562,7 @@ This section provides details for each class and property defined by FAIR-O: An 
   <h3>evidence<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/fair-o#evidence</p>
   <div class="comment">
-   <span class="markdown">Textual evidence supporting the sub-principle result.</span>
+   <span class="markdown">Textual evidence supporting the sub-principle result. Retained for backward compatibility; use fairo:hasEvidence to link to structured evidence with descriptions, supporting resources, and provenance. Textual and structured evidence may be used independently or together.</span>
   </div>
   <div class="description">
    <dl>

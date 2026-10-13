@@ -7,7 +7,7 @@
 @base <https://w3id.org/fair-o#> .
 
 <https://w3id.org/fair-o> rdf:type owl:Ontology ;
-                           owl:versionIRI <https://w3id.org/fair-o/1.0.0> ;
+                           owl:versionIRI <https://w3id.org/fair-o/1.1.0> ;
                            owl:imports <http://www.w3.org/2004/02/skos/core#> ,
                                        <http://www.w3.org/ns/prov#> ,
                                        <https://w3id.org/fair/principles/terms/FAIR-Vocabulary> ;
@@ -18,7 +18,7 @@
                        The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."""@en ;
                            <http://purl.org/dc/terms/issued> "2026-02-01"^^xsd:date ;
                            <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                           <http://purl.org/dc/terms/modified> "2026-06-15"^^xsd:date ;
+                           <http://purl.org/dc/terms/modified> "2026-10-13"^^xsd:date ;
                            <http://purl.org/dc/terms/publisher> "Gabriele Tuozzo and Maria Angela Pellegrino" ;
                            <http://purl.org/dc/terms/source> <https://www.go-fair.org/fair-principles/> ;
                            <http://purl.org/dc/terms/subject> "FAIR principles" ,
@@ -36,7 +36,9 @@
                     The ontology is aligned with the FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for the definition of principles and sub-principles, and reuses established standards such as PROV-O for provenance and SKOS for controlled vocabularies. This ensures interoperability with existing FAIR tools and supports integration into automated FAIR assessment pipelines."""@en ,
                                         "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."@en ;
                            rdfs:seeAlso <https://w3id.org/fair-o/ftr-alignment> ;
-                           owl:versionInfo "1.0.0" ;
+                           owl:backwardCompatibleWith <https://w3id.org/fair-o/1.0.0> ;
+                           owl:priorVersion <https://w3id.org/fair-o/1.0.0> ;
+                           owl:versionInfo "1.1.0" ;
                            <http://xmlns.com/foaf/0.1/depiction> <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png> ;
                            <http://xmlns.com/foaf/0.1/logo> <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png> ;
                            <https://schema.org/codeRepository> <https://github.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring> ;
@@ -146,6 +148,14 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "for sub-principle"@en .
 
 
+###  https://w3id.org/fair-o#hasEvidence
+:hasEvidence rdf:type owl:ObjectProperty ;
+             rdfs:domain :SubPrincipleResult ;
+             rdfs:range :Evidence ;
+             rdfs:comment "Links a sub-principle result to an evidence item used to justify it. A result may link to multiple evidence items. This property is the preferred representation for structured evidence; the textual fairo:evidence property remains available for backward compatibility."@en ;
+             rdfs:label "has evidence"@en .
+
+
 ###  https://w3id.org/fair-o#hasSubPrincipleResult
 :hasSubPrincipleResult rdf:type owl:ObjectProperty ;
                        rdfs:domain :FAIRAssessment ;
@@ -210,8 +220,9 @@ xsd:date rdf:type rdfs:Datatype .
 :evidence rdf:type owl:DatatypeProperty ;
           rdfs:domain :SubPrincipleResult ;
           rdfs:range xsd:string ;
-          rdfs:comment "Textual evidence supporting the sub-principle result."@en ;
-          rdfs:label "evidence"@en .
+          rdfs:comment "Textual evidence supporting the sub-principle result. Retained for backward compatibility; use fairo:hasEvidence to link to structured evidence with descriptions, supporting resources, and provenance. Textual and structured evidence may be used independently or together."@en ;
+          rdfs:label "evidence"@en ;
+          rdfs:seeAlso :hasEvidence .
 
 
 ###  https://w3id.org/fair-o#fScore
@@ -330,6 +341,13 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:subClassOf <http://www.w3.org/ns/prov#Plan> ;
                       rdfs:comment "The computational procedure or method used to evaluate a sub-principle and produce a score."@en ;
                       rdfs:label "Scoring Algorithm"@en .
+
+
+###  https://w3id.org/fair-o#Evidence
+:Evidence rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+          rdfs:comment "An information artifact used to justify a FAIR assessment result, such as a recorded observation, test output, or supporting report. Evidence may support, contradict, or qualify a conclusion. Evidence can be described using dcterms:description, linked to supporting resources using dcterms:source, and enriched with PROV-O provenance, such as prov:wasDerivedFrom, prov:wasGeneratedBy, prov:wasAttributedTo, and prov:generatedAtTime. No particular evidence format or type vocabulary is required."@en ;
+          rdfs:label "Assessment Evidence"@en .
 
 
 ###  https://w3id.org/fair-o#FAIRAssessment

@@ -1,5 +1,5 @@
 <https://w3id.org/fair-o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/fair-o/1.0.0> .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/fair-o/1.1.0> .
 <https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
 <https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov#> .
 <https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/fair/principles/terms/FAIR-Vocabulary> .
@@ -9,7 +9,7 @@
 <https://w3id.org/fair-o> <http://purl.org/dc/terms/description> "The FAIR Assessment Ontology provides a structured and extensible model for representing the evaluation of digital resources against the FAIR (Findable, Accessible, Interoperable, Reusable) principles. It enables the formal description of assessment activities, detailed results at the level of individual FAIR sub-principles, and associated evidence, scoring functions, and computational methods. \n                       The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."@en .
 <https://w3id.org/fair-o> <http://purl.org/dc/terms/issued> "2026-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/fair-o> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/fair-o> <http://purl.org/dc/terms/modified> "2026-06-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/fair-o> <http://purl.org/dc/terms/modified> "2026-10-13"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/fair-o> <http://purl.org/dc/terms/publisher> "Gabriele Tuozzo and Maria Angela Pellegrino" .
 <https://w3id.org/fair-o> <http://purl.org/dc/terms/source> <https://www.go-fair.org/fair-principles/> .
 <https://w3id.org/fair-o> <http://purl.org/dc/terms/subject> "FAIR principles" .
@@ -25,7 +25,9 @@
 <https://w3id.org/fair-o> <http://www.w3.org/2000/01/rdf-schema#comment> "The FAIR Assessment Ontology is designed to model the process and outcomes of evaluating digital objects according to the FAIR principles. It captures FAIR assessments as provenance-aware activities, linking evaluated resources to detailed results for each FAIR sub-principle.\n                    Each assessment can include multiple sub-principle results, associated evidence, quantitative scores, and test outcomes (e.g., pass, fail, indeterminate). The ontology also models the computational aspects of FAIR evaluation, including scoring functions, calculation algorithms, and aggregation methods used to derive higher-level scores.\n                    The ontology is aligned with the FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for the definition of principles and sub-principles, and reuses established standards such as PROV-O for provenance and SKOS for controlled vocabularies. This ensures interoperability with existing FAIR tools and supports integration into automated FAIR assessment pipelines."@en .
 <https://w3id.org/fair-o> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."@en .
 <https://w3id.org/fair-o> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/fair-o/ftr-alignment> .
-<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/fair-o/1.0.0> .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/fair-o/1.0.0> .
+<https://w3id.org/fair-o> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
 <https://w3id.org/fair-o> <http://xmlns.com/foaf/0.1/depiction> <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png> .
 <https://w3id.org/fair-o> <http://xmlns.com/foaf/0.1/logo> <https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png> .
 <https://w3id.org/fair-o> <https://schema.org/codeRepository> <https://github.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring> .
@@ -132,6 +134,13 @@
 <https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sub-principle result to the specific FAIR sub-principle it evaluates (defined in the official FAIR Vocabulary)."@en .
 <https://w3id.org/fair-o#forSubPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "for sub-principle"@en .
 # 
+# https://w3id.org/fair-o#hasEvidence
+<https://w3id.org/fair-o#hasEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fair-o#hasEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
+<https://w3id.org/fair-o#hasEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair-o#Evidence> .
+<https://w3id.org/fair-o#hasEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sub-principle result to an evidence item used to justify it. A result may link to multiple evidence items. This property is the preferred representation for structured evidence; the textual fairo:evidence property remains available for backward compatibility."@en .
+<https://w3id.org/fair-o#hasEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "has evidence"@en .
+# 
 # https://w3id.org/fair-o#hasSubPrincipleResult
 <https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/fair-o#hasSubPrincipleResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#FAIRAssessment> .
@@ -196,8 +205,9 @@
 <https://w3id.org/fair-o#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fair-o#SubPrincipleResult> .
 <https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Textual evidence supporting the sub-principle result."@en .
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Textual evidence supporting the sub-principle result. Retained for backward compatibility; use fairo:hasEvidence to link to structured evidence with descriptions, supporting resources, and provenance. Textual and structured evidence may be used independently or together."@en .
 <https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence"@en .
+<https://w3id.org/fair-o#evidence> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/fair-o#hasEvidence> .
 # 
 # https://w3id.org/fair-o#fScore
 <https://w3id.org/fair-o#fScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -309,6 +319,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
 <https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "The computational procedure or method used to evaluate a sub-principle and produce a score."@en .
 <https://w3id.org/fair-o#CalculationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Scoring Algorithm"@en .
+# 
+# https://w3id.org/fair-o#Evidence
+<https://w3id.org/fair-o#Evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fair-o#Evidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/fair-o#Evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "An information artifact used to justify a FAIR assessment result, such as a recorded observation, test output, or supporting report. Evidence may support, contradict, or qualify a conclusion. Evidence can be described using dcterms:description, linked to supporting resources using dcterms:source, and enriched with PROV-O provenance, such as prov:wasDerivedFrom, prov:wasGeneratedBy, prov:wasAttributedTo, and prov:generatedAtTime. No particular evidence format or type vocabulary is required."@en .
+<https://w3id.org/fair-o#Evidence> <http://www.w3.org/2000/01/rdf-schema#label> "Assessment Evidence"@en .
 # 
 # https://w3id.org/fair-o#FAIRAssessment
 <https://w3id.org/fair-o#FAIRAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
