@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/fair-o/ftr-alignment#"
+     xml:base="https://w3id.org/fair-o/ftr-alignment"
+     xmlns:x="http://purl.org/nanopub/x/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/"
+     xmlns:nschema="http://www.nanopub.org/nschema#"
+     xmlns:ftr-alignment="https://w3id.org/fair-o/ftr-alignment#">
+    <owl:Ontology rdf:about="https://w3id.org/fair-o/ftr-alignment">
+        <owl:imports rdf:resource="https://w3id.org/fair-o"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-15</terms:created>
+        <terms:description xml:lang="en">Conservative class-level correspondences and explicit data-level bridges between FAIR-O and FTR 1.3.0.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">FAIR-O to FTR Alignment Module</terms:title>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/ftr#"/>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/ftr/1.3.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#relatedClass -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#relatedClass">
+        <rdfs:comment xml:lang="en">Conceptually related class in an external ontology, does not entail class equivalence or subclass membership.</rdfs:comment>
+        <rdfs:label xml:lang="en">related OWL class</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#used -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#used"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#assessesSubPrinciple">
+        <rdfs:domain rdf:resource="https://w3id.org/ftr#Metric"/>
+        <rdfs:range rdf:resource="https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"/>
+        <rdfs:label xml:lang="en">assesses FAIR sub-principle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#derivedFromBenchmarkScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fair-o#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="https://w3id.org/ftr#BenchmarkScore"/>
+        <rdfs:label xml:lang="en">derived from benchmark score</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#derivedFromTestResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fair-o#SubPrincipleResult"/>
+        <rdfs:range rdf:resource="https://w3id.org/ftr#TestResult"/>
+        <rdfs:label xml:lang="en">derived from test result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fair-o/ftr-alignment#usesTestResultSet -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fair-o/ftr-alignment#usesTestResultSet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fair-o#FAIRAssessment"/>
+        <rdfs:range rdf:resource="https://w3id.org/ftr#TestResultSet"/>
+        <rdfs:label xml:lang="en">uses test result set</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/fair-o#FAIRAssessment -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/fair-o#FAIRAssessment">
+        <rdfs:comment xml:lang="en">FAIRAssessment is a prov:Activity; a TestResultSet is a prov:Entity. Link their instances via a usage relation, not class equivalence.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/ftr#TestResultSet"/>
+        <relatedClass rdf:resource="https://w3id.org/ftr#TestExecutionActivity"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/fair-o#SubPrincipleResult -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/fair-o#SubPrincipleResult">
+        <rdfs:comment xml:lang="en">A FAIR sub-principle result may be derived from one or many FTR test results, and may correspond to a benchmark score if the benchmark is scoped to that sub-principle.</rdfs:comment>
+        <relatedClass rdf:resource="https://w3id.org/ftr#BenchmarkScore"/>
+        <relatedClass rdf:resource="https://w3id.org/ftr#TestResult"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/ftr#BenchmarkScore -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ftr#BenchmarkScore"/>
+    
+
+
+    <!-- https://w3id.org/ftr#Metric -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ftr#Metric"/>
+    
+
+
+    <!-- https://w3id.org/ftr#TestResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ftr#TestResult"/>
+    
+
+
+    <!-- https://w3id.org/ftr#TestResultSet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ftr#TestResultSet"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/fair-o#AggregationMethod">
+        <rdfs:comment xml:lang="en">Both may aggregate scores, but their units of aggregation need not coincide.</rdfs:comment>
+        <relatedClass rdf:resource="https://w3id.org/ftr#ScoringAlgorithm"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/fair-o#CalculationAlgorithm">
+        <rdfs:comment xml:lang="en">FAIR-O methods calculate sub-principle outcomes; FTR algorithms score test results against benchmarks. Correspondence is contextual.</rdfs:comment>
+        <relatedClass rdf:resource="https://w3id.org/ftr#ScoringAlgorithm"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
