@@ -39,6 +39,7 @@
     dcterms:source <https://www.go-fair.org/fair-principles/> ;
     dcterms:issued "2026-02-01"^^xsd:date ;
     dcterms:publisher "Gabriele Tuozzo and Maria Angela Pellegrino" ;
+    rdfs:seeAlso <https://w3id.org/fair-o/ftr-alignment> ;
     owl:imports <http://www.w3.org/ns/prov#> ,
                 <http://www.w3.org/2004/02/skos/core#> ,
                 <https://w3id.org/fair/principles/terms/FAIR-Vocabulary> .
