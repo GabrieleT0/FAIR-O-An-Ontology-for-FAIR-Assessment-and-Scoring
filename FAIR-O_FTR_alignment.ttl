@@ -13,6 +13,7 @@
     dct:title "FAIR-O to FTR Alignment Module"@en ;
     dct:abstract "Conservative class-level correspondences and explicit data-level bridges between FAIR-O and FTR 1.3.0."@en ;
     dct:description "Conservative class-level correspondences and explicit data-level bridges between FAIR-O and FTR 1.3.0."@en ;
+    rdfs:comment "This module relates FAIR-O assessment activities and sub-principle results to FTR test executions, test results, and benchmark scores. It records contextual class relationships and defines provenance-based links for using FTR outputs as evidence in FAIR-O assessments."@en ;
     dct:created "2026-06-15"^^xsd:date ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:imports <https://w3id.org/fair-o> ;
