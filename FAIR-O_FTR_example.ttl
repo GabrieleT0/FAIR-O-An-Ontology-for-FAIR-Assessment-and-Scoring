@@ -1,0 +1,92 @@
+@prefix ex: <https://example.org/fair-assessment/> .
+@prefix align: <https://w3id.org/fair-o/ftr-alignment#> .
+@prefix fairo: <https://w3id.org/fair-o#> .
+@prefix ftr: <https://w3id.org/ftr#> .
+@prefix fairVocab: <https://w3id.org/fair/principles/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sio: <https://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# Assessed resource 
+ex:dataset42 a prov:Entity ;
+    rdfs:label "Example research dataset"@en ;
+    fairo:wasAssessedBy ex:assessment42 .
+
+# FTR: metric and test descriptions 
+ex:metricUniqueID a ftr:Metric ;
+    rdfs:label "Check globally unique identifier"@en ;
+    align:assessesSubPrinciple fairVocab:F1 .
+
+ex:metricPersistentID a ftr:Metric ;
+    rdfs:label "Check persistent identifier"@en ;
+    align:assessesSubPrinciple fairVocab:F1 .
+
+ex:testUniqueID a ftr:Test ;
+    sio:SIO_000233 ex:metricUniqueID .
+
+ex:testPersistentID a ftr:Test ;
+    sio:SIO_000233 ex:metricPersistentID .
+
+# FTR: execution and its two outcomes 
+ex:testExecution42 a ftr:TestExecutionActivity ;
+    prov:used ex:dataset42 ;
+    prov:wasAssociatedWith ex:testUniqueID, ex:testPersistentID ;
+    prov:generated ex:testResultUniqueID, ex:testResultPersistentID,
+                   ex:resultSet42 .
+
+ex:testResultUniqueID a ftr:TestResult ;
+    ftr:outputFromTest ex:testUniqueID ;
+    ftr:assessmentTarget ex:dataset42 ;
+    ftr:completion "1.0"^^xsd:float ;
+    prov:value "PASS" ;
+    ftr:log "Identifier is globally unique."@en ;
+    prov:wasGeneratedBy ex:testExecution42 .
+
+ex:testResultPersistentID a ftr:TestResult ;
+    ftr:outputFromTest ex:testPersistentID ;
+    ftr:assessmentTarget ex:dataset42 ;
+    ftr:completion "0.0"^^xsd:float ;
+    prov:value "FAIL" ;
+    ftr:log "Identifier persistence could not be established."@en ;
+    prov:wasGeneratedBy ex:testExecution42 .
+
+ex:resultSet42 a ftr:TestResultSet ;
+    ftr:assessmentTarget ex:dataset42 ;
+    prov:hadMember ex:testResultUniqueID, ex:testResultPersistentID ;
+    prov:wasGeneratedBy ex:testExecution42 .
+
+# === FTR calculate a benchmark score from the results ===
+ex:benchmarkF1 a ftr:Benchmark ;
+    ftr:hasAssociatedMetric ex:metricUniqueID, ex:metricPersistentID .
+
+ex:ftrScoringAlgorithmF1 a ftr:ScoringAlgorithm ;
+    ftr:invokesTest ex:testUniqueID, ex:testPersistentID .
+
+ex:benchmarkScoreF1 a ftr:BenchmarkScore ;
+    ftr:scoredTestResults ex:resultSet42 ;
+    ftr:outputFromAlgorithm ex:ftrScoringAlgorithmF1 ;
+    prov:value "0.5"^^xsd:decimal .
+
+# === FAIR-O: broader assessment and interpreted F1 result ===
+ex:assessment42 a fairo:FAIRAssessment ;
+    align:usesTestResultSet ex:resultSet42 ;
+    prov:used ex:benchmarkScoreF1 ;
+    prov:wasInformedBy ex:testExecution42 ;
+    fairo:hasSubPrincipleResult ex:F1Result42 .
+
+ex:algorithmF1 a fairo:CalculationAlgorithm ;
+    fairo:algorithmDescription
+       "Interpret the two FTR test results for F1; score = (1 + 0) / 2 = 0.5."@en .
+
+ex:F1Result42 a fairo:SubPrincipleResult ;
+    fairo:forSubPrinciple fairVocab:F1 ;
+    fairo:assessmentScope fairo:DataScope ;
+    fairo:value "0.5"^^xsd:decimal ;
+    fairo:testResult fairo:Indeterminate ;
+    fairo:evidence "Unique identifier check passed; persistence check failed."@en ;
+    fairo:computedUsing ex:algorithmF1 ;
+    align:derivedFromTestResult ex:testResultUniqueID, ex:testResultPersistentID ;
+    align:derivedFromBenchmarkScore ex:benchmarkScoreF1 ;
+    prov:wasGeneratedBy ex:assessment42 .
