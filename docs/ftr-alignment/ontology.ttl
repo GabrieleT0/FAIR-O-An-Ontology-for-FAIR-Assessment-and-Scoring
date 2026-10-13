@@ -1,0 +1,67 @@
+@prefix align: <https://w3id.org/fair-o/ftr-alignment#> .
+@prefix fairo: <https://w3id.org/fair-o#> .
+@prefix ftr: <https://w3id.org/ftr#> .
+@prefix fairVocab: <https://w3id.org/fair/principles/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/fair-o/ftr-alignment>
+    a owl:Ontology ;
+    dct:title "FAIR-O to FTR Alignment Module"@en ;
+    dct:description "Conservative class-level correspondences and explicit data-level bridges between FAIR-O and FTR 1.3.0."@en ;
+    dct:created "2026-06-15"^^xsd:date ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:imports <https://w3id.org/fair-o> ;
+    rdfs:seeAlso <https://w3id.org/ftr#>,
+                 <https://w3id.org/ftr/1.3.0> .
+
+align:relatedClass a owl:AnnotationProperty ;
+    rdfs:label "related OWL class"@en ;
+    rdfs:comment "Conceptually related class in an external ontology, does not entail class equivalence or subclass membership."@en .
+
+fairo:CalculationAlgorithm
+    align:relatedClass ftr:ScoringAlgorithm ;
+    rdfs:comment "FAIR-O methods calculate sub-principle outcomes; FTR algorithms score test results against benchmarks. Correspondence is contextual."@en .
+
+fairo:AggregationMethod
+    align:relatedClass ftr:ScoringAlgorithm ;
+    rdfs:comment "Both may aggregate scores, but their units of aggregation need not coincide."@en .
+
+fairo:SubPrincipleResult
+    align:relatedClass ftr:TestResult, ftr:BenchmarkScore ;
+    rdfs:comment "A FAIR sub-principle result may be derived from one or many FTR test results, and may correspond to a benchmark score if the benchmark is scoped to that sub-principle."@en .
+
+fairo:FAIRAssessment
+    align:relatedClass ftr:TestExecutionActivity ;
+    rdfs:seeAlso ftr:TestResultSet ;
+    rdfs:comment "FAIRAssessment is a prov:Activity; a TestResultSet is a prov:Entity. Link their instances via a usage relation, not class equivalence."@en .
+
+# An FTR Metric can contribute to assessing one or several FAIR sub-principles.
+align:assessesSubPrinciple a owl:ObjectProperty ;
+    rdfs:label "assesses FAIR sub-principle"@en ;
+    rdfs:domain ftr:Metric ;
+    rdfs:range fairVocab:FAIR-SubPrinciple .
+
+# An existing FTR result set can be used in a broader FAIR-O assessment.
+align:usesTestResultSet a owl:ObjectProperty ;
+    rdfs:label "uses test result set"@en ;
+    rdfs:subPropertyOf prov:used ;
+    rdfs:domain fairo:FAIRAssessment ;
+    rdfs:range ftr:TestResultSet .
+
+# Evidence-level derivation; one sub-principle result can use many test results.
+align:derivedFromTestResult a owl:ObjectProperty ;
+    rdfs:label "derived from test result"@en ;
+    rdfs:subPropertyOf prov:wasDerivedFrom ;
+    rdfs:domain fairo:SubPrincipleResult ;
+    rdfs:range ftr:TestResult .
+
+# A benchmark score can be an input for FAIR-O interpretation/normalization.
+align:derivedFromBenchmarkScore a owl:ObjectProperty ;
+    rdfs:label "derived from benchmark score"@en ;
+    rdfs:subPropertyOf prov:wasDerivedFrom ;
+    rdfs:domain fairo:SubPrincipleResult ;
+    rdfs:range ftr:BenchmarkScore .
