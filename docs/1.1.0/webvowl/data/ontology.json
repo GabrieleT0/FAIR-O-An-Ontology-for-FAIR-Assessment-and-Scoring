@@ -1,0 +1,2085 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/fair-o", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/fair/principles/terms", "http://www.nanopub.org/nschema", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "FAIR-O: An Ontology for FAIR Assessment and Scoring"
+    },
+    "iri" : "https://w3id.org/fair-o",
+    "version" : "1.1.0",
+    "author" : [ "Gabriele Tuozzo and Maria Angela Pellegrino" ],
+    "description" : {
+      "en" : "The FAIR Assessment Ontology provides a structured and extensible model for representing the evaluation of digital resources against the FAIR (Findable, Accessible, Interoperable, Reusable) principles. It enables the formal description of assessment activities, detailed results at the level of individual FAIR sub-principles, and associated evidence, scoring functions, and computational methods. \n                       The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."
+    },
+    "comments" : {
+      "en" : "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fair-o/1.0.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Gabriele Tuozzo and Maria Angela Pellegrino",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-02-01",
+        "type" : "label"
+      } ],
+      "subject" : [ {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "assessment",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "research data",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "ontology",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "metadata quality",
+        "type" : "label"
+      }, {
+        "identifier" : "subject",
+        "language" : "undefined",
+        "value" : "FAIR principles",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.go-fair.org/fair-principles/",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "FAIR-O: An Ontology for FAIR Assessment and Scoring",
+        "type" : "label"
+      } ],
+      "backwardCompatibleWith" : [ {
+        "identifier" : "backwardCompatibleWith",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fair-o/1.0.0",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fair-o/ftr-alignment",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "includedInDataCatalog" : [ {
+        "identifier" : "includedInDataCatalog",
+        "language" : "undefined",
+        "value" : "https://zenodo.org/records/20027101",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "fairo",
+        "type" : "label"
+      } ],
+      "logo" : [ {
+        "identifier" : "logo",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png",
+        "type" : "iri"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "Gabriele Tuozzo and Maria Angela Pellegrino",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-13",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Tuozzo, G., & Pellegrino, M. A. (2026). FAIR-O: An Ontology for FAIR Assessment and Scoring (Version 1.0) [Ontology]. Zenodo. http://doi.org/10.5281/zenodo.20027101",
+        "type" : "label"
+      } ],
+      "codeRepository" : [ {
+        "identifier" : "codeRepository",
+        "language" : "undefined",
+        "value" : "https://github.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring",
+        "type" : "iri"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fair-o#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-02-01",
+        "type" : "label"
+      } ],
+      "depiction" : [ {
+        "identifier" : "depiction",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/diagram.png",
+        "type" : "iri"
+      } ],
+      "doi" : [ {
+        "identifier" : "doi",
+        "language" : "undefined",
+        "value" : "10.5281/zenodo.20027101",
+        "type" : "label"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "undefined",
+        "value" : "Under Review",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "component" : [ {
+        "identifier" : "component",
+        "language" : "undefined",
+        "value" : "entities-activities",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ],
+      "dm" : [ {
+        "identifier" : "dm",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
+        "type" : "label"
+      } ],
+      "category" : [ {
+        "identifier" : "category",
+        "language" : "undefined",
+        "value" : "starting-point",
+        "type" : "label"
+      } ],
+      "constraints" : [ {
+        "identifier" : "constraints",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+        "type" : "label"
+      } ],
+      "n" : [ {
+        "identifier" : "n",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Activity",
+      "undefined" : "Activity"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An idea or notion; a unit of thought.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "subClasses" : [ "8", "9" ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/fair-o#TestOutcome",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestOutcome",
+      "en" : "Test Outcome"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/fair-o#Fail",
+      "baseIri" : "https://w3id.org/fair-o",
+      "comment" : {
+        "en" : "The test was not satisfied (score = 0)."
+      },
+      "labels" : {
+        "IRI-based" : "Fail",
+        "en" : "Fail"
+      }
+    }, {
+      "iri" : "https://w3id.org/fair-o#Indeterminate",
+      "baseIri" : "https://w3id.org/fair-o",
+      "comment" : {
+        "en" : "The test was partially satisfied (0 < score < 1)."
+      },
+      "labels" : {
+        "IRI-based" : "Indeterminate",
+        "en" : "Indeterminate"
+      }
+    }, {
+      "iri" : "https://w3id.org/fair-o#Pass",
+      "baseIri" : "https://w3id.org/fair-o",
+      "comment" : {
+        "en" : "The test was fully satisfied (score = 1)."
+      },
+      "labels" : {
+        "IRI-based" : "Pass",
+        "en" : "Pass"
+      }
+    } ],
+    "comment" : {
+      "en" : "The result of a FAIR test (e.g., Pass, Fail, or Indeterminate)."
+    },
+    "id" : "9",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An ordered collection of concepts, where both the grouping and the ordering are meaningful.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrderedCollection",
+      "en" : "Ordered Collection"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "component" : [ {
+        "identifier" : "component",
+        "language" : "undefined",
+        "value" : "entities-activities",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ],
+      "dm" : [ {
+        "identifier" : "dm",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-entity",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary. ",
+        "type" : "label"
+      } ],
+      "category" : [ {
+        "identifier" : "category",
+        "language" : "undefined",
+        "value" : "starting-point",
+        "type" : "label"
+      } ],
+      "constraints" : [ {
+        "identifier" : "constraints",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+        "type" : "label"
+      } ],
+      "n" : [ {
+        "identifier" : "n",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Entity",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Entity",
+      "undefined" : "Entity"
+    },
+    "subClasses" : [ "20", "21", "22" ],
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/fair-o#CalculationAlgorithm",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CalculationAlgorithm",
+      "en" : "Scoring Algorithm"
+    },
+    "comment" : {
+      "en" : "The computational procedure or method used to evaluate a sub-principle and produce a score."
+    },
+    "id" : "24",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://w3id.org/fair-o#ScoringFunction",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScoringFunction",
+      "en" : "Scoring Function"
+    },
+    "comment" : {
+      "en" : "A mathematical or logical function that maps assessment evidence to a numeric score for a sub-principle."
+    },
+    "id" : "21",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/fair-o#AggregationMethod",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AggregationMethod",
+      "en" : "Aggregation Method"
+    },
+    "comment" : {
+      "en" : "A method for combining individual sub-principle scores into principle-level or overall scores."
+    },
+    "id" : "34",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "List"
+    },
+    "attributes" : [ "external" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "54",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#SoftwareAgent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "component" : [ {
+        "identifier" : "component",
+        "language" : "undefined",
+        "value" : "agents-responsibility",
+        "type" : "label"
+      }, {
+        "identifier" : "component",
+        "language" : "undefined",
+        "value" : "agents-responsibility",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ],
+      "dm" : [ {
+        "identifier" : "dm",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent",
+        "type" : "label"
+      }, {
+        "identifier" : "dm",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A software agent is running software.",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A software agent is running software.",
+        "type" : "label"
+      } ],
+      "category" : [ {
+        "identifier" : "category",
+        "language" : "undefined",
+        "value" : "expanded",
+        "type" : "label"
+      }, {
+        "identifier" : "category",
+        "language" : "undefined",
+        "value" : "expanded",
+        "type" : "label"
+      } ],
+      "n" : [ {
+        "identifier" : "n",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types",
+        "type" : "label"
+      }, {
+        "identifier" : "n",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-n.html#expression-types",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SoftwareAgent",
+      "undefined" : "SoftwareAgent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/fair-o#FAIRAssessment",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FAIRAssessment",
+      "en" : "FAIR Assessment"
+    },
+    "comment" : {
+      "en" : "A quality assessment of a digital object against FAIR principles at a specific point in time."
+    },
+    "id" : "7",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/fair-o#AssessmentScope",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssessmentScope",
+      "en" : "Assessment Scope"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/fair-o#DataScope",
+      "baseIri" : "https://w3id.org/fair-o",
+      "labels" : {
+        "IRI-based" : "DataScope",
+        "en" : "Data"
+      }
+    }, {
+      "iri" : "https://w3id.org/fair-o#DataAndMetadata",
+      "baseIri" : "https://w3id.org/fair-o",
+      "labels" : {
+        "IRI-based" : "DataAndMetadata",
+        "en" : "Data and Metadata"
+      }
+    }, {
+      "iri" : "https://w3id.org/fair-o#MetadataScope",
+      "baseIri" : "https://w3id.org/fair-o",
+      "labels" : {
+        "IRI-based" : "MetadataScope",
+        "en" : "Metadata"
+      }
+    } ],
+    "comment" : {
+      "en" : "The scope of what is being assessed: data, metadata, or both."
+    },
+    "id" : "8",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "15", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.nanopub.org/nschema#Nanopublication",
+    "baseIri" : "http://www.nanopub.org/nschema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Nanopublication"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg",
+      "baseIri" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary",
+      "annotations" : {
+        "hasProvenance" : [ {
+          "identifier" : "hasProvenance",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#provenance",
+          "type" : "iri"
+        } ],
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "https://orcid.org/0000-0002-1267-0234",
+          "type" : "iri"
+        }, {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "https://orcid.org/0000-0003-4727-9435",
+          "type" : "iri"
+        } ],
+        "hasAssertion" : [ {
+          "identifier" : "hasAssertion",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#assertion",
+          "type" : "iri"
+        } ],
+        "hasPublicationInfo" : [ {
+          "identifier" : "hasPublicationInfo",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#pubinfo",
+          "type" : "iri"
+        } ],
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2019-07-12T08:07:27.988+02:00",
+          "type" : "label"
+        } ],
+        "rights" : [ {
+          "identifier" : "rights",
+          "language" : "undefined",
+          "value" : "http://creativecommons.org/licenses/by/4.0/",
+          "type" : "iri"
+        } ],
+        "supersedes" : [ {
+          "identifier" : "supersedes",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RA42Ifild4QRyoA2-A3tam25oe5fd6sDqqzXSVmzOpuYw",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/fair/principles/terms/FAIR-SubPrinciple",
+    "baseIri" : "https://w3id.org/fair/principles/terms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FAIR-SubPrinciple"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/fair-o#Evidence",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Evidence",
+      "en" : "Assessment Evidence"
+    },
+    "comment" : {
+      "en" : "An information artifact used to justify a FAIR assessment result, such as a recorded observation, test output, or supporting report. Evidence may support, contradict, or qualify a conclusion. Evidence can be described using dcterms:description, linked to supporting resources using dcterms:source, and enriched with PROV-O provenance, such as prov:wasDerivedFrom, prov:wasGeneratedBy, prov:wasAttributedTo, and prov:generatedAtTime. No particular evidence format or type vocabulary is required."
+    },
+    "id" : "20",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Collection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A meaningful collection of concepts.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection",
+      "en" : "Collection"
+    },
+    "subClasses" : [ "14" ],
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/fair-o#SubPrincipleResult",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubPrincipleResult",
+      "en" : "Sub-Principle Result"
+    },
+    "comment" : {
+      "en" : "The assessment result for a specific FAIR sub-principle (e.g., F1, A1.1, I2)."
+    },
+    "id" : "22",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Plan",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "component" : [ {
+        "identifier" : "component",
+        "language" : "undefined",
+        "value" : "agents-responsibility",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ],
+      "dm" : [ {
+        "identifier" : "dm",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Association",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.",
+        "type" : "label"
+      } ],
+      "category" : [ {
+        "identifier" : "category",
+        "language" : "undefined",
+        "value" : "expanded",
+        "type" : "label"
+      }, {
+        "identifier" : "category",
+        "language" : "undefined",
+        "value" : "qualified",
+        "type" : "label"
+      } ],
+      "n" : [ {
+        "identifier" : "n",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Association",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Plan",
+      "undefined" : "Plan"
+    },
+    "subClasses" : [ "34", "24" ],
+    "comment" : {
+      "en" : "There exist no prescriptive requirement on the nature of plans, their representation, the actions or steps they consist of, or their intended goals. Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "76",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#semanticRelation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a concept to a concept related by meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "semanticRelation",
+      "en" : "is in semantic relation with"
+    },
+    "domain" : "1",
+    "subproperty" : [ "2", "3", "4", "5" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+    "inverse" : "12",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broadMatch",
+      "en" : "has broader match"
+    },
+    "superproperty" : [ "13", "5" ],
+    "domain" : "11",
+    "attributes" : [ "external", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "inverse" : "13",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more specific in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrower",
+      "en" : "has narrower"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "11",
+    "subproperty" : [ "12" ],
+    "comment" : {
+      "en" : "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/fair-o#appliesTo",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "appliesTo",
+      "en" : "applies to"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Indicates whether a sub-principle applies to data, metadata, or both."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+    "inverse" : "2",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "skos:broaderTransitive is a transitive superproperty of skos:broader.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broaderTransitive",
+      "en" : "has broader transitive"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "11",
+    "subproperty" : [ "13" ],
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/fair-o#computedUsing",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "computedUsing",
+      "en" : "computed using"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Links a sub-principle result to the algorithm used to compute it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/fair-o#iScore",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "iScore",
+      "en" : "I score"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "An aggregate score for the Interoperable principle."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/fair-o#value",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "value",
+      "en" : "value"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "The numeric value assigned to the sub-principle result."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "27"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "19",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "32",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "32",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "1",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/fair-o#implementedBy",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "implementedBy",
+      "en" : "implemented by"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Links the algorithm to the software that implements it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "19",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "19",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/fair-o#algorithmDescription",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "algorithmDescription",
+      "en" : "algorithm description"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "A human-readable description of how the algorithm works."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broader",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more general in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broader",
+      "en" : "has broader"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "11",
+    "subproperty" : [ "10" ],
+    "comment" : {
+      "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/fair-o#formula",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "formula",
+      "en" : "formula"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "A textual or mathematical representation of the scoring formula."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#related",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept with which there is an associative semantic relationship.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related",
+      "en" : "has related"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "11",
+    "subproperty" : [ "46" ],
+    "comment" : {
+      "en" : "skos:related is disjoint with skos:broaderTransitive"
+    },
+    "attributes" : [ "symmetric", "external", "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#notation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "47",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:notation is used with a typed literal in the object position of the triple.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "notation",
+      "en" : "notation"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/fair-o#rScore",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "rScore",
+      "en" : "R score"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "An aggregate score for the Reusable principle."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "range" : "6",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#mappingRelation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mappingRelation",
+      "en" : "is in mapping relation with"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "11",
+    "subproperty" : [ "55", "46", "12", "10" ],
+    "comment" : {
+      "en" : "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/fair-o#wasAssessedBy",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "wasAssessedBy",
+      "en" : "was assessed by"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Links a resource to a FAIR assessment that evaluated it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/fair-o#sourceCode",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "sourceCode",
+      "en" : "source code"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "URI pointing to the source code implementing this algorithm."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#inScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a resource (for example a concept) to a concept scheme in which it is included.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept may be a member of more than one concept scheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inScheme",
+      "en" : "is in scheme"
+    },
+    "domain" : "54",
+    "subproperty" : [ "61" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "closeMatch",
+      "en" : "has close match"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "11",
+    "subproperty" : [ "62" ],
+    "attributes" : [ "symmetric", "external", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/fair-o#hasEvidence",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasEvidence",
+      "en" : "has evidence"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Links a sub-principle result to an evidence item used to justify it. A result may link to multiple evidence items. This property is the preferred representation for structured evidence; the textual fairo:evidence property remains available for backward compatibility."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/fair-o#aScore",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "aScore",
+      "en" : "A score"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "An aggregate score for the Accessible principle."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+    "inverse" : "61",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopConcept",
+      "en" : "has top concept"
+    },
+    "domain" : "43",
+    "attributes" : [ "external", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "43",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/fair-o#fScore",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "fScore",
+      "en" : "F score"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "An aggregate score for the Findable principle."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "relatedMatch",
+      "en" : "has related match"
+    },
+    "superproperty" : [ "4", "5" ],
+    "domain" : "11",
+    "attributes" : [ "symmetric", "external", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/fair-o#usesAggregationMethod",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "usesAggregationMethod",
+      "en" : "uses aggregation method"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links an assessment to the method used to aggregate sub-principle scores."
+    },
+    "attributes" : [ "object" ],
+    "id" : "74"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "43",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to the concept scheme that it is a top level concept of.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "topConceptOf",
+      "en" : "is top concept in scheme"
+    },
+    "superproperty" : [ "60" ],
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/fair-o#fairScore",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "fairScore",
+      "en" : "overall score"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "An aggregate score for the entire FAIR assessment."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/fair-o#forSubPrinciple",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "forSubPrinciple",
+      "en" : "for sub-principle"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Links a sub-principle result to the specific FAIR sub-principle it evaluates (defined in the official FAIR Vocabulary)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/fair-o#appliesScoringFunction",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "appliesScoringFunction",
+      "en" : "applies scoring function"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Links an algorithm to the scoring function it uses."
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "exactMatch",
+      "en" : "has exact match"
+    },
+    "superproperty" : [ "55" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
+    },
+    "attributes" : [ "symmetric", "external", "object", "transitive" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrowMatch",
+      "en" : "has narrower match"
+    },
+    "superproperty" : [ "16", "5" ],
+    "domain" : "11",
+    "attributes" : [ "external", "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/fair-o#evidence",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "69",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fair-o#hasEvidence",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "evidence",
+      "en" : "evidence"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Textual evidence supporting the sub-principle result. Retained for backward compatibility; use fairo:hasEvidence to link to structured evidence with descriptions, supporting resources, and provenance. Textual and structured evidence may be used independently or together."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/fair-o#minValue",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "minValue",
+      "en" : "minimum value"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "The minimum possible score this function can produce."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/fair-o#hasSubPrincipleResult",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasSubPrincipleResult",
+      "en" : "has sub-principle result"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links an assessment to individual sub-principle results."
+    },
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "skos:narrowerTransitive is a transitive superproperty of skos:narrower.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrowerTransitive",
+      "en" : "has narrower transitive"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "11",
+    "subproperty" : [ "16" ],
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/fair-o#testResult",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "testResult",
+      "en" : "test result"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "The outcome of the test for the sub-principle."
+    },
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#memberList",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "53",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates an ordered collection to the RDF list containing its members.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "memberList",
+      "en" : "has member list"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/fair-o#maxValue",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "maxValue",
+      "en" : "maximum value"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "The maximum possible score this function can produce."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/fair-o#assessmentScope",
+    "baseIri" : "https://w3id.org/fair-o",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "assessmentScope",
+      "en" : "assessment scope"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Indicates whether the sub-principle result pertains to data, metadata, or both."
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#member",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "68",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a collection to one of its members.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "member",
+      "en" : "has member"
+    },
+    "domain" : "15",
+    "attributes" : [ "external", "object" ],
+    "id" : "87"
+  } ]
+}

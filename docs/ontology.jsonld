@@ -195,7 +195,7 @@
       "http://purl.org/dc/terms/modified": [
         {
           "@type": "http://www.w3.org/2001/XMLSchema#date",
-          "@value": "2026-06-15"
+          "@value": "2026-10-13"
         }
       ],
       "http://purl.org/dc/terms/publisher": [
@@ -267,6 +267,11 @@
           "@id": "https://w3id.org/fair-o/ftr-alignment"
         }
       ],
+      "http://www.w3.org/2002/07/owl#backwardCompatibleWith": [
+        {
+          "@id": "https://w3id.org/fair-o/1.0.0"
+        }
+      ],
       "http://www.w3.org/2002/07/owl#imports": [
         {
           "@id": "http://www.w3.org/2004/02/skos/core#"
@@ -278,14 +283,19 @@
           "@id": "https://w3id.org/fair/principles/terms/FAIR-Vocabulary"
         }
       ],
-      "http://www.w3.org/2002/07/owl#versionIRI": [
+      "http://www.w3.org/2002/07/owl#priorVersion": [
         {
           "@id": "https://w3id.org/fair-o/1.0.0"
         }
       ],
+      "http://www.w3.org/2002/07/owl#versionIRI": [
+        {
+          "@id": "https://w3id.org/fair-o/1.1.0"
+        }
+      ],
       "http://www.w3.org/2002/07/owl#versionInfo": [
         {
-          "@value": "1.0.0"
+          "@value": "1.1.0"
         }
       ],
       "http://xmlns.com/foaf/0.1/depiction": [
@@ -414,6 +424,29 @@
         {
           "@language": "en",
           "@value": "Data"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/fair-o#Evidence",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "An information artifact used to justify a FAIR assessment result, such as a recorded observation, test output, or supporting report. Evidence may support, contradict, or qualify a conclusion. Evidence can be described using dcterms:description, linked to supporting resources using dcterms:source, and enriched with PROV-O provenance, such as prov:wasDerivedFrom, prov:wasGeneratedBy, prov:wasAttributedTo, and prov:generatedAtTime. No particular evidence format or type vocabulary is required."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "Assessment Evidence"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://www.w3.org/ns/prov#Entity"
         }
       ]
     },
@@ -791,7 +824,7 @@
       "http://www.w3.org/2000/01/rdf-schema#comment": [
         {
           "@language": "en",
-          "@value": "Textual evidence supporting the sub-principle result."
+          "@value": "Textual evidence supporting the sub-principle result. Retained for backward compatibility; use fairo:hasEvidence to link to structured evidence with descriptions, supporting resources, and provenance. Textual and structured evidence may be used independently or together."
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -808,6 +841,11 @@
       "http://www.w3.org/2000/01/rdf-schema#range": [
         {
           "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+        {
+          "@id": "https://w3id.org/fair-o#hasEvidence"
         }
       ]
     },
@@ -915,6 +953,34 @@
       "http://www.w3.org/2000/01/rdf-schema#range": [
         {
           "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/fair-o#hasEvidence",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "Links a sub-principle result to an evidence item used to justify it. A result may link to multiple evidence items. This property is the preferred representation for structured evidence; the textual fairo:evidence property remains available for backward compatibility."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "https://w3id.org/fair-o#SubPrincipleResult"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "has evidence"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "https://w3id.org/fair-o#Evidence"
         }
       ]
     },
