@@ -70,6 +70,10 @@
     "@language" : "en",
     "@value" : "FAIR-O to FTR Alignment Module"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This module relates FAIR-O assessment activities and sub-principle results to FTR test executions, test results, and benchmark scores. It records contextual class relationships and defines provenance-based links for using FTR outputs as evidence in FAIR-O assessments."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://w3id.org/ftr#"
   }, {
