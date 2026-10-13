@@ -13,7 +13,7 @@
       "en" : "The FAIR Assessment Ontology provides a structured and extensible model for representing the evaluation of digital resources against the FAIR (Findable, Accessible, Interoperable, Reusable) principles. It enables the formal description of assessment activities, detailed results at the level of individual FAIR sub-principles, and associated evidence, scoring functions, and computational methods. \n                       The ontology supports fine-grained tracking of assessment outcomes over time, allowing comparisons, reproducibility, and transparency in FAIR evaluations. It reuses and aligns with the official FAIR Vocabulary to ensure semantic consistency and interoperability with existing FAIR assessment frameworks and tools."
     },
     "comments" : {
-      "en" : "The FAIR Assessment Ontology is designed to model the process and outcomes of evaluating digital objects according to the FAIR principles. It captures FAIR assessments as provenance-aware activities, linking evaluated resources to detailed results for each FAIR sub-principle.\n                    Each assessment can include multiple sub-principle results, associated evidence, quantitative scores, and test outcomes (e.g., pass, fail, indeterminate). The ontology also models the computational aspects of FAIR evaluation, including scoring functions, calculation algorithms, and aggregation methods used to derive higher-level scores.\n                    The ontology is aligned with the FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for the definition of principles and sub-principles, and reuses established standards such as PROV-O for provenance and SKOS for controlled vocabularies. This ensures interoperability with existing FAIR tools and supports integration into automated FAIR assessment pipelines."
+      "en" : "This ontology provides comprehensive FAIR assessment modeling. It reuses the official FAIR Vocabulary (https://w3id.org/fair/principles/terms/) for principle and sub-principle definitions."
     },
     "other" : {
       "creator" : [ {
@@ -31,17 +31,12 @@
       "subject" : [ {
         "identifier" : "subject",
         "language" : "undefined",
-        "value" : "research data",
-        "type" : "label"
-      }, {
-        "identifier" : "subject",
-        "language" : "undefined",
         "value" : "assessment",
         "type" : "label"
       }, {
         "identifier" : "subject",
         "language" : "undefined",
-        "value" : "FAIR principles",
+        "value" : "research data",
         "type" : "label"
       }, {
         "identifier" : "subject",
@@ -53,18 +48,23 @@
         "language" : "undefined",
         "value" : "metadata quality",
         "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
+      }, {
+        "identifier" : "subject",
         "language" : "undefined",
-        "value" : "https://www.go-fair.org/fair-principles/",
-        "type" : "iri"
+        "value" : "FAIR principles",
+        "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
         "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.go-fair.org/fair-principles/",
+        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -96,11 +96,11 @@
         "value" : "fairo",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
+      "logo" : [ {
+        "identifier" : "logo",
         "language" : "undefined",
-        "value" : "2026-06-15",
-        "type" : "label"
+        "value" : "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png",
+        "type" : "iri"
       } ],
       "publisher" : [ {
         "identifier" : "publisher",
@@ -108,11 +108,11 @@
         "value" : "Gabriele Tuozzo and Maria Angela Pellegrino",
         "type" : "label"
       } ],
-      "logo" : [ {
-        "identifier" : "logo",
+      "modified" : [ {
+        "identifier" : "modified",
         "language" : "undefined",
-        "value" : "https://raw.githubusercontent.com/GabrieleT0/FAIR-O-An-Ontology-for-FAIR-Assessment-and-Scoring/refs/heads/main/assets/logo.png",
-        "type" : "iri"
+        "value" : "2026-06-15",
+        "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -178,10 +178,10 @@
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
     "id" : "45",
@@ -489,16 +489,16 @@
         "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "en",
-        "value" : "A concept scheme may be defined to include concepts from different sources.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
         "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept scheme may be defined to include concepts from different sources.",
         "type" : "label"
       } ]
     },
@@ -508,19 +508,6 @@
     },
     "attributes" : [ "external" ],
     "id" : "41"
-  }, {
-    "iri" : "https://w3id.org/fair-o#CalculationAlgorithm",
-    "baseIri" : "https://w3id.org/fair-o",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CalculationAlgorithm",
-      "en" : "Scoring Algorithm"
-    },
-    "comment" : {
-      "en" : "The computational procedure or method used to evaluate a sub-principle and produce a score."
-    },
-    "id" : "23",
-    "superClasses" : [ "30" ]
   }, {
     "iri" : "https://w3id.org/fair-o#ScoringFunction",
     "baseIri" : "https://w3id.org/fair-o",
@@ -534,6 +521,19 @@
     },
     "id" : "20",
     "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/fair-o#CalculationAlgorithm",
+    "baseIri" : "https://w3id.org/fair-o",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CalculationAlgorithm",
+      "en" : "Scoring Algorithm"
+    },
+    "comment" : {
+      "en" : "The computational procedure or method used to evaluate a sub-principle and produce a score."
+    },
+    "id" : "23",
+    "superClasses" : [ "30" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "45",
@@ -635,12 +635,12 @@
       "dm" : [ {
         "identifier" : "dm",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent",
+        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
         "type" : "label"
       }, {
         "identifier" : "dm",
         "language" : "undefined",
-        "value" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
+        "value" : "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent",
         "type" : "label"
       } ],
       "definition" : [ {
@@ -809,6 +809,12 @@
           "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#provenance",
           "type" : "iri"
         } ],
+        "hasAssertion" : [ {
+          "identifier" : "hasAssertion",
+          "language" : "undefined",
+          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#assertion",
+          "type" : "iri"
+        } ],
         "creator" : [ {
           "identifier" : "creator",
           "language" : "undefined",
@@ -818,12 +824,6 @@
           "identifier" : "creator",
           "language" : "undefined",
           "value" : "https://orcid.org/0000-0002-1267-0234",
-          "type" : "iri"
-        } ],
-        "hasAssertion" : [ {
-          "identifier" : "hasAssertion",
-          "language" : "undefined",
-          "value" : "https://w3id.org/fair/principles/np/FAIR-Vocabulary/RAET5spTgImGvHwx1aAbwCshWN9SUzthi9FkVoKME56xg#assertion",
           "type" : "iri"
         } ],
         "hasPublicationInfo" : [ {
@@ -942,12 +942,12 @@
       "category" : [ {
         "identifier" : "category",
         "language" : "undefined",
-        "value" : "qualified",
+        "value" : "expanded",
         "type" : "label"
       }, {
         "identifier" : "category",
         "language" : "undefined",
-        "value" : "expanded",
+        "value" : "qualified",
         "type" : "label"
       } ],
       "n" : [ {
@@ -1152,7 +1152,7 @@
     },
     "domain" : "1",
     "subproperty" : [ "2", "3", "4", "5" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "0"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broadMatch",
@@ -1179,7 +1179,7 @@
     },
     "superproperty" : [ "13", "5" ],
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "10"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
@@ -1216,7 +1216,7 @@
     "comment" : {
       "en" : "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "16"
   }, {
     "iri" : "https://w3id.org/fair-o#appliesTo",
@@ -1264,7 +1264,7 @@
     "superproperty" : [ "0" ],
     "domain" : "11",
     "subproperty" : [ "13" ],
-    "attributes" : [ "object", "external", "transitive" ],
+    "attributes" : [ "transitive", "external", "object" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/fair-o#computedUsing",
@@ -1405,7 +1405,7 @@
     "comment" : {
       "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/fair-o#formula",
@@ -1449,7 +1449,7 @@
     "comment" : {
       "en" : "skos:related is disjoint with skos:broaderTransitive"
     },
-    "attributes" : [ "object", "symmetric", "external" ],
+    "attributes" : [ "external", "object", "symmetric" ],
     "id" : "4"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#notation",
@@ -1480,7 +1480,7 @@
       "en" : "notation"
     },
     "domain" : "11",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/fair-o#rScore",
@@ -1529,7 +1529,7 @@
     "comment" : {
       "en" : "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "5"
   }, {
     "iri" : "https://w3id.org/fair-o#wasAssessedBy",
@@ -1589,7 +1589,7 @@
     },
     "domain" : "52",
     "subproperty" : [ "59" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "58"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
@@ -1616,7 +1616,7 @@
     "superproperty" : [ "5" ],
     "domain" : "11",
     "subproperty" : [ "60" ],
-    "attributes" : [ "object", "symmetric", "external" ],
+    "attributes" : [ "external", "object", "symmetric" ],
     "id" : "53"
   }, {
     "iri" : "https://w3id.org/fair-o#aScore",
@@ -1656,7 +1656,7 @@
       "en" : "has top concept"
     },
     "domain" : "41",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "63"
   }, {
     "range" : "41",
@@ -1701,7 +1701,7 @@
     },
     "superproperty" : [ "4", "5" ],
     "domain" : "11",
-    "attributes" : [ "object", "symmetric", "external" ],
+    "attributes" : [ "external", "object", "symmetric" ],
     "id" : "44"
   }, {
     "iri" : "https://w3id.org/fair-o#usesAggregationMethod",
@@ -1751,7 +1751,7 @@
     },
     "superproperty" : [ "58" ],
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "59"
   }, {
     "iri" : "https://w3id.org/fair-o#fairScore",
@@ -1822,7 +1822,7 @@
     "comment" : {
       "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
     },
-    "attributes" : [ "object", "symmetric", "external", "transitive" ],
+    "attributes" : [ "transitive", "external", "object", "symmetric" ],
     "id" : "60"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
@@ -1848,7 +1848,7 @@
     },
     "superproperty" : [ "16", "5" ],
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "12"
   }, {
     "iri" : "https://w3id.org/fair-o#evidence",
@@ -1923,7 +1923,7 @@
     "superproperty" : [ "0" ],
     "domain" : "11",
     "subproperty" : [ "16" ],
-    "attributes" : [ "object", "external", "transitive" ],
+    "attributes" : [ "transitive", "external", "object" ],
     "id" : "2"
   }, {
     "iri" : "https://w3id.org/fair-o#testResult",
@@ -1965,7 +1965,7 @@
     "comment" : {
       "en" : "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "functional", "external", "object" ],
     "id" : "81"
   }, {
     "iri" : "https://w3id.org/fair-o#maxValue",
@@ -2018,7 +2018,7 @@
       "en" : "has member"
     },
     "domain" : "15",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "84"
   } ]
 }
